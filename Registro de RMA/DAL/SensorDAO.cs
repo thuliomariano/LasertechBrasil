@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Registro_de_RMA.DAL
 {
-    class SensorDAO
+    public class SensorDAO
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Registro_de_RMA.Modelo
 {
-    class Controle
+    public class Controle
     {
     }
 }

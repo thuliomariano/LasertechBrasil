@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Registro_de_RMA.Apresentacao;
+
 
 namespace Registro_de_RMA
 {
@@ -15,6 +17,12 @@ namespace Registro_de_RMA
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void sensorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro registro = new Registro();
+            registro.ShowDialog();
         }
     }
 }

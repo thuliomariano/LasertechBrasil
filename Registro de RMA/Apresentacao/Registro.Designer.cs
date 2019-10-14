@@ -67,14 +67,14 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radNumerDeSerie = new System.Windows.Forms.RadioButton();
+            this.radData = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnConsultarData = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -423,27 +423,27 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Data de retorno";
             // 
-            // radioButton1
+            // radNumerDeSerie
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(77, 17);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nº de série";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radNumerDeSerie.AutoSize = true;
+            this.radNumerDeSerie.Location = new System.Drawing.Point(6, 19);
+            this.radNumerDeSerie.Name = "radNumerDeSerie";
+            this.radNumerDeSerie.Size = new System.Drawing.Size(77, 17);
+            this.radNumerDeSerie.TabIndex = 9;
+            this.radNumerDeSerie.TabStop = true;
+            this.radNumerDeSerie.Text = "Nº de série";
+            this.radNumerDeSerie.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radData
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(103, 19);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(48, 17);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Data";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radData.AutoSize = true;
+            this.radData.Location = new System.Drawing.Point(103, 19);
+            this.radData.Name = "radData";
+            this.radData.Size = new System.Drawing.Size(48, 17);
+            this.radData.TabIndex = 10;
+            this.radData.TabStop = true;
+            this.radData.Text = "Data";
+            this.radData.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -461,8 +461,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.radData);
+            this.groupBox3.Controls.Add(this.radNumerDeSerie);
             this.groupBox3.Location = new System.Drawing.Point(736, 310);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(165, 49);
@@ -485,7 +485,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button8);
+            this.groupBox5.Controls.Add(this.btnConsultarData);
             this.groupBox5.Controls.Add(this.dateTimePicker2);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.label9);
@@ -497,14 +497,14 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Consulta por data";
             // 
-            // button8
+            // btnConsultarData
             // 
-            this.button8.Location = new System.Drawing.Point(142, 131);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Consultar";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnConsultarData.Location = new System.Drawing.Point(142, 131);
+            this.btnConsultarData.Name = "btnConsultarData";
+            this.btnConsultarData.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultarData.TabIndex = 6;
+            this.btnConsultarData.Text = "Consultar";
+            this.btnConsultarData.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
@@ -587,6 +587,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "Registro";
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.Registro_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -649,14 +650,14 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radNumerDeSerie;
+        private System.Windows.Forms.RadioButton radData;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnConsultarData;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label12;

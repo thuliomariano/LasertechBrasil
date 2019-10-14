@@ -16,5 +16,18 @@ namespace Registro_de_RMA.Apresentacao
         {
             InitializeComponent();
         }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+            if (radNumerDeSerie.Checked == true)
+            {
+                btnConsultarData.Enabled = true;
+
+            }
+            if (radData.Checked == true)
+            {
+                btnConsultarData.Enabled = false;
+            }
+        }
     }
 }
