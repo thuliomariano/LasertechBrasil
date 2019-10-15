@@ -27,10 +27,12 @@ namespace Registro_de_RMA.Apresentacao
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
 
-            DateTime date1 = DateTime.ParseExact("20/10/2019", "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-            DateTime date2 = DateTime.ParseExact("20/10/2019", "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+            DateTime date1 = DateTime.Today;
+            DateTime date2 = DateTime.Parse("2019-08-12 18:00:15");
 
-            
+            String d1 = date1.ToString("yyyy-MM-dd");
+            String d2 = date2.ToString("yyyy-MM-dd");
+
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
             sensor.NumeroDeSerie = txtSerie.Text;   
@@ -41,8 +43,8 @@ namespace Registro_de_RMA.Apresentacao
             sensor.Os = txtOrdemDeServico.Text;
             sensor.Apontamento = txtApontamento.Text;
             sensor.Patrimonio = Convert.ToInt32(txtPatrimonio.Text);
-            sensor.DataDeEntrada = date1;
-            sensor.DataDeSaida = date2;
+            sensor.DataDeEntrada = d1;
+            sensor.DataDeSaida = d2;
             controle.CadastrarSensor(sensor);
             MessageBox.Show(controle.Mensagem);
         }

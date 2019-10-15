@@ -213,6 +213,7 @@
             // 
             // txtObservacao
             // 
+            this.txtObservacao.BackColor = System.Drawing.SystemColors.Info;
             this.txtObservacao.Location = new System.Drawing.Point(16, 121);
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
@@ -221,6 +222,7 @@
             // 
             // txtPatrimonio
             // 
+            this.txtPatrimonio.BackColor = System.Drawing.SystemColors.Info;
             this.txtPatrimonio.Location = new System.Drawing.Point(654, 21);
             this.txtPatrimonio.Name = "txtPatrimonio";
             this.txtPatrimonio.Size = new System.Drawing.Size(134, 20);
@@ -255,7 +257,8 @@
             // 
             // txtApontamento
             // 
-            this.txtApontamento.Location = new System.Drawing.Point(385, 76);
+            this.txtApontamento.BackColor = System.Drawing.SystemColors.Info;
+            this.txtApontamento.Location = new System.Drawing.Point(787, 320);
             this.txtApontamento.Name = "txtApontamento";
             this.txtApontamento.Size = new System.Drawing.Size(134, 20);
             this.txtApontamento.TabIndex = 15;
@@ -280,6 +283,7 @@
             // 
             // txtOrdemDeServico
             // 
+            this.txtOrdemDeServico.BackColor = System.Drawing.SystemColors.Info;
             this.txtOrdemDeServico.Location = new System.Drawing.Point(385, 47);
             this.txtOrdemDeServico.Name = "txtOrdemDeServico";
             this.txtOrdemDeServico.Size = new System.Drawing.Size(202, 20);
@@ -296,6 +300,7 @@
             // 
             // txtRecebimento
             // 
+            this.txtRecebimento.BackColor = System.Drawing.SystemColors.Info;
             this.txtRecebimento.Location = new System.Drawing.Point(385, 21);
             this.txtRecebimento.Name = "txtRecebimento";
             this.txtRecebimento.Size = new System.Drawing.Size(202, 20);
@@ -313,6 +318,7 @@
             // 
             // txtRma
             // 
+            this.txtRma.BackColor = System.Drawing.SystemColors.Info;
             this.txtRma.Location = new System.Drawing.Point(77, 76);
             this.txtRma.Name = "txtRma";
             this.txtRma.Size = new System.Drawing.Size(134, 20);
@@ -338,6 +344,7 @@
             // 
             // txtCliente
             // 
+            this.txtCliente.BackColor = System.Drawing.SystemColors.Info;
             this.txtCliente.Location = new System.Drawing.Point(77, 47);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(202, 20);
@@ -354,6 +361,7 @@
             // 
             // txtSerie
             // 
+            this.txtSerie.BackColor = System.Drawing.SystemColors.Info;
             this.txtSerie.Location = new System.Drawing.Point(77, 21);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(202, 20);

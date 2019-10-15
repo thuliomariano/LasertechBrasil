@@ -17,8 +17,8 @@ namespace Registro_de_RMA.Modelo
         private String os;
         private String apontamento;
         private String observacao;
-        private DateTime dataDeEntrada;
-        private DateTime dataDeSaida;
+        private String dataDeEntrada;
+        private String dataDeSaida;
         private String status;
 
         public int IdSensor { get => idSensor; set => idSensor = value; }
@@ -30,8 +30,8 @@ namespace Registro_de_RMA.Modelo
         public string Os { get => os; set => os = value; }
         public string Apontamento { get => apontamento; set => apontamento = value; }
         public string Observacao { get => observacao; set => observacao = value; }
-        public DateTime DataDeEntrada { get => dataDeEntrada; set => dataDeEntrada = value; }
-        public DateTime DataDeSaida { get => dataDeSaida; set => dataDeSaida = value; }
+        public String DataDeEntrada { get => dataDeEntrada; set => dataDeEntrada = value; }
+        public String DataDeSaida { get => dataDeSaida; set => dataDeSaida = value; }
         public string Status { get => status; set => status = value; }
     }
 }
