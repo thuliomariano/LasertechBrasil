@@ -20,6 +20,7 @@ namespace Registro_de_RMA.Modelo
         private String dataDeEntrada;
         private String dataDeSaida;
         private String status;
+        private String mensagem;
 
         public int IdSensor { get => idSensor; set => idSensor = value; }
         public string NumeroDeSerie { get => numeroDeSerie; set => numeroDeSerie = value; }
@@ -33,5 +34,6 @@ namespace Registro_de_RMA.Modelo
         public String DataDeEntrada { get => dataDeEntrada; set => dataDeEntrada = value; }
         public String DataDeSaida { get => dataDeSaida; set => dataDeSaida = value; }
         public string Status { get => status; set => status = value; }
+        public string Mensagem { get => mensagem; set => mensagem = value; }
     }
 }

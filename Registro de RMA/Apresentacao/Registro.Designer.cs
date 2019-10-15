@@ -43,6 +43,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtApontamentos = new System.Windows.Forms.TextBox();
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.txtPatrimonio = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -111,6 +112,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -186,6 +188,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtApontamentos);
             this.groupBox1.Controls.Add(this.txtObservacao);
             this.groupBox1.Controls.Add(this.txtPatrimonio);
             this.groupBox1.Controls.Add(this.label11);
@@ -211,6 +214,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
             // 
+            // txtApontamentos
+            // 
+            this.txtApontamentos.BackColor = System.Drawing.SystemColors.Info;
+            this.txtApontamentos.Location = new System.Drawing.Point(385, 72);
+            this.txtApontamentos.Name = "txtApontamentos";
+            this.txtApontamentos.Size = new System.Drawing.Size(202, 20);
+            this.txtApontamentos.TabIndex = 21;
+            this.txtApontamentos.Text = "AP-";
+            // 
             // txtObservacao
             // 
             this.txtObservacao.BackColor = System.Drawing.SystemColors.Info;
@@ -219,6 +231,7 @@
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(772, 61);
             this.txtObservacao.TabIndex = 20;
+            this.txtObservacao.Text = "321";
             // 
             // txtPatrimonio
             // 
@@ -288,6 +301,7 @@
             this.txtOrdemDeServico.Name = "txtOrdemDeServico";
             this.txtOrdemDeServico.Size = new System.Drawing.Size(202, 20);
             this.txtOrdemDeServico.TabIndex = 13;
+            this.txtOrdemDeServico.Text = "OS-";
             // 
             // lblRecebimento
             // 
@@ -305,6 +319,7 @@
             this.txtRecebimento.Name = "txtRecebimento";
             this.txtRecebimento.Size = new System.Drawing.Size(202, 20);
             this.txtRecebimento.TabIndex = 11;
+            this.txtRecebimento.Text = "321";
             // 
             // btnCadastrar
             // 
@@ -323,6 +338,7 @@
             this.txtRma.Name = "txtRma";
             this.txtRma.Size = new System.Drawing.Size(134, 20);
             this.txtRma.TabIndex = 9;
+            this.txtRma.Text = "RMA-";
             // 
             // lblRma
             // 
@@ -349,6 +365,7 @@
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(202, 20);
             this.txtCliente.TabIndex = 7;
+            this.txtCliente.Text = "Lasertech";
             // 
             // lblNumeroDeSerie
             // 
@@ -366,6 +383,7 @@
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(202, 20);
             this.txtSerie.TabIndex = 5;
+            this.txtSerie.Text = "DS";
             // 
             // btnConsultarSerie
             // 
@@ -636,5 +654,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnConsultarData;
+        private System.Windows.Forms.TextBox txtApontamentos;
     }
 }

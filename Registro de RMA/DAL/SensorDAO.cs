@@ -10,7 +10,7 @@ namespace Registro_de_RMA.DAL
 
         public string Mensagem { get => mensagem; set => mensagem = value; }
 
-        
+
         Sensor sensor = new Sensor();
 
         public String CadatrarSensor(Sensor sensor)
@@ -51,9 +51,45 @@ namespace Registro_de_RMA.DAL
             return Mensagem;
         }
 
-        public String DeletarSensor()
+
+
+
+        public Sensor ConsultarTodos(Sensor sensor)
         {
-            return mensagem;
+            Conexao con = new Conexao();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = @"select * from sensor";
+            
+            try
+            {
+                cmd.Connection = con.Conectar();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    sensor.IdSensor = Convert.ToInt32(dr["idsensor"]);
+                    sensor.NumeroDeSerie = dr["numero"].ToString();
+                    sensor.Cliente = dr["cliente"].ToString();
+                    sensor.Rma = dr["rma"].ToString();
+                    sensor.Patrimonio = Convert.ToInt32(dr["patrimonio"]);
+                    sensor.Recebimento = dr["recebimento"].ToString();
+                    sensor.Os = dr["os"].ToString();
+                    sensor.Apontamento = dr["apontamento"].ToString();
+                    sensor.Observacao = dr["observacao"].ToString();
+                    sensor.DataDeEntrada = dr["datadeentrada"].ToString();
+                    sensor.DataDeSaida = dr["datadesaida"].ToString();
+                    sensor.Status = dr["statusdaos"].ToString();
+                    return sensor;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                mensagem = "Erro de comunicação com o banco de dados!";
+            }
+            return sensor;
+
         }
 
         public String AtualizarSensor()

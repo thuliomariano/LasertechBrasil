@@ -29,5 +29,23 @@ namespace Registro_de_RMA.Modelo
 
             return Mensagem;
         }
+
+        public Sensor BuscarTudo(Sensor sensor)
+        {
+            Validacao validacao = new Validacao(sensor);
+            if (validacao.Mensagem.Equals(""))
+            {
+                SensorDAO sensorDAO = new SensorDAO();
+                 
+                return sensorDAO.ConsultarTodos(sensor);
+               
+            }
+            else
+            {
+                sensor.Mensagem = validacao.Mensagem;
+                return sensor;
+            }
+            
+        }
     }
 }
