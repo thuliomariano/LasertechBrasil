@@ -28,17 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -63,7 +53,7 @@
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.btnConsultarSerie = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNumeroSerie = new System.Windows.Forms.TextBox();
             this.lblNumber = new System.Windows.Forms.Label();
             this.btnDeletarSerie = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -73,89 +63,44 @@
             this.btnEncaminhar = new System.Windows.Forms.Button();
             this.lblDataDeEntrada = new System.Windows.Forms.Label();
             this.lblDataDeSaida = new System.Windows.Forms.Label();
-            this.radNumerDeSerie = new System.Windows.Forms.RadioButton();
-            this.radData = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnConsultarData = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.sensorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lasertechbrasilDataSet = new Registro_de_RMA.lasertechbrasilDataSet();
+            this.sensorTableAdapter = new Registro_de_RMA.lasertechbrasilDataSetTableAdapters.SensorTableAdapter();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patrimonioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recebimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.osDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apontamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDeEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDeSaidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDaOsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sensorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.Info;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(12, 310);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(704, 309);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Código";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Nº de série";
-            this.columnHeader2.Width = 100;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Cliente";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "RMA";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Rec.";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "O.S";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "AP";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Data de entrada";
-            this.columnHeader8.Width = 90;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Data de saída";
-            this.columnHeader9.Width = 90;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Status";
             // 
             // panel1
             // 
@@ -165,7 +110,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1067, 76);
+            this.panel1.Size = new System.Drawing.Size(863, 76);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox3
@@ -188,6 +133,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.txtId);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtApontamentos);
             this.groupBox1.Controls.Add(this.txtObservacao);
             this.groupBox1.Controls.Add(this.txtPatrimonio);
@@ -207,17 +155,18 @@
             this.groupBox1.Controls.Add(this.txtCliente);
             this.groupBox1.Controls.Add(this.lblNumeroDeSerie);
             this.groupBox1.Controls.Add(this.txtSerie);
-            this.groupBox1.Location = new System.Drawing.Point(12, 98);
+            this.groupBox1.Location = new System.Drawing.Point(12, 79);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(818, 188);
+            this.groupBox1.Size = new System.Drawing.Size(648, 237);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtApontamentos
             // 
             this.txtApontamentos.BackColor = System.Drawing.SystemColors.Info;
-            this.txtApontamentos.Location = new System.Drawing.Point(385, 72);
+            this.txtApontamentos.Location = new System.Drawing.Point(114, 173);
             this.txtApontamentos.Name = "txtApontamentos";
             this.txtApontamentos.Size = new System.Drawing.Size(202, 20);
             this.txtApontamentos.TabIndex = 21;
@@ -226,25 +175,24 @@
             // txtObservacao
             // 
             this.txtObservacao.BackColor = System.Drawing.SystemColors.Info;
-            this.txtObservacao.Location = new System.Drawing.Point(16, 121);
+            this.txtObservacao.Location = new System.Drawing.Point(336, 65);
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(772, 61);
+            this.txtObservacao.Size = new System.Drawing.Size(276, 114);
             this.txtObservacao.TabIndex = 20;
-            this.txtObservacao.Text = "321";
             // 
             // txtPatrimonio
             // 
             this.txtPatrimonio.BackColor = System.Drawing.SystemColors.Info;
-            this.txtPatrimonio.Location = new System.Drawing.Point(654, 21);
+            this.txtPatrimonio.Location = new System.Drawing.Point(114, 199);
             this.txtPatrimonio.Name = "txtPatrimonio";
-            this.txtPatrimonio.Size = new System.Drawing.Size(134, 20);
+            this.txtPatrimonio.Size = new System.Drawing.Size(121, 20);
             this.txtPatrimonio.TabIndex = 19;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 107);
+            this.label11.Location = new System.Drawing.Point(337, 51);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 13);
             this.label11.TabIndex = 18;
@@ -253,7 +201,7 @@
             // lblPatrimonio
             // 
             this.lblPatrimonio.AutoSize = true;
-            this.lblPatrimonio.Location = new System.Drawing.Point(592, 28);
+            this.lblPatrimonio.Location = new System.Drawing.Point(19, 206);
             this.lblPatrimonio.Name = "lblPatrimonio";
             this.lblPatrimonio.Size = new System.Drawing.Size(56, 13);
             this.lblPatrimonio.TabIndex = 17;
@@ -261,12 +209,13 @@
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(711, 80);
+            this.btnAtualizar.Location = new System.Drawing.Point(327, 15);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizar.TabIndex = 16;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // txtApontamento
             // 
@@ -279,7 +228,7 @@
             // lblApontamento
             // 
             this.lblApontamento.AutoSize = true;
-            this.lblApontamento.Location = new System.Drawing.Point(290, 79);
+            this.lblApontamento.Location = new System.Drawing.Point(19, 180);
             this.lblApontamento.Name = "lblApontamento";
             this.lblApontamento.Size = new System.Drawing.Size(70, 13);
             this.lblApontamento.TabIndex = 14;
@@ -288,7 +237,7 @@
             // lblOs
             // 
             this.lblOs.AutoSize = true;
-            this.lblOs.Location = new System.Drawing.Point(287, 54);
+            this.lblOs.Location = new System.Drawing.Point(16, 155);
             this.lblOs.Name = "lblOs";
             this.lblOs.Size = new System.Drawing.Size(92, 13);
             this.lblOs.TabIndex = 12;
@@ -297,7 +246,7 @@
             // txtOrdemDeServico
             // 
             this.txtOrdemDeServico.BackColor = System.Drawing.SystemColors.Info;
-            this.txtOrdemDeServico.Location = new System.Drawing.Point(385, 47);
+            this.txtOrdemDeServico.Location = new System.Drawing.Point(114, 148);
             this.txtOrdemDeServico.Name = "txtOrdemDeServico";
             this.txtOrdemDeServico.Size = new System.Drawing.Size(202, 20);
             this.txtOrdemDeServico.TabIndex = 13;
@@ -306,7 +255,7 @@
             // lblRecebimento
             // 
             this.lblRecebimento.AutoSize = true;
-            this.lblRecebimento.Location = new System.Drawing.Point(287, 28);
+            this.lblRecebimento.Location = new System.Drawing.Point(16, 129);
             this.lblRecebimento.Name = "lblRecebimento";
             this.lblRecebimento.Size = new System.Drawing.Size(70, 13);
             this.lblRecebimento.TabIndex = 10;
@@ -315,7 +264,7 @@
             // txtRecebimento
             // 
             this.txtRecebimento.BackColor = System.Drawing.SystemColors.Info;
-            this.txtRecebimento.Location = new System.Drawing.Point(385, 21);
+            this.txtRecebimento.Location = new System.Drawing.Point(114, 122);
             this.txtRecebimento.Name = "txtRecebimento";
             this.txtRecebimento.Size = new System.Drawing.Size(202, 20);
             this.txtRecebimento.TabIndex = 11;
@@ -323,7 +272,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(603, 80);
+            this.btnCadastrar.Location = new System.Drawing.Point(543, 191);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 0;
@@ -334,7 +283,7 @@
             // txtRma
             // 
             this.txtRma.BackColor = System.Drawing.SystemColors.Info;
-            this.txtRma.Location = new System.Drawing.Point(77, 76);
+            this.txtRma.Location = new System.Drawing.Point(114, 95);
             this.txtRma.Name = "txtRma";
             this.txtRma.Size = new System.Drawing.Size(134, 20);
             this.txtRma.TabIndex = 9;
@@ -343,7 +292,7 @@
             // lblRma
             // 
             this.lblRma.AutoSize = true;
-            this.lblRma.Location = new System.Drawing.Point(16, 79);
+            this.lblRma.Location = new System.Drawing.Point(18, 101);
             this.lblRma.Name = "lblRma";
             this.lblRma.Size = new System.Drawing.Size(31, 13);
             this.lblRma.TabIndex = 8;
@@ -352,7 +301,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(13, 54);
+            this.lblCliente.Location = new System.Drawing.Point(15, 76);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(39, 13);
             this.lblCliente.TabIndex = 6;
@@ -361,7 +310,7 @@
             // txtCliente
             // 
             this.txtCliente.BackColor = System.Drawing.SystemColors.Info;
-            this.txtCliente.Location = new System.Drawing.Point(77, 47);
+            this.txtCliente.Location = new System.Drawing.Point(114, 69);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(202, 20);
             this.txtCliente.TabIndex = 7;
@@ -370,7 +319,7 @@
             // lblNumeroDeSerie
             // 
             this.lblNumeroDeSerie.AutoSize = true;
-            this.lblNumeroDeSerie.Location = new System.Drawing.Point(13, 28);
+            this.lblNumeroDeSerie.Location = new System.Drawing.Point(13, 50);
             this.lblNumeroDeSerie.Name = "lblNumeroDeSerie";
             this.lblNumeroDeSerie.Size = new System.Drawing.Size(59, 13);
             this.lblNumeroDeSerie.TabIndex = 5;
@@ -379,9 +328,9 @@
             // txtSerie
             // 
             this.txtSerie.BackColor = System.Drawing.SystemColors.Info;
-            this.txtSerie.Location = new System.Drawing.Point(77, 21);
+            this.txtSerie.Location = new System.Drawing.Point(114, 43);
             this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(202, 20);
+            this.txtSerie.Size = new System.Drawing.Size(121, 20);
             this.txtSerie.TabIndex = 5;
             this.txtSerie.Text = "DS";
             // 
@@ -393,22 +342,23 @@
             this.btnConsultarSerie.TabIndex = 1;
             this.btnConsultarSerie.Text = "Consultar";
             this.btnConsultarSerie.UseVisualStyleBackColor = true;
+            this.btnConsultarSerie.Click += new System.EventHandler(this.btnConsultarSerie_Click);
             // 
-            // textBox1
+            // txtNumeroSerie
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtNumeroSerie.Location = new System.Drawing.Point(6, 36);
+            this.txtNumeroSerie.Name = "txtNumeroSerie";
+            this.txtNumeroSerie.Size = new System.Drawing.Size(130, 20);
+            this.txtNumeroSerie.TabIndex = 3;
             // 
             // lblNumber
             // 
             this.lblNumber.AutoSize = true;
             this.lblNumber.Location = new System.Drawing.Point(3, 20);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(59, 13);
+            this.lblNumber.Size = new System.Drawing.Size(18, 13);
             this.lblNumber.TabIndex = 4;
-            this.lblNumber.Text = "Nº de série";
+            this.lblNumber.Text = "ID";
             // 
             // btnDeletarSerie
             // 
@@ -418,23 +368,26 @@
             this.btnDeletarSerie.TabIndex = 5;
             this.btnDeletarSerie.Text = "Deletar";
             this.btnDeletarSerie.UseVisualStyleBackColor = true;
+            this.btnDeletarSerie.Click += new System.EventHandler(this.btnDeletarSerie_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.btnPausa);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btnEntregue);
             this.groupBox2.Controls.Add(this.btnRecebido);
             this.groupBox2.Controls.Add(this.btnEncaminhar);
-            this.groupBox2.Location = new System.Drawing.Point(878, 111);
+            this.groupBox2.Location = new System.Drawing.Point(666, 104);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(151, 169);
+            this.groupBox2.Size = new System.Drawing.Size(163, 212);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Status";
+            this.groupBox2.Text = "Alterar o Status";
             // 
             // btnPausa
             // 
-            this.btnPausa.Location = new System.Drawing.Point(22, 99);
+            this.btnPausa.Location = new System.Drawing.Point(17, 174);
             this.btnPausa.Name = "btnPausa";
             this.btnPausa.Size = new System.Drawing.Size(114, 26);
             this.btnPausa.TabIndex = 10;
@@ -443,7 +396,7 @@
             // 
             // btnEntregue
             // 
-            this.btnEntregue.Location = new System.Drawing.Point(22, 131);
+            this.btnEntregue.Location = new System.Drawing.Point(16, 139);
             this.btnEntregue.Name = "btnEntregue";
             this.btnEntregue.Size = new System.Drawing.Size(115, 26);
             this.btnEntregue.TabIndex = 9;
@@ -452,7 +405,7 @@
             // 
             // btnRecebido
             // 
-            this.btnRecebido.Location = new System.Drawing.Point(22, 64);
+            this.btnRecebido.Location = new System.Drawing.Point(16, 107);
             this.btnRecebido.Name = "btnRecebido";
             this.btnRecebido.Size = new System.Drawing.Size(115, 26);
             this.btnRecebido.TabIndex = 8;
@@ -461,7 +414,7 @@
             // 
             // btnEncaminhar
             // 
-            this.btnEncaminhar.Location = new System.Drawing.Point(22, 29);
+            this.btnEncaminhar.Location = new System.Drawing.Point(16, 77);
             this.btnEncaminhar.Name = "btnEncaminhar";
             this.btnEncaminhar.Size = new System.Drawing.Size(115, 26);
             this.btnEncaminhar.TabIndex = 7;
@@ -480,68 +433,36 @@
             // lblDataDeSaida
             // 
             this.lblDataDeSaida.AutoSize = true;
-            this.lblDataDeSaida.Location = new System.Drawing.Point(3, 78);
+            this.lblDataDeSaida.Location = new System.Drawing.Point(3, 54);
             this.lblDataDeSaida.Name = "lblDataDeSaida";
             this.lblDataDeSaida.Size = new System.Drawing.Size(81, 13);
             this.lblDataDeSaida.TabIndex = 8;
             this.lblDataDeSaida.Text = "Data de retorno";
             // 
-            // radNumerDeSerie
-            // 
-            this.radNumerDeSerie.AutoSize = true;
-            this.radNumerDeSerie.Location = new System.Drawing.Point(6, 19);
-            this.radNumerDeSerie.Name = "radNumerDeSerie";
-            this.radNumerDeSerie.Size = new System.Drawing.Size(77, 17);
-            this.radNumerDeSerie.TabIndex = 9;
-            this.radNumerDeSerie.TabStop = true;
-            this.radNumerDeSerie.Text = "Nº de série";
-            this.radNumerDeSerie.UseVisualStyleBackColor = true;
-            // 
-            // radData
-            // 
-            this.radData.AutoSize = true;
-            this.radData.Location = new System.Drawing.Point(103, 19);
-            this.radData.Name = "radData";
-            this.radData.Size = new System.Drawing.Size(48, 17);
-            this.radData.TabIndex = 10;
-            this.radData.TabStop = true;
-            this.radData.Text = "Data";
-            this.radData.UseVisualStyleBackColor = true;
-            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 42);
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 31);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(227, 20);
             this.dateTimePicker1.TabIndex = 11;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(6, 105);
+            this.dateTimePicker2.Location = new System.Drawing.Point(6, 70);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(227, 20);
             this.dateTimePicker2.TabIndex = 12;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.radData);
-            this.groupBox3.Controls.Add(this.radNumerDeSerie);
-            this.groupBox3.Location = new System.Drawing.Point(736, 310);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(165, 49);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tipo de consulta";
-            // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.txtNumeroSerie);
             this.groupBox4.Controls.Add(this.btnConsultarSerie);
             this.groupBox4.Controls.Add(this.lblNumber);
             this.groupBox4.Controls.Add(this.btnDeletarSerie);
-            this.groupBox4.Location = new System.Drawing.Point(736, 370);
+            this.groupBox4.Location = new System.Drawing.Point(348, 322);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(314, 68);
+            this.groupBox4.Size = new System.Drawing.Size(314, 98);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Consulta por DS";
@@ -553,34 +474,201 @@
             this.groupBox5.Controls.Add(this.lblDataDeEntrada);
             this.groupBox5.Controls.Add(this.lblDataDeSaida);
             this.groupBox5.Controls.Add(this.dateTimePicker1);
-            this.groupBox5.Location = new System.Drawing.Point(736, 444);
+            this.groupBox5.Location = new System.Drawing.Point(12, 322);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(314, 175);
+            this.groupBox5.Size = new System.Drawing.Size(313, 98);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Consulta por data";
             // 
             // btnConsultarData
             // 
-            this.btnConsultarData.Location = new System.Drawing.Point(142, 131);
+            this.btnConsultarData.Location = new System.Drawing.Point(233, 28);
             this.btnConsultarData.Name = "btnConsultarData";
             this.btnConsultarData.Size = new System.Drawing.Size(75, 23);
             this.btnConsultarData.TabIndex = 6;
             this.btnConsultarData.Text = "Consultar";
             this.btnConsultarData.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.numeroDataGridViewTextBoxColumn,
+            this.clienteDataGridViewTextBoxColumn,
+            this.rmaDataGridViewTextBoxColumn,
+            this.patrimonioDataGridViewTextBoxColumn,
+            this.recebimentoDataGridViewTextBoxColumn,
+            this.osDataGridViewTextBoxColumn,
+            this.apontamentoDataGridViewTextBoxColumn,
+            this.observacaoDataGridViewTextBoxColumn,
+            this.dataDeEntradaDataGridViewTextBoxColumn,
+            this.dataDeSaidaDataGridViewTextBoxColumn,
+            this.statusDaOsDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.sensorBindingSource;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 432);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ShowEditingIcon = false;
+            this.dataGridView1.Size = new System.Drawing.Size(844, 315);
+            this.dataGridView1.TabIndex = 16;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(17, 40);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(114, 20);
+            this.textBox2.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "ID";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(293, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Listar tudo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // sensorBindingSource
+            // 
+            this.sensorBindingSource.DataMember = "Sensor";
+            this.sensorBindingSource.DataSource = this.lasertechbrasilDataSet;
+            // 
+            // lasertechbrasilDataSet
+            // 
+            this.lasertechbrasilDataSet.DataSetName = "lasertechbrasilDataSet";
+            this.lasertechbrasilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sensorTableAdapter
+            // 
+            this.sensorTableAdapter.ClearBeforeFill = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "idSensor";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "numero";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "Nº de série";
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            // 
+            // clienteDataGridViewTextBoxColumn
+            // 
+            this.clienteDataGridViewTextBoxColumn.DataPropertyName = "cliente";
+            this.clienteDataGridViewTextBoxColumn.HeaderText = "Cliente";
+            this.clienteDataGridViewTextBoxColumn.Name = "clienteDataGridViewTextBoxColumn";
+            // 
+            // rmaDataGridViewTextBoxColumn
+            // 
+            this.rmaDataGridViewTextBoxColumn.DataPropertyName = "rma";
+            this.rmaDataGridViewTextBoxColumn.HeaderText = "RMA";
+            this.rmaDataGridViewTextBoxColumn.Name = "rmaDataGridViewTextBoxColumn";
+            // 
+            // patrimonioDataGridViewTextBoxColumn
+            // 
+            this.patrimonioDataGridViewTextBoxColumn.DataPropertyName = "patrimonio";
+            this.patrimonioDataGridViewTextBoxColumn.HeaderText = "Patrimonio";
+            this.patrimonioDataGridViewTextBoxColumn.Name = "patrimonioDataGridViewTextBoxColumn";
+            // 
+            // recebimentoDataGridViewTextBoxColumn
+            // 
+            this.recebimentoDataGridViewTextBoxColumn.DataPropertyName = "recebimento";
+            this.recebimentoDataGridViewTextBoxColumn.HeaderText = "Recebimento";
+            this.recebimentoDataGridViewTextBoxColumn.Name = "recebimentoDataGridViewTextBoxColumn";
+            // 
+            // osDataGridViewTextBoxColumn
+            // 
+            this.osDataGridViewTextBoxColumn.DataPropertyName = "os";
+            this.osDataGridViewTextBoxColumn.HeaderText = "O.S";
+            this.osDataGridViewTextBoxColumn.Name = "osDataGridViewTextBoxColumn";
+            // 
+            // apontamentoDataGridViewTextBoxColumn
+            // 
+            this.apontamentoDataGridViewTextBoxColumn.DataPropertyName = "apontamento";
+            this.apontamentoDataGridViewTextBoxColumn.HeaderText = "Apontamento";
+            this.apontamentoDataGridViewTextBoxColumn.Name = "apontamentoDataGridViewTextBoxColumn";
+            // 
+            // observacaoDataGridViewTextBoxColumn
+            // 
+            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "observacao";
+            this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observacao";
+            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
+            // 
+            // dataDeEntradaDataGridViewTextBoxColumn
+            // 
+            this.dataDeEntradaDataGridViewTextBoxColumn.DataPropertyName = "dataDeEntrada";
+            this.dataDeEntradaDataGridViewTextBoxColumn.HeaderText = "Data de entrada";
+            this.dataDeEntradaDataGridViewTextBoxColumn.Name = "dataDeEntradaDataGridViewTextBoxColumn";
+            // 
+            // dataDeSaidaDataGridViewTextBoxColumn
+            // 
+            this.dataDeSaidaDataGridViewTextBoxColumn.DataPropertyName = "dataDeSaida";
+            this.dataDeSaidaDataGridViewTextBoxColumn.HeaderText = "Data de saída";
+            this.dataDeSaidaDataGridViewTextBoxColumn.Name = "dataDeSaidaDataGridViewTextBoxColumn";
+            // 
+            // statusDaOsDataGridViewTextBoxColumn
+            // 
+            this.statusDaOsDataGridViewTextBoxColumn.DataPropertyName = "statusDaOs";
+            this.statusDaOsDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDaOsDataGridViewTextBoxColumn.Name = "statusDaOsDataGridViewTextBoxColumn";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "ID";
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.SystemColors.Info;
+            this.txtId.Location = new System.Drawing.Point(112, 17);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(121, 20);
+            this.txtId.TabIndex = 23;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(246, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Buscar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 631);
+            this.ClientSize = new System.Drawing.Size(863, 787);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.listView1);
             this.Name = "Registro";
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.Registro_Load);
@@ -590,32 +678,22 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sensorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtObservacao;
         private System.Windows.Forms.TextBox txtPatrimonio;
@@ -636,7 +714,7 @@
         private System.Windows.Forms.Label lblNumeroDeSerie;
         private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.Button btnConsultarSerie;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNumeroSerie;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.Button btnDeletarSerie;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -646,14 +724,34 @@
         private System.Windows.Forms.Button btnEncaminhar;
         private System.Windows.Forms.Label lblDataDeEntrada;
         private System.Windows.Forms.Label lblDataDeSaida;
-        private System.Windows.Forms.RadioButton radNumerDeSerie;
-        private System.Windows.Forms.RadioButton radData;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnConsultarData;
         private System.Windows.Forms.TextBox txtApontamentos;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private lasertechbrasilDataSet lasertechbrasilDataSet;
+        private System.Windows.Forms.BindingSource sensorBindingSource;
+        private lasertechbrasilDataSetTableAdapters.SensorTableAdapter sensorTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idSensorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rmaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patrimonioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn recebimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn osDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apontamentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn observacaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDeEntradaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDeSaidaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDaOsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
     }
 }

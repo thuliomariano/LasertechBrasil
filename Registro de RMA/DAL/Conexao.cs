@@ -10,7 +10,7 @@ namespace Registro_de_RMA.DAL
         {
             connection = new SqlConnection();
 
-            connection.ConnectionString = @"Data Source=MANUTENÇÃO;Initial Catalog=lasertechbrasil;Integrated Security=True";
+            connection.ConnectionString = @"Data Source=Manutenção;Initial Catalog=lasertechbrasil;Integrated Security=True";
    
         }
 

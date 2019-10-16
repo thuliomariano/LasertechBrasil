@@ -24,5 +24,10 @@ namespace Registro_de_RMA
             Registro registro = new Registro();
             registro.ShowDialog();
         }
+
+        private void cÇAmeraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

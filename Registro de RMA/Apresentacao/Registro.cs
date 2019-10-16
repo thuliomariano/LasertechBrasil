@@ -22,27 +22,14 @@ namespace Registro_de_RMA.Apresentacao
 
         private void Registro_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'lasertechbrasilDataSet.Sensor'. Você pode movê-la ou removê-la conforme necessário.
+            this.sensorTableAdapter.Fill(this.lasertechbrasilDataSet.Sensor);
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
 
-            listView1.Items.Clear();
-
-             
-                sensor = controle.BuscarTudo(sensor);
-
-                ListViewItem item = new ListViewItem(sensor.IdSensor.ToString());
-                item.SubItems.Add(sensor.NumeroDeSerie);
-                item.SubItems.Add(sensor.Cliente);
-                item.SubItems.Add(sensor.Rma);
-                item.SubItems.Add(sensor.Patrimonio.ToString());
-                item.SubItems.Add(sensor.Recebimento);
-                item.SubItems.Add(sensor.Os);
-                item.SubItems.Add(sensor.Apontamento);
-                item.SubItems.Add(sensor.Observacao);
-                item.SubItems.Add(sensor.DataDeEntrada);
-                item.SubItems.Add(sensor.DataDeSaida);
-                item.SubItems.Add(sensor.Status);
-                listView1.Items.Add(item);
+         
+           
+               
             
 
         }
@@ -71,10 +58,77 @@ namespace Registro_de_RMA.Apresentacao
             sensor.Status = "Aberto";
             controle.CadastrarSensor(sensor);
             MessageBox.Show(controle.Mensagem);
+            this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
+        }
+
+        private void btnConsultarSerie_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeletarSerie_Click(object sender, EventArgs e)
+        {
+            Sensor sensor = new Sensor();
+            Controle controle = new Controle();
+
+            sensor.IdSensor = Convert.ToInt32(txtNumeroSerie.Text);
+            controle.DeletarSensor(sensor);
+            MessageBox.Show(controle.Mensagem);
+            this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            Sensor sensor = new Sensor();
+            Controle controle = new Controle();
+
+            sensor.IdSensor = Convert.ToInt32(txtId.Text);
+            controle.AtualizarPorId(sensor);
+            MessageBox.Show(controle.Mensagem);
+            this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Sensor sensor = new Sensor();
+            Controle controle = new Controle();
+            sensor = controle.BuscaPorId(sensor);
+
+            txtNumeroSerie.Text = sensor.NumeroDeSerie;
+
 
         }
     }

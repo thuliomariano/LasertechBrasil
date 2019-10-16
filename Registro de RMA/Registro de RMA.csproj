@@ -60,6 +60,11 @@
     </Compile>
     <Compile Include="DAL\Conexao.cs" />
     <Compile Include="DAL\SensorDAO.cs" />
+    <Compile Include="lasertechbrasilDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lasertechbrasilDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Modelo\Sensor.cs" />
     <Compile Include="Modelo\Validacao.cs" />
@@ -81,6 +86,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="lasertechbrasilDataSet.xsc">
+      <DependentUpon>lasertechbrasilDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lasertechbrasilDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lasertechbrasilDataSet.xss">
+      <DependentUpon>lasertechbrasilDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

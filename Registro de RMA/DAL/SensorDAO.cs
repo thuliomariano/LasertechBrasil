@@ -1,11 +1,17 @@
 ﻿using Registro_de_RMA.Modelo;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 namespace Registro_de_RMA.DAL
 {
+
     public class SensorDAO
     {
+
         private String mensagem;
 
         public string Mensagem { get => mensagem; set => mensagem = value; }
@@ -15,6 +21,7 @@ namespace Registro_de_RMA.DAL
 
         public String CadatrarSensor(Sensor sensor)
         {
+
             Conexao con = new Conexao();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"insert into sensor(numero,cliente,rma,patrimonio,recebimento,os,apontamento,observacao, dataDeEntrada, dataDeSaida, statusDaOs) 
@@ -52,22 +59,89 @@ namespace Registro_de_RMA.DAL
         }
 
 
-
-
-        public Sensor ConsultarTodos(Sensor sensor)
+        public String AtualizarSensor()
         {
-            Conexao con = new Conexao();
-            SqlCommand cmd = new SqlCommand();
+            return mensagem;
+        }
 
-            cmd.CommandText = @"select * from sensor";
-            
+        public String DeletarSensor(Sensor sensor)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Conexao con = new Conexao();
+
+            cmd.CommandText = @"delete from sensor where idsensor = @id";
+
+            cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
+
             try
             {
                 cmd.Connection = con.Conectar();
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                cmd.ExecuteNonQuery();
+                mensagem = "Deletado com sucesso!";
+
+            }
+            catch (Exception)
+            {
+                con.Desconectar();
+                mensagem = "Erro  de comunicação com o banco de dados!";
+               
+            }
+            return mensagem;
+        }
+
+        public String AtualizarPorId(Sensor sensor)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Conexao con = new Conexao();
+
+            cmd.CommandText = @"update form sensor set numero = @numero,cliente = @cliente,rma = @rma,patrimonio= @patrimonio,recebimento = recebimento,os = @os, apontamento = @apontamento, observacao = @observacao, where idsensor =@id";
+
+
+            cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
+            cmd.Parameters.AddWithValue("@numero", sensor.NumeroDeSerie);
+            cmd.Parameters.AddWithValue("@cliente", sensor.Cliente);
+            cmd.Parameters.AddWithValue("@rma", sensor.Rma);
+            cmd.Parameters.AddWithValue("@patrimonio", sensor.Patrimonio);
+            cmd.Parameters.AddWithValue("@recebimento", sensor.Recebimento);
+            cmd.Parameters.AddWithValue("@os", sensor.Os);
+            cmd.Parameters.AddWithValue("@apontamento", sensor.Apontamento);
+            cmd.Parameters.AddWithValue("@observacao", sensor.Observacao);
+
+            try
+            {
+                cmd.Connection = con.Conectar();
+                cmd.ExecuteNonQuery();
+                mensagem = "Item atualizado com sucesso!";
+            }
+            catch (Exception)
+            {
+
+                mensagem = "Erro de comunitação com o banco de dados";
+            }
+
+            return mensagem;
+        }
+        public Sensor BuscarPorID(Sensor sensor)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Conexao con = new Conexao();
+
+            cmd.CommandText = @"select * from sensor where idsensor = @id";
+
+            cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
+
+            cmd.Connection = con.Conectar();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            try
+            {
+                
+                
+               
+                
+                if (dr.HasRows)
                 {
-                    sensor.IdSensor = Convert.ToInt32(dr["idsensor"]);
+                    dr.Read();
                     sensor.NumeroDeSerie = dr["numero"].ToString();
                     sensor.Cliente = dr["cliente"].ToString();
                     sensor.Rma = dr["rma"].ToString();
@@ -76,25 +150,25 @@ namespace Registro_de_RMA.DAL
                     sensor.Os = dr["os"].ToString();
                     sensor.Apontamento = dr["apontamento"].ToString();
                     sensor.Observacao = dr["observacao"].ToString();
-                    sensor.DataDeEntrada = dr["datadeentrada"].ToString();
-                    sensor.DataDeSaida = dr["datadesaida"].ToString();
-                    sensor.Status = dr["statusdaos"].ToString();
-                    return sensor;
+
+                }
+                else
+                {
+                    sensor.IdSensor = 0;
                 }
 
             }
             catch (Exception)
             {
 
-                mensagem = "Erro de comunicação com o banco de dados!";
+
+            }
+            finally
+            {
+                dr.Close();
+                con.Desconectar();
             }
             return sensor;
-
-        }
-
-        public String AtualizarSensor()
-        {
-            return mensagem;
         }
 
     }

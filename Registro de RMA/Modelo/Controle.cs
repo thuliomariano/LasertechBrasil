@@ -30,22 +30,50 @@ namespace Registro_de_RMA.Modelo
             return Mensagem;
         }
 
-        public Sensor BuscarTudo(Sensor sensor)
+       public String DeletarSensor(Sensor sensor)
         {
             Validacao validacao = new Validacao(sensor);
             if (validacao.Mensagem.Equals(""))
             {
                 SensorDAO sensorDAO = new SensorDAO();
-                 
-                return sensorDAO.ConsultarTodos(sensor);
-               
+                return Mensagem = sensorDAO.DeletarSensor(sensor);
             }
             else
             {
-                sensor.Mensagem = validacao.Mensagem;
-                return sensor;
+                Mensagem = validacao.Mensagem;
             }
-            
+            return mensagem;
+        }
+
+        public String AtualizarPorId(Sensor sensor)
+        {
+            Validacao validacao = new Validacao(sensor);
+            if (validacao.Mensagem.Equals(""))
+            {
+                SensorDAO sensorDAO = new SensorDAO();
+                return Mensagem = sensorDAO.AtualizarPorId(sensor);
+            }
+            else
+            {
+                Mensagem = validacao.Mensagem;
+            }
+            return mensagem;
+        }
+
+        public Sensor BuscaPorId(Sensor sensor)
+        {
+            Validacao validacao = new Validacao(sensor);
+            if (validacao.Mensagem.Equals(""))
+            {
+                SensorDAO sensorDAO = new SensorDAO();
+                sensorDAO.BuscarPorID(sensor);
+            }
+            else
+            {
+                Mensagem = validacao.Mensagem;
+            }
+
+            return sensor;
         }
     }
 }
