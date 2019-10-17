@@ -125,9 +125,18 @@ namespace Registro_de_RMA.Apresentacao
         {
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
+            sensor.IdSensor =  Convert.ToInt32(txtId.Text);
             sensor = controle.BuscaPorId(sensor);
 
-            txtNumeroSerie.Text = sensor.NumeroDeSerie;
+            txtSerie.Text = sensor.NumeroDeSerie;
+            txtCliente.Text = sensor.Cliente;
+            txtRma.Text = sensor.Rma;
+            txtRecebimento.Text = sensor.Recebimento;
+            txtOrdemDeServico.Text = sensor.Os;
+            txtApontamento.Text = sensor.Apontamento;
+            txtObservacao.Text = sensor.Observacao;
+            txtPatrimonio.Text = sensor.Patrimonio.ToString();
+                
 
 
         }
