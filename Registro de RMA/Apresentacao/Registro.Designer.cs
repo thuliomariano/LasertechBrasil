@@ -33,6 +33,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtApontamentos = new System.Windows.Forms.TextBox();
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.txtPatrimonio = new System.Windows.Forms.TextBox();
@@ -53,28 +56,17 @@
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.btnConsultarSerie = new System.Windows.Forms.Button();
-            this.txtNumeroSerie = new System.Windows.Forms.TextBox();
-            this.lblNumber = new System.Windows.Forms.Label();
+            this.txtIdOuStatus = new System.Windows.Forms.TextBox();
             this.btnDeletarSerie = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnPausa = new System.Windows.Forms.Button();
-            this.btnEntregue = new System.Windows.Forms.Button();
-            this.btnRecebido = new System.Windows.Forms.Button();
-            this.btnEncaminhar = new System.Windows.Forms.Button();
             this.lblDataDeEntrada = new System.Windows.Forms.Label();
             this.lblDataDeSaida = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnConsultarData = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.sensorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lasertechbrasilDataSet = new Registro_de_RMA.lasertechbrasilDataSet();
-            this.sensorTableAdapter = new Registro_de_RMA.lasertechbrasilDataSetTableAdapters.SensorTableAdapter();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,14 +79,19 @@
             this.dataDeEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDeSaidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDaOsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.sensorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lasertechbrasilDataSet = new Registro_de_RMA.lasertechbrasilDataSet();
+            this.sensorTableAdapter = new Registro_de_RMA.lasertechbrasilDataSetTableAdapters.SensorTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSolucao = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -110,7 +107,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(863, 76);
+            this.panel1.Size = new System.Drawing.Size(1266, 76);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox3
@@ -133,12 +130,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtSolucao);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtStatus);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtApontamentos);
             this.groupBox1.Controls.Add(this.txtObservacao);
             this.groupBox1.Controls.Add(this.txtPatrimonio);
+            this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.lblPatrimonio);
             this.groupBox1.Controls.Add(this.btnAtualizar);
@@ -148,7 +150,6 @@
             this.groupBox1.Controls.Add(this.txtOrdemDeServico);
             this.groupBox1.Controls.Add(this.lblRecebimento);
             this.groupBox1.Controls.Add(this.txtRecebimento);
-            this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(this.txtRma);
             this.groupBox1.Controls.Add(this.lblRma);
             this.groupBox1.Controls.Add(this.lblCliente);
@@ -157,11 +158,38 @@
             this.groupBox1.Controls.Add(this.txtSerie);
             this.groupBox1.Location = new System.Drawing.Point(12, 79);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(648, 237);
+            this.groupBox1.Size = new System.Drawing.Size(650, 262);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(246, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Buscar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.SystemColors.Info;
+            this.txtId.Location = new System.Drawing.Point(112, 17);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(121, 20);
+            this.txtId.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "ID";
             // 
             // txtApontamentos
             // 
@@ -175,10 +203,10 @@
             // txtObservacao
             // 
             this.txtObservacao.BackColor = System.Drawing.SystemColors.Info;
-            this.txtObservacao.Location = new System.Drawing.Point(336, 65);
+            this.txtObservacao.Location = new System.Drawing.Point(327, 69);
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(276, 114);
+            this.txtObservacao.Size = new System.Drawing.Size(317, 73);
             this.txtObservacao.TabIndex = 20;
             // 
             // txtPatrimonio
@@ -192,11 +220,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(337, 51);
+            this.label11.Location = new System.Drawing.Point(324, 50);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 13);
+            this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.TabIndex = 18;
-            this.label11.Text = "Observação";
+            this.label11.Text = "Problema";
             // 
             // lblPatrimonio
             // 
@@ -272,7 +300,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(543, 191);
+            this.btnCadastrar.Location = new System.Drawing.Point(408, 14);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 0;
@@ -336,7 +364,7 @@
             // 
             // btnConsultarSerie
             // 
-            this.btnConsultarSerie.Location = new System.Drawing.Point(142, 33);
+            this.btnConsultarSerie.Location = new System.Drawing.Point(6, 121);
             this.btnConsultarSerie.Name = "btnConsultarSerie";
             this.btnConsultarSerie.Size = new System.Drawing.Size(75, 23);
             this.btnConsultarSerie.TabIndex = 1;
@@ -344,82 +372,22 @@
             this.btnConsultarSerie.UseVisualStyleBackColor = true;
             this.btnConsultarSerie.Click += new System.EventHandler(this.btnConsultarSerie_Click);
             // 
-            // txtNumeroSerie
+            // txtIdOuStatus
             // 
-            this.txtNumeroSerie.Location = new System.Drawing.Point(6, 36);
-            this.txtNumeroSerie.Name = "txtNumeroSerie";
-            this.txtNumeroSerie.Size = new System.Drawing.Size(130, 20);
-            this.txtNumeroSerie.TabIndex = 3;
-            // 
-            // lblNumber
-            // 
-            this.lblNumber.AutoSize = true;
-            this.lblNumber.Location = new System.Drawing.Point(3, 20);
-            this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(18, 13);
-            this.lblNumber.TabIndex = 4;
-            this.lblNumber.Text = "ID";
+            this.txtIdOuStatus.Location = new System.Drawing.Point(6, 88);
+            this.txtIdOuStatus.Name = "txtIdOuStatus";
+            this.txtIdOuStatus.Size = new System.Drawing.Size(156, 20);
+            this.txtIdOuStatus.TabIndex = 3;
             // 
             // btnDeletarSerie
             // 
-            this.btnDeletarSerie.Location = new System.Drawing.Point(224, 33);
+            this.btnDeletarSerie.Location = new System.Drawing.Point(87, 121);
             this.btnDeletarSerie.Name = "btnDeletarSerie";
             this.btnDeletarSerie.Size = new System.Drawing.Size(75, 23);
             this.btnDeletarSerie.TabIndex = 5;
             this.btnDeletarSerie.Text = "Deletar";
             this.btnDeletarSerie.UseVisualStyleBackColor = true;
             this.btnDeletarSerie.Click += new System.EventHandler(this.btnDeletarSerie_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.btnPausa);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.btnEntregue);
-            this.groupBox2.Controls.Add(this.btnRecebido);
-            this.groupBox2.Controls.Add(this.btnEncaminhar);
-            this.groupBox2.Location = new System.Drawing.Point(666, 104);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(163, 212);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Alterar o Status";
-            // 
-            // btnPausa
-            // 
-            this.btnPausa.Location = new System.Drawing.Point(17, 174);
-            this.btnPausa.Name = "btnPausa";
-            this.btnPausa.Size = new System.Drawing.Size(114, 26);
-            this.btnPausa.TabIndex = 10;
-            this.btnPausa.Text = "Pausa";
-            this.btnPausa.UseVisualStyleBackColor = true;
-            // 
-            // btnEntregue
-            // 
-            this.btnEntregue.Location = new System.Drawing.Point(16, 139);
-            this.btnEntregue.Name = "btnEntregue";
-            this.btnEntregue.Size = new System.Drawing.Size(115, 26);
-            this.btnEntregue.TabIndex = 9;
-            this.btnEntregue.Text = "Entregue";
-            this.btnEntregue.UseVisualStyleBackColor = true;
-            // 
-            // btnRecebido
-            // 
-            this.btnRecebido.Location = new System.Drawing.Point(16, 107);
-            this.btnRecebido.Name = "btnRecebido";
-            this.btnRecebido.Size = new System.Drawing.Size(115, 26);
-            this.btnRecebido.TabIndex = 8;
-            this.btnRecebido.Text = "Recebido";
-            this.btnRecebido.UseVisualStyleBackColor = true;
-            // 
-            // btnEncaminhar
-            // 
-            this.btnEncaminhar.Location = new System.Drawing.Point(16, 77);
-            this.btnEncaminhar.Name = "btnEncaminhar";
-            this.btnEncaminhar.Size = new System.Drawing.Size(115, 26);
-            this.btnEncaminhar.TabIndex = 7;
-            this.btnEncaminhar.Text = "Encaminhar";
-            this.btnEncaminhar.UseVisualStyleBackColor = true;
             // 
             // lblDataDeEntrada
             // 
@@ -455,17 +423,26 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.txtNumeroSerie);
+            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.txtIdOuStatus);
             this.groupBox4.Controls.Add(this.btnConsultarSerie);
-            this.groupBox4.Controls.Add(this.lblNumber);
             this.groupBox4.Controls.Add(this.btnDeletarSerie);
-            this.groupBox4.Location = new System.Drawing.Point(348, 322);
+            this.groupBox4.Location = new System.Drawing.Point(687, 164);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(314, 98);
+            this.groupBox4.Size = new System.Drawing.Size(172, 160);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Consulta por DS";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(958, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(293, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Listar tudo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox5
             // 
@@ -474,7 +451,7 @@
             this.groupBox5.Controls.Add(this.lblDataDeEntrada);
             this.groupBox5.Controls.Add(this.lblDataDeSaida);
             this.groupBox5.Controls.Add(this.dateTimePicker1);
-            this.groupBox5.Location = new System.Drawing.Point(12, 322);
+            this.groupBox5.Location = new System.Drawing.Point(938, 226);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(313, 98);
             this.groupBox5.TabIndex = 15;
@@ -512,51 +489,11 @@
             this.statusDaOsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.sensorBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 432);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 366);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(844, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(1239, 315);
             this.dataGridView1.TabIndex = 16;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(17, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 20);
-            this.textBox2.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "ID";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(293, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Listar tudo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // sensorBindingSource
-            // 
-            this.sensorBindingSource.DataMember = "Sensor";
-            this.sensorBindingSource.DataSource = this.lasertechbrasilDataSet;
-            // 
-            // lasertechbrasilDataSet
-            // 
-            this.lasertechbrasilDataSet.DataSetName = "lasertechbrasilDataSet";
-            this.lasertechbrasilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sensorTableAdapter
-            // 
-            this.sensorTableAdapter.ClearBeforeFill = true;
             // 
             // Column1
             // 
@@ -631,54 +568,97 @@
             this.statusDaOsDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDaOsDataGridViewTextBoxColumn.Name = "statusDaOsDataGridViewTextBoxColumn";
             // 
-            // label2
+            // sensorBindingSource
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "ID";
+            this.sensorBindingSource.DataMember = "Sensor";
+            this.sensorBindingSource.DataSource = this.lasertechbrasilDataSet;
             // 
-            // txtId
+            // lasertechbrasilDataSet
             // 
-            this.txtId.BackColor = System.Drawing.SystemColors.Info;
-            this.txtId.Location = new System.Drawing.Point(112, 17);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(121, 20);
-            this.txtId.TabIndex = 23;
+            this.lasertechbrasilDataSet.DataSetName = "lasertechbrasilDataSet";
+            this.lasertechbrasilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button2
+            // sensorTableAdapter
             // 
-            this.button2.Location = new System.Drawing.Point(246, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.sensorTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 350);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Historico";
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.BackColor = System.Drawing.SystemColors.Info;
+            this.txtStatus.Location = new System.Drawing.Point(114, 225);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(121, 20);
+            this.txtStatus.TabIndex = 25;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 232);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Status";
+            // 
+            // txtSolucao
+            // 
+            this.txtSolucao.BackColor = System.Drawing.SystemColors.Info;
+            this.txtSolucao.Location = new System.Drawing.Point(327, 173);
+            this.txtSolucao.Multiline = true;
+            this.txtSolucao.Name = "txtSolucao";
+            this.txtSolucao.Size = new System.Drawing.Size(317, 72);
+            this.txtSolucao.TabIndex = 27;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(324, 154);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Solução";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Número de serie",
+            "Cliente",
+            "RMA",
+            "Status"});
+            this.comboBox1.Location = new System.Drawing.Point(7, 37);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 6;
             // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 787);
+            this.ClientSize = new System.Drawing.Size(1266, 787);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "Registro";
-            this.Text = "Registro";
+            this.Text = "Problema";
             this.Load += new System.EventHandler(this.Registro_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -687,6 +667,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sensorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -714,14 +695,8 @@
         private System.Windows.Forms.Label lblNumeroDeSerie;
         private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.Button btnConsultarSerie;
-        private System.Windows.Forms.TextBox txtNumeroSerie;
-        private System.Windows.Forms.Label lblNumber;
+        private System.Windows.Forms.TextBox txtIdOuStatus;
         private System.Windows.Forms.Button btnDeletarSerie;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnPausa;
-        private System.Windows.Forms.Button btnEntregue;
-        private System.Windows.Forms.Button btnRecebido;
-        private System.Windows.Forms.Button btnEncaminhar;
         private System.Windows.Forms.Label lblDataDeEntrada;
         private System.Windows.Forms.Label lblDataDeSaida;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -735,8 +710,6 @@
         private System.Windows.Forms.BindingSource sensorBindingSource;
         private lasertechbrasilDataSetTableAdapters.SensorTableAdapter sensorTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idSensorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
@@ -753,5 +726,11 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtSolucao;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

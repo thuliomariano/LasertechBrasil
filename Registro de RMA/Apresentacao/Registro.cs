@@ -54,7 +54,7 @@ namespace Registro_de_RMA.Apresentacao
             sensor.Apontamento = txtApontamentos.Text;
             sensor.Patrimonio = Convert.ToInt32(txtPatrimonio.Text);
             sensor.DataDeEntrada = d1;
-            sensor.DataDeSaida = d2;
+            sensor.DataDeSaida = "";
             sensor.Status = "Aberto";
             controle.CadastrarSensor(sensor);
             MessageBox.Show(controle.Mensagem);
@@ -99,7 +99,7 @@ namespace Registro_de_RMA.Apresentacao
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
 
-            sensor.IdSensor = Convert.ToInt32(txtNumeroSerie.Text);
+            sensor.IdSensor = Convert.ToInt32(txtIdOuStatus.Text);
             controle.DeletarSensor(sensor);
             MessageBox.Show(controle.Mensagem);
             this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
