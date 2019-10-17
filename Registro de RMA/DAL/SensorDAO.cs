@@ -94,7 +94,7 @@ namespace Registro_de_RMA.DAL
             SqlCommand cmd = new SqlCommand();
             Conexao con = new Conexao();
 
-            cmd.CommandText = @"update form sensor set numero = @numero,cliente = @cliente,rma = @rma,patrimonio= @patrimonio,recebimento = recebimento,os = @os, apontamento = @apontamento, observacao = @observacao, where idsensor =@id";
+            cmd.CommandText = @"update from sensor set numero = @numero,cliente = @cliente,rma = @rma,patrimonio= @patrimonio, recebimento = @recebimento, os = @os, apontamento = @apontamento, observacao = @observacao, where idsensor = @id";
 
 
             cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
@@ -118,6 +118,10 @@ namespace Registro_de_RMA.DAL
 
                 mensagem = "Erro de comunitação com o banco de dados";
             }
+            finally
+            {
+                con.Desconectar();
+            }
 
             return mensagem;
         }
@@ -135,10 +139,6 @@ namespace Registro_de_RMA.DAL
             dr = cmd.ExecuteReader();
             try
             {
-                
-                
-               
-                
                 if (dr.HasRows)
                 {
                     dr.Read();
