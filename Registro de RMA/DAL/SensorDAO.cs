@@ -94,7 +94,7 @@ namespace Registro_de_RMA.DAL
             SqlCommand cmd = new SqlCommand();
             Conexao con = new Conexao();
 
-            cmd.CommandText = @"update from sensor set numero = @numero,cliente = @cliente,rma = @rma,patrimonio= @patrimonio, recebimento = @recebimento, os = @os, apontamento = @apontamento, observacao = @observacao, where idsensor = @id";
+            cmd.CommandText = @"update sensor set numero = @numero,cliente = @cliente,rma = @rma,patrimonio= @patrimonio, recebimento = @recebimento, os = @os, apontamento = @apontamento, observacao = @observacao where idSensor = @id";
 
 
             cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
@@ -161,7 +161,7 @@ namespace Registro_de_RMA.DAL
             catch (Exception)
             {
 
-
+                //não ira mensagem por se tratar de leitura de dados
             }
             finally
             {

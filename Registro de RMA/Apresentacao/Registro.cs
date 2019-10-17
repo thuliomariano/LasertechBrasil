@@ -111,6 +111,15 @@ namespace Registro_de_RMA.Apresentacao
             Controle controle = new Controle();
 
             sensor.IdSensor = Convert.ToInt32(txtId.Text);
+            sensor.NumeroDeSerie = txtSerie.Text;
+            sensor.Cliente = txtCliente.Text;
+            sensor.Rma = txtRma.Text;
+            sensor.Recebimento = txtRecebimento.Text;
+            sensor.Observacao = txtObservacao.Text;
+            sensor.Os = txtOrdemDeServico.Text;
+            sensor.Apontamento = txtApontamentos.Text;
+            sensor.Patrimonio = Convert.ToInt32(txtPatrimonio.Text);
+
             controle.AtualizarPorId(sensor);
             MessageBox.Show(controle.Mensagem);
             this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
