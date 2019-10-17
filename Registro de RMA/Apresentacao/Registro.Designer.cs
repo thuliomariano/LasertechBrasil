@@ -56,7 +56,7 @@
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.btnConsultarSerie = new System.Windows.Forms.Button();
-            this.txtIdOuStatus = new System.Windows.Forms.TextBox();
+            this.txtConsulta = new System.Windows.Forms.TextBox();
             this.btnDeletarSerie = new System.Windows.Forms.Button();
             this.lblDataDeEntrada = new System.Windows.Forms.Label();
             this.lblDataDeSaida = new System.Windows.Forms.Label();
@@ -68,6 +68,17 @@
             this.btnConsultarData = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSolucao = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblItem = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.consultaNsToolStrip = new System.Windows.Forms.ToolStrip();
+            this.numeroDeSerieToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.numeroDeSerieToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.consultaNsToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,12 +93,6 @@
             this.sensorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lasertechbrasilDataSet = new Registro_de_RMA.lasertechbrasilDataSet();
             this.sensorTableAdapter = new Registro_de_RMA.lasertechbrasilDataSetTableAdapters.SensorTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSolucao = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -95,6 +100,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.consultaNsToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sensorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet)).BeginInit();
             this.SuspendLayout();
@@ -107,7 +113,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1266, 76);
+            this.panel1.Size = new System.Drawing.Size(1271, 76);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox3
@@ -135,6 +141,7 @@
             this.groupBox1.Controls.Add(this.txtStatus);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnDeletarSerie);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtApontamentos);
@@ -364,7 +371,7 @@
             // 
             // btnConsultarSerie
             // 
-            this.btnConsultarSerie.Location = new System.Drawing.Point(6, 121);
+            this.btnConsultarSerie.Location = new System.Drawing.Point(9, 64);
             this.btnConsultarSerie.Name = "btnConsultarSerie";
             this.btnConsultarSerie.Size = new System.Drawing.Size(75, 23);
             this.btnConsultarSerie.TabIndex = 1;
@@ -372,16 +379,16 @@
             this.btnConsultarSerie.UseVisualStyleBackColor = true;
             this.btnConsultarSerie.Click += new System.EventHandler(this.btnConsultarSerie_Click);
             // 
-            // txtIdOuStatus
+            // txtConsulta
             // 
-            this.txtIdOuStatus.Location = new System.Drawing.Point(6, 88);
-            this.txtIdOuStatus.Name = "txtIdOuStatus";
-            this.txtIdOuStatus.Size = new System.Drawing.Size(156, 20);
-            this.txtIdOuStatus.TabIndex = 3;
+            this.txtConsulta.Location = new System.Drawing.Point(6, 36);
+            this.txtConsulta.Name = "txtConsulta";
+            this.txtConsulta.Size = new System.Drawing.Size(306, 20);
+            this.txtConsulta.TabIndex = 3;
             // 
             // btnDeletarSerie
             // 
-            this.btnDeletarSerie.Location = new System.Drawing.Point(87, 121);
+            this.btnDeletarSerie.Location = new System.Drawing.Point(489, 14);
             this.btnDeletarSerie.Name = "btnDeletarSerie";
             this.btnDeletarSerie.Size = new System.Drawing.Size(75, 23);
             this.btnDeletarSerie.TabIndex = 5;
@@ -423,13 +430,12 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.Controls.Add(this.txtIdOuStatus);
+            this.groupBox4.Controls.Add(this.lblItem);
+            this.groupBox4.Controls.Add(this.txtConsulta);
             this.groupBox4.Controls.Add(this.btnConsultarSerie);
-            this.groupBox4.Controls.Add(this.btnDeletarSerie);
-            this.groupBox4.Location = new System.Drawing.Point(687, 164);
+            this.groupBox4.Location = new System.Drawing.Point(683, 86);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(172, 160);
+            this.groupBox4.Size = new System.Drawing.Size(331, 107);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Consulta por DS";
@@ -451,16 +457,16 @@
             this.groupBox5.Controls.Add(this.lblDataDeEntrada);
             this.groupBox5.Controls.Add(this.lblDataDeSaida);
             this.groupBox5.Controls.Add(this.dateTimePicker1);
-            this.groupBox5.Location = new System.Drawing.Point(938, 226);
+            this.groupBox5.Location = new System.Drawing.Point(683, 208);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(313, 98);
+            this.groupBox5.Size = new System.Drawing.Size(331, 98);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Consulta por data";
             // 
             // btnConsultarData
             // 
-            this.btnConsultarData.Location = new System.Drawing.Point(233, 28);
+            this.btnConsultarData.Location = new System.Drawing.Point(250, 31);
             this.btnConsultarData.Name = "btnConsultarData";
             this.btnConsultarData.Size = new System.Drawing.Size(75, 23);
             this.btnConsultarData.TabIndex = 6;
@@ -491,6 +497,7 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
             this.dataGridView1.Location = new System.Drawing.Point(12, 366);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(1239, 315);
             this.dataGridView1.TabIndex = 16;
@@ -501,86 +508,6 @@
             this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            // 
-            // numeroDataGridViewTextBoxColumn
-            // 
-            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "numero";
-            this.numeroDataGridViewTextBoxColumn.HeaderText = "Nº de série";
-            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
-            // 
-            // clienteDataGridViewTextBoxColumn
-            // 
-            this.clienteDataGridViewTextBoxColumn.DataPropertyName = "cliente";
-            this.clienteDataGridViewTextBoxColumn.HeaderText = "Cliente";
-            this.clienteDataGridViewTextBoxColumn.Name = "clienteDataGridViewTextBoxColumn";
-            // 
-            // rmaDataGridViewTextBoxColumn
-            // 
-            this.rmaDataGridViewTextBoxColumn.DataPropertyName = "rma";
-            this.rmaDataGridViewTextBoxColumn.HeaderText = "RMA";
-            this.rmaDataGridViewTextBoxColumn.Name = "rmaDataGridViewTextBoxColumn";
-            // 
-            // patrimonioDataGridViewTextBoxColumn
-            // 
-            this.patrimonioDataGridViewTextBoxColumn.DataPropertyName = "patrimonio";
-            this.patrimonioDataGridViewTextBoxColumn.HeaderText = "Patrimonio";
-            this.patrimonioDataGridViewTextBoxColumn.Name = "patrimonioDataGridViewTextBoxColumn";
-            // 
-            // recebimentoDataGridViewTextBoxColumn
-            // 
-            this.recebimentoDataGridViewTextBoxColumn.DataPropertyName = "recebimento";
-            this.recebimentoDataGridViewTextBoxColumn.HeaderText = "Recebimento";
-            this.recebimentoDataGridViewTextBoxColumn.Name = "recebimentoDataGridViewTextBoxColumn";
-            // 
-            // osDataGridViewTextBoxColumn
-            // 
-            this.osDataGridViewTextBoxColumn.DataPropertyName = "os";
-            this.osDataGridViewTextBoxColumn.HeaderText = "O.S";
-            this.osDataGridViewTextBoxColumn.Name = "osDataGridViewTextBoxColumn";
-            // 
-            // apontamentoDataGridViewTextBoxColumn
-            // 
-            this.apontamentoDataGridViewTextBoxColumn.DataPropertyName = "apontamento";
-            this.apontamentoDataGridViewTextBoxColumn.HeaderText = "Apontamento";
-            this.apontamentoDataGridViewTextBoxColumn.Name = "apontamentoDataGridViewTextBoxColumn";
-            // 
-            // observacaoDataGridViewTextBoxColumn
-            // 
-            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "observacao";
-            this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observacao";
-            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
-            // 
-            // dataDeEntradaDataGridViewTextBoxColumn
-            // 
-            this.dataDeEntradaDataGridViewTextBoxColumn.DataPropertyName = "dataDeEntrada";
-            this.dataDeEntradaDataGridViewTextBoxColumn.HeaderText = "Data de entrada";
-            this.dataDeEntradaDataGridViewTextBoxColumn.Name = "dataDeEntradaDataGridViewTextBoxColumn";
-            // 
-            // dataDeSaidaDataGridViewTextBoxColumn
-            // 
-            this.dataDeSaidaDataGridViewTextBoxColumn.DataPropertyName = "dataDeSaida";
-            this.dataDeSaidaDataGridViewTextBoxColumn.HeaderText = "Data de saída";
-            this.dataDeSaidaDataGridViewTextBoxColumn.Name = "dataDeSaidaDataGridViewTextBoxColumn";
-            // 
-            // statusDaOsDataGridViewTextBoxColumn
-            // 
-            this.statusDaOsDataGridViewTextBoxColumn.DataPropertyName = "statusDaOs";
-            this.statusDaOsDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDaOsDataGridViewTextBoxColumn.Name = "statusDaOsDataGridViewTextBoxColumn";
-            // 
-            // sensorBindingSource
-            // 
-            this.sensorBindingSource.DataMember = "Sensor";
-            this.sensorBindingSource.DataSource = this.lasertechbrasilDataSet;
-            // 
-            // lasertechbrasilDataSet
-            // 
-            this.lasertechbrasilDataSet.DataSetName = "lasertechbrasilDataSet";
-            this.lasertechbrasilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sensorTableAdapter
-            // 
-            this.sensorTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -626,24 +553,153 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Solução";
             // 
-            // comboBox1
+            // lblItem
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Número de serie",
-            "Cliente",
-            "RMA",
-            "Status"});
-            this.comboBox1.Location = new System.Drawing.Point(7, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 6;
+            this.lblItem.AutoSize = true;
+            this.lblItem.Location = new System.Drawing.Point(6, 17);
+            this.lblItem.Name = "lblItem";
+            this.lblItem.Size = new System.Drawing.Size(59, 13);
+            this.lblItem.TabIndex = 29;
+            this.lblItem.Text = "Nº de série";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1176, 732);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 43);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Fechar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // consultaNsToolStrip
+            // 
+            this.consultaNsToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.numeroDeSerieToolStripLabel,
+            this.numeroDeSerieToolStripTextBox,
+            this.consultaNsToolStripButton});
+            this.consultaNsToolStrip.Location = new System.Drawing.Point(0, 76);
+            this.consultaNsToolStrip.Name = "consultaNsToolStrip";
+            this.consultaNsToolStrip.Size = new System.Drawing.Size(1271, 25);
+            this.consultaNsToolStrip.TabIndex = 17;
+            this.consultaNsToolStrip.Text = "consultaNsToolStrip";
+            // 
+            // numeroDeSerieToolStripLabel
+            // 
+            this.numeroDeSerieToolStripLabel.Name = "numeroDeSerieToolStripLabel";
+            this.numeroDeSerieToolStripLabel.Size = new System.Drawing.Size(93, 22);
+            this.numeroDeSerieToolStripLabel.Text = "NumeroDeSerie:";
+            // 
+            // numeroDeSerieToolStripTextBox
+            // 
+            this.numeroDeSerieToolStripTextBox.Name = "numeroDeSerieToolStripTextBox";
+            this.numeroDeSerieToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // consultaNsToolStripButton
+            // 
+            this.consultaNsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.consultaNsToolStripButton.Name = "consultaNsToolStripButton";
+            this.consultaNsToolStripButton.Size = new System.Drawing.Size(72, 22);
+            this.consultaNsToolStripButton.Text = "ConsultaNs";
+            this.consultaNsToolStripButton.Click += new System.EventHandler(this.consultaNsToolStripButton_Click);
+            // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "numero";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "Nº de série";
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clienteDataGridViewTextBoxColumn
+            // 
+            this.clienteDataGridViewTextBoxColumn.DataPropertyName = "cliente";
+            this.clienteDataGridViewTextBoxColumn.HeaderText = "Cliente";
+            this.clienteDataGridViewTextBoxColumn.Name = "clienteDataGridViewTextBoxColumn";
+            this.clienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rmaDataGridViewTextBoxColumn
+            // 
+            this.rmaDataGridViewTextBoxColumn.DataPropertyName = "rma";
+            this.rmaDataGridViewTextBoxColumn.HeaderText = "RMA";
+            this.rmaDataGridViewTextBoxColumn.Name = "rmaDataGridViewTextBoxColumn";
+            this.rmaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // patrimonioDataGridViewTextBoxColumn
+            // 
+            this.patrimonioDataGridViewTextBoxColumn.DataPropertyName = "patrimonio";
+            this.patrimonioDataGridViewTextBoxColumn.HeaderText = "Patrimonio";
+            this.patrimonioDataGridViewTextBoxColumn.Name = "patrimonioDataGridViewTextBoxColumn";
+            this.patrimonioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // recebimentoDataGridViewTextBoxColumn
+            // 
+            this.recebimentoDataGridViewTextBoxColumn.DataPropertyName = "recebimento";
+            this.recebimentoDataGridViewTextBoxColumn.HeaderText = "Recebimento";
+            this.recebimentoDataGridViewTextBoxColumn.Name = "recebimentoDataGridViewTextBoxColumn";
+            this.recebimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // osDataGridViewTextBoxColumn
+            // 
+            this.osDataGridViewTextBoxColumn.DataPropertyName = "os";
+            this.osDataGridViewTextBoxColumn.HeaderText = "O.S";
+            this.osDataGridViewTextBoxColumn.Name = "osDataGridViewTextBoxColumn";
+            this.osDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apontamentoDataGridViewTextBoxColumn
+            // 
+            this.apontamentoDataGridViewTextBoxColumn.DataPropertyName = "apontamento";
+            this.apontamentoDataGridViewTextBoxColumn.HeaderText = "Apontamento";
+            this.apontamentoDataGridViewTextBoxColumn.Name = "apontamentoDataGridViewTextBoxColumn";
+            this.apontamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // observacaoDataGridViewTextBoxColumn
+            // 
+            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "observacao";
+            this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observacao";
+            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
+            this.observacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataDeEntradaDataGridViewTextBoxColumn
+            // 
+            this.dataDeEntradaDataGridViewTextBoxColumn.DataPropertyName = "dataDeEntrada";
+            this.dataDeEntradaDataGridViewTextBoxColumn.HeaderText = "Data de entrada";
+            this.dataDeEntradaDataGridViewTextBoxColumn.Name = "dataDeEntradaDataGridViewTextBoxColumn";
+            this.dataDeEntradaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataDeSaidaDataGridViewTextBoxColumn
+            // 
+            this.dataDeSaidaDataGridViewTextBoxColumn.DataPropertyName = "dataDeSaida";
+            this.dataDeSaidaDataGridViewTextBoxColumn.HeaderText = "Data de saída";
+            this.dataDeSaidaDataGridViewTextBoxColumn.Name = "dataDeSaidaDataGridViewTextBoxColumn";
+            this.dataDeSaidaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDaOsDataGridViewTextBoxColumn
+            // 
+            this.statusDaOsDataGridViewTextBoxColumn.DataPropertyName = "statusDaOs";
+            this.statusDaOsDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDaOsDataGridViewTextBoxColumn.Name = "statusDaOsDataGridViewTextBoxColumn";
+            this.statusDaOsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sensorBindingSource
+            // 
+            this.sensorBindingSource.DataMember = "Sensor";
+            this.sensorBindingSource.DataSource = this.lasertechbrasilDataSet;
+            // 
+            // lasertechbrasilDataSet
+            // 
+            this.lasertechbrasilDataSet.DataSetName = "lasertechbrasilDataSet";
+            this.lasertechbrasilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sensorTableAdapter
+            // 
+            this.sensorTableAdapter.ClearBeforeFill = true;
             // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 787);
+            this.ClientSize = new System.Drawing.Size(1271, 795);
+            this.Controls.Add(this.consultaNsToolStrip);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -664,6 +720,8 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.consultaNsToolStrip.ResumeLayout(false);
+            this.consultaNsToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sensorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -695,7 +753,7 @@
         private System.Windows.Forms.Label lblNumeroDeSerie;
         private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.Button btnConsultarSerie;
-        private System.Windows.Forms.TextBox txtIdOuStatus;
+        private System.Windows.Forms.TextBox txtConsulta;
         private System.Windows.Forms.Button btnDeletarSerie;
         private System.Windows.Forms.Label lblDataDeEntrada;
         private System.Windows.Forms.Label lblDataDeSaida;
@@ -731,6 +789,11 @@
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblItem;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolStrip consultaNsToolStrip;
+        private System.Windows.Forms.ToolStripLabel numeroDeSerieToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox numeroDeSerieToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton consultaNsToolStripButton;
     }
 }

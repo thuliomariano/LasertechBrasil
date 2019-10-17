@@ -8,6 +8,7 @@ namespace Registro_de_RMA.Modelo
 {
     public class Sensor
     {
+        //declaração das variaveis como private
         private int idSensor;
         private String numeroDeSerie;
         private String cliente;
@@ -21,7 +22,10 @@ namespace Registro_de_RMA.Modelo
         private String dataDeSaida;
         private String status;
         private String mensagem;
+        private String tipo;
+        private String item;
 
+        //encapsulamento(restrição de acesso)
         public int IdSensor { get => idSensor; set => idSensor = value; }
         public string NumeroDeSerie { get => numeroDeSerie; set => numeroDeSerie = value; }
         public string Cliente { get => cliente; set => cliente = value; }
@@ -35,5 +39,7 @@ namespace Registro_de_RMA.Modelo
         public String DataDeSaida { get => dataDeSaida; set => dataDeSaida = value; }
         public string Status { get => status; set => status = value; }
         public string Mensagem { get => mensagem; set => mensagem = value; }
+        public string Tipo { get => tipo; set => tipo = value; }
+        public string Item { get => item; set => item = value; }
     }
 }

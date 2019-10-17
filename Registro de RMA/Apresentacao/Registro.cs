@@ -91,7 +91,7 @@ namespace Registro_de_RMA.Apresentacao
 
         private void btnConsultarSerie_Click(object sender, EventArgs e)
         {
-
+            this.sensorTableAdapter.ConsultaNs(lasertechbrasilDataSet.Sensor, "%" + txtConsulta + "%");
         }
 
         private void btnDeletarSerie_Click(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace Registro_de_RMA.Apresentacao
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
 
-            sensor.IdSensor = Convert.ToInt32(txtIdOuStatus.Text);
+            sensor.IdSensor = Convert.ToInt32(txtId.Text);
             controle.DeletarSensor(sensor);
             MessageBox.Show(controle.Mensagem);
             this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
@@ -147,6 +147,19 @@ namespace Registro_de_RMA.Apresentacao
             txtPatrimonio.Text = sensor.Patrimonio.ToString();
                 
 
+
+        }
+
+        private void consultaNsToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.sensorTableAdapter.ConsultaNs(this.lasertechbrasilDataSet.Sensor, numeroDeSerieToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }

@@ -170,6 +170,6 @@ namespace Registro_de_RMA.DAL
             }
             return sensor;
         }
-
+        
     }
 }

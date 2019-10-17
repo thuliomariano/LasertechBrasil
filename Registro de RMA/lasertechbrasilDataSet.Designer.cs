@@ -1314,7 +1314,7 @@ SELECT idSensor, numero, cliente, rma, patrimonio, recebimento, os, apontamento,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idSensor, numero, cliente, rma, patrimonio, recebimento, os, apontamento, " +
@@ -1322,9 +1322,16 @@ SELECT idSensor, numero, cliente, rma, patrimonio, recebimento, os, apontamento,
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT idSensor, numero, cliente, rma, patrimonio, recebimento, os, apontamento, " +
-                "observacao, dataDeEntrada, dataDeSaida, statusDaOs FROM dbo.Sensor";
+            this._commandCollection[1].CommandText = "SELECT        idSensor, numero, cliente, rma, patrimonio, recebimento, os, aponta" +
+                "mento, observacao, dataDeEntrada, dataDeSaida, statusDaOs\r\nFROM            Senso" +
+                "r\r\nWHERE        (numero LIKE @NumeroDeSerie)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumeroDeSerie", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "numero", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT idSensor, numero, cliente, rma, patrimonio, recebimento, os, apontamento, " +
+                "observacao, dataDeEntrada, dataDeSaida, statusDaOs FROM dbo.Sensor";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1355,8 +1362,27 @@ SELECT idSensor, numero, cliente, rma, patrimonio, recebimento, os, apontamento,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(lasertechbrasilDataSet.SensorDataTable dataTable) {
+        public virtual int ConsultaNs(lasertechbrasilDataSet.SensorDataTable dataTable, string NumeroDeSerie) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((NumeroDeSerie == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(NumeroDeSerie));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(lasertechbrasilDataSet.SensorDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }

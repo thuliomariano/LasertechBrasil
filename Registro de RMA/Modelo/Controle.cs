@@ -75,5 +75,7 @@ namespace Registro_de_RMA.Modelo
 
             return sensor;
         }
+
+       
     }
 }
