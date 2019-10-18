@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Registro_de_RMA.Modelo;
 
 namespace Registro_de_RMA.Apresentacao
 {
@@ -19,10 +20,19 @@ namespace Registro_de_RMA.Apresentacao
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            btnAndamento.Enabled = true;
-            btnFechar.Enabled = true;
-            btnCancelar.Enabled = true;
-            btnPausar.Enabled = true;
+            Sensor sensor = new Sensor();
+            Controle controle = new Controle();
+
+            DateTime d1 = DateTime.Now;
+            String date = d1.ToString("yyyy-MM-dd HH:mm:ss");
+
+            sensor.IdSensor = Convert.ToInt32(txtId.Text.ToUpper());
+            sensor.Status = comboBox1.Text.ToUpper();
+            sensor.Observacao = txtObservacao.Text.ToUpper();
+            sensor.DataDeSaida = date;
+            controle.AtualizarStatus(sensor);
+            MessageBox.Show(controle.Mensagem, "Anteção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -32,10 +42,13 @@ namespace Registro_de_RMA.Apresentacao
 
         private void AtualizarSensor_Load(object sender, EventArgs e)
         {
-            btnAndamento.Enabled = false;
-            btnFechar.Enabled = false;
-            btnCancelar.Enabled = false;
-            btnPausar.Enabled = false;
+          
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtId.Text = "";
+            txtObservacao.Text = "";
         }
     }
 }

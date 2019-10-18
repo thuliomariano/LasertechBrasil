@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.txtApontamentos = new System.Windows.Forms.TextBox();
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.txtPatrimonio = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -85,27 +85,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
             // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(437, 15);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
-            this.btnLimpar.TabIndex = 26;
-            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.button4_Click);
-            // 
             // txtApontamentos
             // 
             this.txtApontamentos.BackColor = System.Drawing.SystemColors.Info;
             this.txtApontamentos.Location = new System.Drawing.Point(116, 145);
             this.txtApontamentos.Name = "txtApontamentos";
             this.txtApontamentos.Size = new System.Drawing.Size(202, 20);
-            this.txtApontamentos.TabIndex = 21;
+            this.txtApontamentos.TabIndex = 6;
             // 
             // txtObservacao
             // 
@@ -114,7 +100,7 @@
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(474, 67);
-            this.txtObservacao.TabIndex = 20;
+            this.txtObservacao.TabIndex = 8;
             // 
             // txtPatrimonio
             // 
@@ -122,7 +108,7 @@
             this.txtPatrimonio.Location = new System.Drawing.Point(116, 171);
             this.txtPatrimonio.Name = "txtPatrimonio";
             this.txtPatrimonio.Size = new System.Drawing.Size(121, 20);
-            this.txtPatrimonio.TabIndex = 19;
+            this.txtPatrimonio.TabIndex = 7;
             // 
             // label11
             // 
@@ -174,7 +160,7 @@
             this.txtOrdemDeServico.Location = new System.Drawing.Point(116, 120);
             this.txtOrdemDeServico.Name = "txtOrdemDeServico";
             this.txtOrdemDeServico.Size = new System.Drawing.Size(202, 20);
-            this.txtOrdemDeServico.TabIndex = 13;
+            this.txtOrdemDeServico.TabIndex = 5;
             // 
             // lblRecebimento
             // 
@@ -191,7 +177,7 @@
             this.txtRecebimento.Location = new System.Drawing.Point(116, 94);
             this.txtRecebimento.Name = "txtRecebimento";
             this.txtRecebimento.Size = new System.Drawing.Size(202, 20);
-            this.txtRecebimento.TabIndex = 11;
+            this.txtRecebimento.TabIndex = 4;
             // 
             // txtRma
             // 
@@ -199,7 +185,7 @@
             this.txtRma.Location = new System.Drawing.Point(116, 67);
             this.txtRma.Name = "txtRma";
             this.txtRma.Size = new System.Drawing.Size(134, 20);
-            this.txtRma.TabIndex = 9;
+            this.txtRma.TabIndex = 3;
             // 
             // lblRma
             // 
@@ -225,7 +211,7 @@
             this.txtCliente.Location = new System.Drawing.Point(116, 41);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(202, 20);
-            this.txtCliente.TabIndex = 7;
+            this.txtCliente.TabIndex = 2;
             // 
             // lblNumeroDeSerie
             // 
@@ -242,7 +228,7 @@
             this.txtSerie.Location = new System.Drawing.Point(116, 15);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(121, 20);
-            this.txtSerie.TabIndex = 5;
+            this.txtSerie.TabIndex = 1;
             // 
             // btnCadastrar
             // 
@@ -250,7 +236,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(419, 295);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(79, 38);
-            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.TabIndex = 9;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -283,6 +269,20 @@
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpar.Location = new System.Drawing.Point(437, 15);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
+            this.btnLimpar.TabIndex = 10;
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.button4_Click);
             // 
             // CadastrarSensor
             // 

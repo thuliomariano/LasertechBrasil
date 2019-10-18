@@ -170,6 +170,36 @@ namespace Registro_de_RMA.DAL
             }
             return sensor;
         }
+
+        public String AtualizarStatus(Sensor sensor)
+        {
+            Conexao con = new Conexao();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = @"update sensor set statusDaOs = @status, observacao = @observacao where idSensor = @id";
+            cmd.Parameters.AddWithValue("@status", sensor.Status);
+            cmd.Parameters.AddWithValue("@observacao", sensor.Observacao);
+            cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
+
+            try
+            {
+                cmd.Connection = con.Conectar();
+                cmd.ExecuteNonQuery();
+                mensagem = "Atualização realizada com sucesso";
+
+            }
+            catch (Exception)
+            {
+
+                mensagem = "Erro de conexão com o banco de dados";
+            }
+            finally
+            {
+                con.Desconectar();
+            }
+
+            return mensagem;
+        }
         
     }
 }

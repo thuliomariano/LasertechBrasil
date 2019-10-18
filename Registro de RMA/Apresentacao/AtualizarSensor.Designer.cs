@@ -34,16 +34,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtApontamento = new System.Windows.Forms.TextBox();
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
-            this.txtSerie = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnAndamento = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnPausar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -52,20 +50,18 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnCancelar);
-            this.groupBox1.Controls.Add(this.btnPausar);
-            this.groupBox1.Controls.Add(this.btnFechar);
-            this.groupBox1.Controls.Add(this.btnAndamento);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnLimpar);
             this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(this.txtObservacao);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtApontamento);
             this.groupBox1.Controls.Add(this.lblNumeroDeSerie);
-            this.groupBox1.Controls.Add(this.txtSerie);
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Location = new System.Drawing.Point(12, 82);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(504, 216);
+            this.groupBox1.Size = new System.Drawing.Size(504, 225);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
@@ -74,9 +70,9 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Location = new System.Drawing.Point(260, 15);
+            this.btnCadastrar.Location = new System.Drawing.Point(410, 177);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(63, 31);
+            this.btnCadastrar.Size = new System.Drawing.Size(78, 31);
             this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Atualizar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -85,7 +81,7 @@
             // txtObservacao
             // 
             this.txtObservacao.BackColor = System.Drawing.SystemColors.Info;
-            this.txtObservacao.Location = new System.Drawing.Point(18, 67);
+            this.txtObservacao.Location = new System.Drawing.Point(18, 84);
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(474, 76);
@@ -94,7 +90,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 51);
+            this.label11.Location = new System.Drawing.Point(15, 68);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 13);
             this.label11.TabIndex = 18;
@@ -113,17 +109,17 @@
             this.lblNumeroDeSerie.AutoSize = true;
             this.lblNumeroDeSerie.Location = new System.Drawing.Point(15, 22);
             this.lblNumeroDeSerie.Name = "lblNumeroDeSerie";
-            this.lblNumeroDeSerie.Size = new System.Drawing.Size(59, 13);
+            this.lblNumeroDeSerie.Size = new System.Drawing.Size(18, 13);
             this.lblNumeroDeSerie.TabIndex = 5;
-            this.lblNumeroDeSerie.Text = "Nº de série";
+            this.lblNumeroDeSerie.Text = "ID";
             // 
-            // txtSerie
+            // txtId
             // 
-            this.txtSerie.BackColor = System.Drawing.SystemColors.Info;
-            this.txtSerie.Location = new System.Drawing.Point(116, 15);
-            this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(121, 20);
-            this.txtSerie.TabIndex = 5;
+            this.txtId.BackColor = System.Drawing.SystemColors.Info;
+            this.txtId.Location = new System.Drawing.Point(116, 15);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(121, 20);
+            this.txtId.TabIndex = 5;
             // 
             // panel1
             // 
@@ -167,46 +163,7 @@
             this.btnLimpar.TabIndex = 26;
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.UseVisualStyleBackColor = true;
-            // 
-            // btnAndamento
-            // 
-            this.btnAndamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAndamento.Location = new System.Drawing.Point(18, 165);
-            this.btnAndamento.Name = "btnAndamento";
-            this.btnAndamento.Size = new System.Drawing.Size(90, 38);
-            this.btnAndamento.TabIndex = 27;
-            this.btnAndamento.Text = "ANDAMENTO";
-            this.btnAndamento.UseVisualStyleBackColor = true;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFechar.Location = new System.Drawing.Point(398, 165);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(90, 38);
-            this.btnFechar.TabIndex = 28;
-            this.btnFechar.Text = "FECHADO";
-            this.btnFechar.UseVisualStyleBackColor = true;
-            // 
-            // btnPausar
-            // 
-            this.btnPausar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPausar.Location = new System.Drawing.Point(274, 165);
-            this.btnPausar.Name = "btnPausar";
-            this.btnPausar.Size = new System.Drawing.Size(90, 38);
-            this.btnPausar.TabIndex = 29;
-            this.btnPausar.Text = "PAUSA";
-            this.btnPausar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.Location = new System.Drawing.Point(147, 165);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 38);
-            this.btnCancelar.TabIndex = 30;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // lblStatus
             // 
@@ -218,11 +175,34 @@
             this.lblStatus.TabIndex = 31;
             this.lblStatus.Text = "Status";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Status";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ANDAMENTO",
+            "CANCELADO",
+            "PAUSA",
+            "FINALIZADO"});
+            this.comboBox1.Location = new System.Drawing.Point(116, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 32;
+            // 
             // AtualizarSensor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 313);
+            this.ClientSize = new System.Drawing.Size(528, 340);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "AtualizarSensor";
@@ -247,14 +227,12 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtApontamento;
         private System.Windows.Forms.Label lblNumeroDeSerie;
-        private System.Windows.Forms.TextBox txtSerie;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnPausar;
-        private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Button btnAndamento;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
