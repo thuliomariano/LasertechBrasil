@@ -58,17 +58,23 @@
     <Compile Include="Apresentacao\CadastrarSensor.Designer.cs">
       <DependentUpon>CadastrarSensor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apresentacao\RegistroCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\RegistroCamera.Designer.cs">
+      <DependentUpon>RegistroCamera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apresentacao\Tela_inicial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Apresentacao\Tela_inicial.Designer.cs">
       <DependentUpon>Tela_inicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\Registro.cs">
+    <Compile Include="Apresentacao\RegistroSensor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\Registro.Designer.cs">
-      <DependentUpon>Registro.cs</DependentUpon>
+    <Compile Include="Apresentacao\RegistroSensor.Designer.cs">
+      <DependentUpon>RegistroSensor.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Conexao.cs" />
     <Compile Include="DAL\SensorDAO.cs" />
@@ -76,6 +82,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>lasertechbrasilDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lasertechbrasilDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lasertechbrasilDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Modelo\Sensor.cs" />
@@ -88,8 +99,11 @@
     <EmbeddedResource Include="Apresentacao\CadastrarSensor.resx">
       <DependentUpon>CadastrarSensor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\Registro.resx">
-      <DependentUpon>Registro.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\RegistroCamera.resx">
+      <DependentUpon>RegistroCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\RegistroSensor.resx">
+      <DependentUpon>RegistroSensor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\Tela_inicial.resx">
       <DependentUpon>Tela_inicial.cs</DependentUpon>
@@ -114,6 +128,17 @@
     </None>
     <None Include="lasertechbrasilDataSet.xss">
       <DependentUpon>lasertechbrasilDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet1.xsc">
+      <DependentUpon>lasertechbrasilDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lasertechbrasilDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lasertechbrasilDataSet1.xss">
+      <DependentUpon>lasertechbrasilDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

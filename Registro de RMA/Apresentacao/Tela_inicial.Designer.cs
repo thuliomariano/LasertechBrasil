@@ -78,8 +78,9 @@
             // 
             // sensorToolStripMenuItem
             // 
+            this.sensorToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.sensorToolStripMenuItem.Name = "sensorToolStripMenuItem";
-            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sensorToolStripMenuItem.Text = "Sensor";
             this.sensorToolStripMenuItem.Click += new System.EventHandler(this.sensorToolStripMenuItem_Click);
             // 

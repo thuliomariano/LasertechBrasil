@@ -21,7 +21,7 @@ namespace Registro_de_RMA
 
         private void sensorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Registro registro = new Registro();
+            RegistroSensor registro = new RegistroSensor();
             registro.ShowDialog();
         }
 

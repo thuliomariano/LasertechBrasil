@@ -1,6 +1,6 @@
 ﻿namespace Registro_de_RMA.Apresentacao
 {
-    partial class Registro
+    partial class RegistroSensor
     {
         /// <summary>
         /// Required designer variable.

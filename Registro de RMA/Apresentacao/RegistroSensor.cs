@@ -13,9 +13,9 @@ using System.Data.SqlClient;
 using Registro_de_RMA.DAL;
 namespace Registro_de_RMA.Apresentacao
 {
-    public partial class Registro : Form
+    public partial class RegistroSensor : Form
     {
-        public Registro()
+        public RegistroSensor()
         {
             InitializeComponent();
         }
