@@ -36,7 +36,7 @@ namespace Registro_de_RMA.Apresentacao
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-
+/*
             DateTime date1 = DateTime.Now;
             DateTime date2 = DateTime.Parse("2019-08-12 18:00:15");
 
@@ -59,6 +59,7 @@ namespace Registro_de_RMA.Apresentacao
             controle.CadastrarSensor(sensor);
             MessageBox.Show(controle.Mensagem);
             this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
+            */
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -91,11 +92,12 @@ namespace Registro_de_RMA.Apresentacao
 
         private void btnConsultarSerie_Click(object sender, EventArgs e)
         {
-            this.sensorTableAdapter.ConsultaNs(lasertechbrasilDataSet.Sensor, "%" + txtConsulta + "%");
+            this.sensorTableAdapter.ConsultaNs(lasertechbrasilDataSet.Sensor, "%" + txtConsulta.Text + "%");
         }
 
         private void btnDeletarSerie_Click(object sender, EventArgs e)
         {
+            /*
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
 
@@ -103,10 +105,12 @@ namespace Registro_de_RMA.Apresentacao
             controle.DeletarSensor(sensor);
             MessageBox.Show(controle.Mensagem);
             this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
+            */
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            /*
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
 
@@ -123,6 +127,7 @@ namespace Registro_de_RMA.Apresentacao
             controle.AtualizarPorId(sensor);
             MessageBox.Show(controle.Mensagem);
             this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
+            */
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -132,6 +137,7 @@ namespace Registro_de_RMA.Apresentacao
 
         private void button2_Click(object sender, EventArgs e)
         {
+            /*
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
             sensor.IdSensor =  Convert.ToInt32(txtId.Text);
@@ -146,21 +152,31 @@ namespace Registro_de_RMA.Apresentacao
             txtObservacao.Text = sensor.Observacao;
             txtPatrimonio.Text = sensor.Patrimonio.ToString();
                 
-
+    */
 
         }
 
         private void consultaNsToolStripButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.sensorTableAdapter.ConsultaNs(this.lasertechbrasilDataSet.Sensor, numeroDeSerieToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void toolStripLabel3_Click(object sender, EventArgs e)
+        {
+            CadastrarSensor cadastrar = new CadastrarSensor();
+            cadastrar.ShowDialog();
+            this.sensorTableAdapter.FillBy(this.lasertechbrasilDataSet.Sensor);
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            AtualizarSensor atualizar = new AtualizarSensor();
+            atualizar.ShowDialog();
         }
     }
 }

@@ -29,56 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtApontamentos = new System.Windows.Forms.TextBox();
-            this.txtObservacao = new System.Windows.Forms.TextBox();
-            this.txtPatrimonio = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblPatrimonio = new System.Windows.Forms.Label();
-            this.btnAtualizar = new System.Windows.Forms.Button();
-            this.txtApontamento = new System.Windows.Forms.TextBox();
-            this.lblApontamento = new System.Windows.Forms.Label();
-            this.lblOs = new System.Windows.Forms.Label();
-            this.txtOrdemDeServico = new System.Windows.Forms.TextBox();
-            this.lblRecebimento = new System.Windows.Forms.Label();
-            this.txtRecebimento = new System.Windows.Forms.TextBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.txtRma = new System.Windows.Forms.TextBox();
-            this.lblRma = new System.Windows.Forms.Label();
-            this.lblCliente = new System.Windows.Forms.Label();
-            this.txtCliente = new System.Windows.Forms.TextBox();
-            this.lblNumeroDeSerie = new System.Windows.Forms.Label();
-            this.txtSerie = new System.Windows.Forms.TextBox();
             this.btnConsultarSerie = new System.Windows.Forms.Button();
             this.txtConsulta = new System.Windows.Forms.TextBox();
-            this.btnDeletarSerie = new System.Windows.Forms.Button();
             this.lblDataDeEntrada = new System.Windows.Forms.Label();
             this.lblDataDeSaida = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblItem = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnConsultarData = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSolucao = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblItem = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.consultaNsToolStrip = new System.Windows.Forms.ToolStrip();
-            this.numeroDeSerieToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.numeroDeSerieToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.consultaNsToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,17 +59,31 @@
             this.statusDaOsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sensorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lasertechbrasilDataSet = new Registro_de_RMA.lasertechbrasilDataSet();
+            this.label1 = new System.Windows.Forms.Label();
             this.sensorTableAdapter = new Registro_de_RMA.lasertechbrasilDataSetTableAdapters.SensorTableAdapter();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.consultaNsToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sensorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,9 +100,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Registro_de_RMA.Properties.Resources.LTI_Logo;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(279, 63);
+            this.pictureBox3.Size = new System.Drawing.Size(279, 70);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
@@ -133,241 +114,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtSolucao);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtStatus);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.btnDeletarSerie);
-            this.groupBox1.Controls.Add(this.txtId);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtApontamentos);
-            this.groupBox1.Controls.Add(this.txtObservacao);
-            this.groupBox1.Controls.Add(this.txtPatrimonio);
-            this.groupBox1.Controls.Add(this.btnCadastrar);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.lblPatrimonio);
-            this.groupBox1.Controls.Add(this.btnAtualizar);
-            this.groupBox1.Controls.Add(this.txtApontamento);
-            this.groupBox1.Controls.Add(this.lblApontamento);
-            this.groupBox1.Controls.Add(this.lblOs);
-            this.groupBox1.Controls.Add(this.txtOrdemDeServico);
-            this.groupBox1.Controls.Add(this.lblRecebimento);
-            this.groupBox1.Controls.Add(this.txtRecebimento);
-            this.groupBox1.Controls.Add(this.txtRma);
-            this.groupBox1.Controls.Add(this.lblRma);
-            this.groupBox1.Controls.Add(this.lblCliente);
-            this.groupBox1.Controls.Add(this.txtCliente);
-            this.groupBox1.Controls.Add(this.lblNumeroDeSerie);
-            this.groupBox1.Controls.Add(this.txtSerie);
-            this.groupBox1.Location = new System.Drawing.Point(12, 79);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(650, 262);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Registrar";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(246, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.SystemColors.Info;
-            this.txtId.Location = new System.Drawing.Point(112, 17);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(121, 20);
-            this.txtId.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "ID";
-            // 
-            // txtApontamentos
-            // 
-            this.txtApontamentos.BackColor = System.Drawing.SystemColors.Info;
-            this.txtApontamentos.Location = new System.Drawing.Point(114, 173);
-            this.txtApontamentos.Name = "txtApontamentos";
-            this.txtApontamentos.Size = new System.Drawing.Size(202, 20);
-            this.txtApontamentos.TabIndex = 21;
-            this.txtApontamentos.Text = "AP-";
-            // 
-            // txtObservacao
-            // 
-            this.txtObservacao.BackColor = System.Drawing.SystemColors.Info;
-            this.txtObservacao.Location = new System.Drawing.Point(327, 69);
-            this.txtObservacao.Multiline = true;
-            this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(317, 73);
-            this.txtObservacao.TabIndex = 20;
-            // 
-            // txtPatrimonio
-            // 
-            this.txtPatrimonio.BackColor = System.Drawing.SystemColors.Info;
-            this.txtPatrimonio.Location = new System.Drawing.Point(114, 199);
-            this.txtPatrimonio.Name = "txtPatrimonio";
-            this.txtPatrimonio.Size = new System.Drawing.Size(121, 20);
-            this.txtPatrimonio.TabIndex = 19;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(324, 50);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 13);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Problema";
-            // 
-            // lblPatrimonio
-            // 
-            this.lblPatrimonio.AutoSize = true;
-            this.lblPatrimonio.Location = new System.Drawing.Point(19, 206);
-            this.lblPatrimonio.Name = "lblPatrimonio";
-            this.lblPatrimonio.Size = new System.Drawing.Size(56, 13);
-            this.lblPatrimonio.TabIndex = 17;
-            this.lblPatrimonio.Text = "Patrimônio";
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Location = new System.Drawing.Point(327, 15);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnAtualizar.TabIndex = 16;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
-            // txtApontamento
-            // 
-            this.txtApontamento.BackColor = System.Drawing.SystemColors.Info;
-            this.txtApontamento.Location = new System.Drawing.Point(787, 320);
-            this.txtApontamento.Name = "txtApontamento";
-            this.txtApontamento.Size = new System.Drawing.Size(134, 20);
-            this.txtApontamento.TabIndex = 15;
-            // 
-            // lblApontamento
-            // 
-            this.lblApontamento.AutoSize = true;
-            this.lblApontamento.Location = new System.Drawing.Point(19, 180);
-            this.lblApontamento.Name = "lblApontamento";
-            this.lblApontamento.Size = new System.Drawing.Size(70, 13);
-            this.lblApontamento.TabIndex = 14;
-            this.lblApontamento.Text = "Apontamento";
-            // 
-            // lblOs
-            // 
-            this.lblOs.AutoSize = true;
-            this.lblOs.Location = new System.Drawing.Point(16, 155);
-            this.lblOs.Name = "lblOs";
-            this.lblOs.Size = new System.Drawing.Size(92, 13);
-            this.lblOs.TabIndex = 12;
-            this.lblOs.Text = "Ordem de Serviço";
-            // 
-            // txtOrdemDeServico
-            // 
-            this.txtOrdemDeServico.BackColor = System.Drawing.SystemColors.Info;
-            this.txtOrdemDeServico.Location = new System.Drawing.Point(114, 148);
-            this.txtOrdemDeServico.Name = "txtOrdemDeServico";
-            this.txtOrdemDeServico.Size = new System.Drawing.Size(202, 20);
-            this.txtOrdemDeServico.TabIndex = 13;
-            this.txtOrdemDeServico.Text = "OS-";
-            // 
-            // lblRecebimento
-            // 
-            this.lblRecebimento.AutoSize = true;
-            this.lblRecebimento.Location = new System.Drawing.Point(16, 129);
-            this.lblRecebimento.Name = "lblRecebimento";
-            this.lblRecebimento.Size = new System.Drawing.Size(70, 13);
-            this.lblRecebimento.TabIndex = 10;
-            this.lblRecebimento.Text = "Recebimento";
-            // 
-            // txtRecebimento
-            // 
-            this.txtRecebimento.BackColor = System.Drawing.SystemColors.Info;
-            this.txtRecebimento.Location = new System.Drawing.Point(114, 122);
-            this.txtRecebimento.Name = "txtRecebimento";
-            this.txtRecebimento.Size = new System.Drawing.Size(202, 20);
-            this.txtRecebimento.TabIndex = 11;
-            this.txtRecebimento.Text = "321";
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Location = new System.Drawing.Point(408, 14);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrar.TabIndex = 0;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // txtRma
-            // 
-            this.txtRma.BackColor = System.Drawing.SystemColors.Info;
-            this.txtRma.Location = new System.Drawing.Point(114, 95);
-            this.txtRma.Name = "txtRma";
-            this.txtRma.Size = new System.Drawing.Size(134, 20);
-            this.txtRma.TabIndex = 9;
-            this.txtRma.Text = "RMA-";
-            // 
-            // lblRma
-            // 
-            this.lblRma.AutoSize = true;
-            this.lblRma.Location = new System.Drawing.Point(18, 101);
-            this.lblRma.Name = "lblRma";
-            this.lblRma.Size = new System.Drawing.Size(31, 13);
-            this.lblRma.TabIndex = 8;
-            this.lblRma.Text = "RMA";
-            // 
-            // lblCliente
-            // 
-            this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(15, 76);
-            this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(39, 13);
-            this.lblCliente.TabIndex = 6;
-            this.lblCliente.Text = "Cliente";
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.BackColor = System.Drawing.SystemColors.Info;
-            this.txtCliente.Location = new System.Drawing.Point(114, 69);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(202, 20);
-            this.txtCliente.TabIndex = 7;
-            this.txtCliente.Text = "Lasertech";
-            // 
-            // lblNumeroDeSerie
-            // 
-            this.lblNumeroDeSerie.AutoSize = true;
-            this.lblNumeroDeSerie.Location = new System.Drawing.Point(13, 50);
-            this.lblNumeroDeSerie.Name = "lblNumeroDeSerie";
-            this.lblNumeroDeSerie.Size = new System.Drawing.Size(59, 13);
-            this.lblNumeroDeSerie.TabIndex = 5;
-            this.lblNumeroDeSerie.Text = "Nº de série";
-            // 
-            // txtSerie
-            // 
-            this.txtSerie.BackColor = System.Drawing.SystemColors.Info;
-            this.txtSerie.Location = new System.Drawing.Point(114, 43);
-            this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(121, 20);
-            this.txtSerie.TabIndex = 5;
-            this.txtSerie.Text = "DS";
             // 
             // btnConsultarSerie
             // 
@@ -385,16 +131,6 @@
             this.txtConsulta.Name = "txtConsulta";
             this.txtConsulta.Size = new System.Drawing.Size(306, 20);
             this.txtConsulta.TabIndex = 3;
-            // 
-            // btnDeletarSerie
-            // 
-            this.btnDeletarSerie.Location = new System.Drawing.Point(489, 14);
-            this.btnDeletarSerie.Name = "btnDeletarSerie";
-            this.btnDeletarSerie.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletarSerie.TabIndex = 5;
-            this.btnDeletarSerie.Text = "Deletar";
-            this.btnDeletarSerie.UseVisualStyleBackColor = true;
-            this.btnDeletarSerie.Click += new System.EventHandler(this.btnDeletarSerie_Click);
             // 
             // lblDataDeEntrada
             // 
@@ -430,21 +166,31 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Controls.Add(this.lblItem);
             this.groupBox4.Controls.Add(this.txtConsulta);
             this.groupBox4.Controls.Add(this.btnConsultarSerie);
-            this.groupBox4.Location = new System.Drawing.Point(683, 86);
+            this.groupBox4.Location = new System.Drawing.Point(12, 108);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(331, 107);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Consulta por DS";
             // 
+            // lblItem
+            // 
+            this.lblItem.AutoSize = true;
+            this.lblItem.Location = new System.Drawing.Point(6, 17);
+            this.lblItem.Name = "lblItem";
+            this.lblItem.Size = new System.Drawing.Size(59, 13);
+            this.lblItem.TabIndex = 29;
+            this.lblItem.Text = "Nº de série";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(958, 337);
+            this.button1.Location = new System.Drawing.Point(1157, 214);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(293, 23);
+            this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "Listar tudo";
             this.button1.UseVisualStyleBackColor = true;
@@ -457,9 +203,9 @@
             this.groupBox5.Controls.Add(this.lblDataDeEntrada);
             this.groupBox5.Controls.Add(this.lblDataDeSaida);
             this.groupBox5.Controls.Add(this.dateTimePicker1);
-            this.groupBox5.Location = new System.Drawing.Point(683, 208);
+            this.groupBox5.Location = new System.Drawing.Point(377, 108);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(331, 98);
+            this.groupBox5.Size = new System.Drawing.Size(332, 107);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Consulta por data";
@@ -494,12 +240,20 @@
             this.dataDeSaidaDataGridViewTextBoxColumn,
             this.statusDaOsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.sensorBindingSource;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 366);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 243);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1239, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(1237, 382);
             this.dataGridView1.TabIndex = 16;
             // 
             // Column1
@@ -508,99 +262,6 @@
             this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 350);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Historico";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.BackColor = System.Drawing.SystemColors.Info;
-            this.txtStatus.Location = new System.Drawing.Point(114, 225);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(121, 20);
-            this.txtStatus.TabIndex = 25;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 232);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Status";
-            // 
-            // txtSolucao
-            // 
-            this.txtSolucao.BackColor = System.Drawing.SystemColors.Info;
-            this.txtSolucao.Location = new System.Drawing.Point(327, 173);
-            this.txtSolucao.Multiline = true;
-            this.txtSolucao.Name = "txtSolucao";
-            this.txtSolucao.Size = new System.Drawing.Size(317, 72);
-            this.txtSolucao.TabIndex = 27;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(324, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Solução";
-            // 
-            // lblItem
-            // 
-            this.lblItem.AutoSize = true;
-            this.lblItem.Location = new System.Drawing.Point(6, 17);
-            this.lblItem.Name = "lblItem";
-            this.lblItem.Size = new System.Drawing.Size(59, 13);
-            this.lblItem.TabIndex = 29;
-            this.lblItem.Text = "Nº de série";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(1176, 732);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 43);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Fechar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // consultaNsToolStrip
-            // 
-            this.consultaNsToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.numeroDeSerieToolStripLabel,
-            this.numeroDeSerieToolStripTextBox,
-            this.consultaNsToolStripButton});
-            this.consultaNsToolStrip.Location = new System.Drawing.Point(0, 76);
-            this.consultaNsToolStrip.Name = "consultaNsToolStrip";
-            this.consultaNsToolStrip.Size = new System.Drawing.Size(1271, 25);
-            this.consultaNsToolStrip.TabIndex = 17;
-            this.consultaNsToolStrip.Text = "consultaNsToolStrip";
-            // 
-            // numeroDeSerieToolStripLabel
-            // 
-            this.numeroDeSerieToolStripLabel.Name = "numeroDeSerieToolStripLabel";
-            this.numeroDeSerieToolStripLabel.Size = new System.Drawing.Size(93, 22);
-            this.numeroDeSerieToolStripLabel.Text = "NumeroDeSerie:";
-            // 
-            // numeroDeSerieToolStripTextBox
-            // 
-            this.numeroDeSerieToolStripTextBox.Name = "numeroDeSerieToolStripTextBox";
-            this.numeroDeSerieToolStripTextBox.Size = new System.Drawing.Size(100, 25);
-            // 
-            // consultaNsToolStripButton
-            // 
-            this.consultaNsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.consultaNsToolStripButton.Name = "consultaNsToolStripButton";
-            this.consultaNsToolStripButton.Size = new System.Drawing.Size(72, 22);
-            this.consultaNsToolStripButton.Text = "ConsultaNs";
-            this.consultaNsToolStripButton.Click += new System.EventHandler(this.consultaNsToolStripButton_Click);
             // 
             // numeroDataGridViewTextBoxColumn
             // 
@@ -689,41 +350,172 @@
             this.lasertechbrasilDataSet.DataSetName = "lasertechbrasilDataSet";
             this.lasertechbrasilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 227);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Historico";
+            // 
             // sensorTableAdapter
             // 
             this.sensorTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel3,
+            this.toolStripSeparator1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 76);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1271, 25);
+            this.toolStrip1.TabIndex = 17;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Image = global::Registro_de_RMA.Properties.Resources.kisspng_computer_icons_plus_sign_clip_art_plus_sign_5b4bfbdff0b3a7_2950963015317063359859;
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(73, 22);
+            this.toolStripLabel3.Text = "Cadastrar";
+            this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Image = global::Registro_de_RMA.Properties.Resources.kisspng_computer_icons_button_update_clip_art_alexis_snchez_5b516c3b6d9af0_831798481532062779449;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(69, 22);
+            this.toolStripLabel1.Text = "Atualizar";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::Registro_de_RMA.Properties.Resources.exit_97636_960_720;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(1174, 631);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 74);
+            this.button3.TabIndex = 13;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Location = new System.Drawing.Point(734, 108);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(304, 107);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cosulta avançada";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Status",
+            "RMA",
+            "Recebimento",
+            "OS",
+            "AP",
+            "Nº de serie"});
+            this.comboBox1.Location = new System.Drawing.Point(9, 36);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(147, 21);
+            this.comboBox1.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(162, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Item";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(162, 36);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(134, 20);
+            this.textBox2.TabIndex = 30;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Tipo de consulta";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(221, 71);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Consultar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(90, 64);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 30;
+            this.button4.Text = "Excluir";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1271, 795);
-            this.Controls.Add(this.consultaNsToolStrip);
+            this.ClientSize = new System.Drawing.Size(1271, 717);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "Registro";
-            this.Text = "Problema";
+            this.Text = "Consulta avançada";
             this.Load += new System.EventHandler(this.Registro_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.consultaNsToolStrip.ResumeLayout(false);
-            this.consultaNsToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sensorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -733,28 +525,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtObservacao;
-        private System.Windows.Forms.TextBox txtPatrimonio;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lblPatrimonio;
-        private System.Windows.Forms.Button btnAtualizar;
-        private System.Windows.Forms.TextBox txtApontamento;
-        private System.Windows.Forms.Label lblApontamento;
-        private System.Windows.Forms.Label lblOs;
-        private System.Windows.Forms.TextBox txtOrdemDeServico;
-        private System.Windows.Forms.Label lblRecebimento;
-        private System.Windows.Forms.TextBox txtRecebimento;
-        private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.TextBox txtRma;
-        private System.Windows.Forms.Label lblRma;
-        private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.Label lblNumeroDeSerie;
-        private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.Button btnConsultarSerie;
         private System.Windows.Forms.TextBox txtConsulta;
-        private System.Windows.Forms.Button btnDeletarSerie;
         private System.Windows.Forms.Label lblDataDeEntrada;
         private System.Windows.Forms.Label lblDataDeSaida;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -762,7 +534,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnConsultarData;
-        private System.Windows.Forms.TextBox txtApontamentos;
         private System.Windows.Forms.DataGridView dataGridView1;
         private lasertechbrasilDataSet lasertechbrasilDataSet;
         private System.Windows.Forms.BindingSource sensorBindingSource;
@@ -781,19 +552,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDeEntradaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDeSaidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDaOsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtSolucao;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtStatus;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblItem;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ToolStrip consultaNsToolStrip;
-        private System.Windows.Forms.ToolStripLabel numeroDeSerieToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox numeroDeSerieToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton consultaNsToolStripButton;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button4;
     }
 }

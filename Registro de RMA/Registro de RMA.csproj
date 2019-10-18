@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apresentacao\AtualizarSensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\AtualizarSensor.Designer.cs">
+      <DependentUpon>AtualizarSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\CadastrarSensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\CadastrarSensor.Designer.cs">
+      <DependentUpon>CadastrarSensor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apresentacao\Tela_inicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,12 @@
     <Compile Include="Modelo\Validacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Apresentacao\AtualizarSensor.resx">
+      <DependentUpon>AtualizarSensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\CadastrarSensor.resx">
+      <DependentUpon>CadastrarSensor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +134,23 @@
   <ItemGroup>
     <None Include="Resources\LTI_Logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\exit-97636_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wipe-97583_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-plus-sign-clip-art-plus-sign-5b4bfbdff0b3a7.2950963015317063359859.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-button-update-clip-art-alexis-snchez-5b516c3b6d9af0.831798481532062779449.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon-11.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
