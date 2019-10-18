@@ -28,7 +28,15 @@ namespace Registro_de_RMA.Apresentacao
             sensor.Observacao = txtObservacao.Text.ToUpper();
             sensor.Os = "OS-" + txtOrdemDeServico.Text.ToUpper();
             sensor.Apontamento = "AP-" + txtApontamentos.Text.ToUpper();
+            try
+            {
             sensor.Patrimonio = Convert.ToInt32(txtPatrimonio.Text);
+            }
+            catch (Exception)
+            {
+
+              
+            }
             sensor.DataDeEntrada = d1;
             sensor.DataDeSaida = "";
             sensor.Status = "ABERTO";

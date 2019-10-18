@@ -79,14 +79,14 @@
             // sensorToolStripMenuItem
             // 
             this.sensorToolStripMenuItem.Name = "sensorToolStripMenuItem";
-            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.sensorToolStripMenuItem.Text = "Sensor";
             this.sensorToolStripMenuItem.Click += new System.EventHandler(this.sensorToolStripMenuItem_Click);
             // 
             // cÇAmeraToolStripMenuItem
             // 
             this.cÇAmeraToolStripMenuItem.Name = "cÇAmeraToolStripMenuItem";
-            this.cÇAmeraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cÇAmeraToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.cÇAmeraToolStripMenuItem.Text = "Câmera";
             this.cÇAmeraToolStripMenuItem.Click += new System.EventHandler(this.cÇAmeraToolStripMenuItem_Click);
             // 
@@ -129,6 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1159, 580);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);

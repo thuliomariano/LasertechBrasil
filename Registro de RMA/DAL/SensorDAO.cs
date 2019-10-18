@@ -64,7 +64,7 @@ namespace Registro_de_RMA.DAL
             return mensagem;
         }
 
-        public String DeletarSensor(Sensor sensor)
+       /* public String DeletarSensor(Sensor sensor)
         {
             SqlCommand cmd = new SqlCommand();
             Conexao con = new Conexao();
@@ -87,7 +87,7 @@ namespace Registro_de_RMA.DAL
                
             }
             return mensagem;
-        }
+        }*/
 
         public String AtualizarPorId(Sensor sensor)
         {
@@ -125,6 +125,40 @@ namespace Registro_de_RMA.DAL
 
             return mensagem;
         }
+        public String AtualizarStatus(Sensor sensor)
+        {
+            Conexao con = new Conexao();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = @"update sensor set statusDaOs = @status, dataDeSaida = @datas, observacao = @observacao where idSensor = @id";
+
+            cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
+            cmd.Parameters.AddWithValue("@status", sensor.Status);
+            cmd.Parameters.AddWithValue("@observacao", sensor.Observacao);
+            cmd.Parameters.AddWithValue("@datas", sensor.DataDeSaida);
+
+
+            try
+            {
+                cmd.Connection = con.Conectar();
+                cmd.ExecuteNonQuery();
+                mensagem = "Atualização realizada com sucesso";
+
+            }
+            catch (Exception)
+            {
+
+                mensagem = "Erro de conexão com o banco de dados";
+            }
+            finally
+            {
+                con.Desconectar();
+            }
+
+            return mensagem;
+        }
+
+        /*
         public Sensor BuscarPorID(Sensor sensor)
         {
             SqlCommand cmd = new SqlCommand();
@@ -170,36 +204,9 @@ namespace Registro_de_RMA.DAL
             }
             return sensor;
         }
+        */
+         
 
-        public String AtualizarStatus(Sensor sensor)
-        {
-            Conexao con = new Conexao();
-            SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = @"update sensor set statusDaOs = @status, observacao = @observacao where idSensor = @id";
-            cmd.Parameters.AddWithValue("@status", sensor.Status);
-            cmd.Parameters.AddWithValue("@observacao", sensor.Observacao);
-            cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
-
-            try
-            {
-                cmd.Connection = con.Conectar();
-                cmd.ExecuteNonQuery();
-                mensagem = "Atualização realizada com sucesso";
-
-            }
-            catch (Exception)
-            {
-
-                mensagem = "Erro de conexão com o banco de dados";
-            }
-            finally
-            {
-                con.Desconectar();
-            }
-
-            return mensagem;
-        }
-        
     }
 }

@@ -24,7 +24,7 @@ namespace Registro_de_RMA.Apresentacao
             Controle controle = new Controle();
 
             DateTime d1 = DateTime.Now;
-            String date = d1.ToString("yyyy-MM-dd HH:mm:ss");
+            String date = d1.ToString("yyyy-dd-MM HH:mm:ss");
 
             sensor.IdSensor = Convert.ToInt32(txtId.Text.ToUpper());
             sensor.Status = comboBox1.Text.ToUpper();

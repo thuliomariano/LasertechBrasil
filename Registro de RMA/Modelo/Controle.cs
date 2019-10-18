@@ -30,20 +30,7 @@ namespace Registro_de_RMA.Modelo
             return Mensagem;
         }
 
-       public String DeletarSensor(Sensor sensor)
-        {
-            Validacao validacao = new Validacao(sensor);
-            if (validacao.Mensagem.Equals(""))
-            {
-                SensorDAO sensorDAO = new SensorDAO();
-                return Mensagem = sensorDAO.DeletarSensor(sensor);
-            }
-            else
-            {
-                Mensagem = validacao.Mensagem;
-            }
-            return mensagem;
-        }
+       
 
         public String AtualizarStatus(Sensor sensor)
         {
@@ -60,21 +47,7 @@ namespace Registro_de_RMA.Modelo
             return mensagem;
         }
 
-        public Sensor BuscaPorId(Sensor sensor)
-        {
-            Validacao validacao = new Validacao(sensor);
-            if (validacao.Mensagem.Equals(""))
-            {
-                SensorDAO sensorDAO = new SensorDAO();
-                sensorDAO.BuscarPorID(sensor);
-            }
-            else
-            {
-                Mensagem = validacao.Mensagem;
-            }
-
-            return sensor;
-        }
+      
 
        
     }
