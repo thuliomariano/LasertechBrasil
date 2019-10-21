@@ -46,34 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apresentacao\AtualizarSensor.cs">
+    <Compile Include="Entities\Enum\OrderStatus.cs" />
+    <Compile Include="Views\AtualizarSensor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\AtualizarSensor.Designer.cs">
+    <Compile Include="Views\AtualizarSensor.Designer.cs">
       <DependentUpon>AtualizarSensor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\CadastrarSensor.cs">
+    <Compile Include="Views\CadastrarSensor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\CadastrarSensor.Designer.cs">
+    <Compile Include="Views\CadastrarSensor.Designer.cs">
       <DependentUpon>CadastrarSensor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\RegistroCamera.cs">
+    <Compile Include="Views\RegistroCamera.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\RegistroCamera.Designer.cs">
+    <Compile Include="Views\RegistroCamera.Designer.cs">
       <DependentUpon>RegistroCamera.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\Tela_inicial.cs">
+    <Compile Include="Views\Tela_inicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\Tela_inicial.Designer.cs">
+    <Compile Include="Views\Tela_inicial.Designer.cs">
       <DependentUpon>Tela_inicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\RegistroSensor.cs">
+    <Compile Include="Views\RegistroSensor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\RegistroSensor.Designer.cs">
+    <Compile Include="Views\RegistroSensor.Designer.cs">
       <DependentUpon>RegistroSensor.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Conexao.cs" />
@@ -88,24 +89,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lasertechbrasilDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Modelo\Controle.cs" />
-    <Compile Include="Modelo\Sensor.cs" />
-    <Compile Include="Modelo\Validacao.cs" />
+    <Compile Include="Controller\Controle.cs" />
+    <Compile Include="Entities\Sensor.cs" />
+    <Compile Include="Controller\Validacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Apresentacao\AtualizarSensor.resx">
+    <EmbeddedResource Include="Views\AtualizarSensor.resx">
       <DependentUpon>AtualizarSensor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\CadastrarSensor.resx">
+    <EmbeddedResource Include="Views\CadastrarSensor.resx">
       <DependentUpon>CadastrarSensor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\RegistroCamera.resx">
+    <EmbeddedResource Include="Views\RegistroCamera.resx">
       <DependentUpon>RegistroCamera.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\RegistroSensor.resx">
+    <EmbeddedResource Include="Views\RegistroSensor.resx">
       <DependentUpon>RegistroSensor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\Tela_inicial.resx">
+    <EmbeddedResource Include="Views\Tela_inicial.resx">
       <DependentUpon>Tela_inicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

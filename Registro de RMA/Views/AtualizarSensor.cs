@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Registro_de_RMA.Modelo;
 
+
 namespace Registro_de_RMA.Apresentacao
 {
     public partial class AtualizarSensor : Form
@@ -27,7 +28,7 @@ namespace Registro_de_RMA.Apresentacao
             String date = d1.ToString("yyyy-dd-MM HH:mm:ss");
 
             sensor.IdSensor = Convert.ToInt32(txtId.Text.ToUpper());
-            sensor.Status = comboBox1.Text.ToUpper();
+            sensor.Status = cbStatus.Text.ToUpper();
             sensor.Observacao = txtObservacao.Text.ToUpper();
             sensor.DataDeSaida = date;
             controle.AtualizarStatus(sensor);
@@ -42,13 +43,20 @@ namespace Registro_de_RMA.Apresentacao
 
         private void AtualizarSensor_Load(object sender, EventArgs e)
         {
-          
+            cbStatus.DataSource = Enum.GetValues(typeof(Entities.Enum.OrderStatus));
+            
+            
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtId.Text = "";
             txtObservacao.Text = "";
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
