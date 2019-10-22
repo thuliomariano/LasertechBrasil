@@ -105,12 +105,14 @@ namespace Registro_de_RMA.DAL
             Conexao con = new Conexao();
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = @"update sensor set statusDaOs = @status, dataDeSaida = @datas, observacao = @observacao where idSensor = @id";
+            cmd.CommandText = @"update sensor set statusDaOs = @status, dataDeSaida = @datas, observacao = @observacao, preco = @preco, informacoeslti = @lti where idSensor = @id";
 
             cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
             cmd.Parameters.AddWithValue("@status", sensor.Status);
             cmd.Parameters.AddWithValue("@observacao", sensor.Observacao);
             cmd.Parameters.AddWithValue("@datas", sensor.DataDeSaida);
+            cmd.Parameters.AddWithValue("@preco", sensor.SensorPrice);
+            cmd.Parameters.AddWithValue("@Lti", sensor.Lti);
 
 
             try

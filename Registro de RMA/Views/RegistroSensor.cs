@@ -26,11 +26,11 @@ namespace Registro_de_RMA.Apresentacao
             this.sensorTableAdapter.Fill(this.lasertechbrasilDataSet.Sensor);
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
+            cbStatus.DataSource = Enum.GetValues(typeof(Entities.Enum.OrderStatus));
 
-         
-           
-               
-            
+
+
+
 
         }
 
@@ -186,15 +186,18 @@ namespace Registro_de_RMA.Apresentacao
 
         private void consultaStatusToolStripButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.sensorTableAdapter.ConsultaStatus(this.lasertechbrasilDataSet.Sensor, statusToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+           
 
+        }
+
+        private void consultaStatusToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.sensorTableAdapter.ConsultaStatus(this.lasertechbrasilDataSet.Sensor, cbStatus.Text);
         }
     }
 }

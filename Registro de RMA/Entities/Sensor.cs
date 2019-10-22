@@ -23,6 +23,7 @@ namespace Registro_de_RMA.Modelo
         private String mensagem;
         private String tipo;
         private String item;
+        public String Lti { get; set; }
         public double SensorPrice { get; set; }
 
         //encapsulamento(restrição de acesso)

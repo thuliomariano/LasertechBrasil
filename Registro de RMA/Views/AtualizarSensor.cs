@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Registro_de_RMA.Modelo;
+using System;
 using System.Windows.Forms;
-using Registro_de_RMA.Modelo;
+using System.Globalization;
 
 
 namespace Registro_de_RMA.Apresentacao
@@ -31,6 +25,9 @@ namespace Registro_de_RMA.Apresentacao
             sensor.Status = cbStatus.Text.ToUpper();
             sensor.Observacao = txtObservacao.Text.ToUpper();
             sensor.DataDeSaida = date;
+            sensor.Lti = txtLti.Text;
+            sensor.SensorPrice = Convert.ToDouble(txtPreco.Text);
+            sensor.SensorPrice.ToString("F2", CultureInfo.InvariantCulture);
             controle.AtualizarStatus(sensor);
             MessageBox.Show(controle.Mensagem, "Anteção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -44,8 +41,8 @@ namespace Registro_de_RMA.Apresentacao
         private void AtualizarSensor_Load(object sender, EventArgs e)
         {
             cbStatus.DataSource = Enum.GetValues(typeof(Entities.Enum.OrderStatus));
-            
-            
+
+
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -56,7 +53,7 @@ namespace Registro_de_RMA.Apresentacao
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

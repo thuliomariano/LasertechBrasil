@@ -26,19 +26,8 @@ namespace Registro_de_RMA.Apresentacao
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                if ()
-                {
-
-                }
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            
+            
         }
     }
 }
