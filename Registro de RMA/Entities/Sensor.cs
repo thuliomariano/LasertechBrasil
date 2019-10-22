@@ -20,10 +20,10 @@ namespace Registro_de_RMA.Modelo
         private String observacao;
         private String dataDeEntrada;
         private String dataDeSaida;
-        private String status;
         private String mensagem;
         private String tipo;
         private String item;
+        public double SensorPrice { get; set; }
 
         //encapsulamento(restrição de acesso)
         public int IdSensor { get => idSensor; set => idSensor = value; }
@@ -37,9 +37,10 @@ namespace Registro_de_RMA.Modelo
         public string Observacao { get => observacao; set => observacao = value; }
         public String DataDeEntrada { get => dataDeEntrada; set => dataDeEntrada = value; }
         public String DataDeSaida { get => dataDeSaida; set => dataDeSaida = value; }
-        public string Status { get => status; set => status = value; }
+        public string Status { get; set; }
         public string Mensagem { get => mensagem; set => mensagem = value; }
         public string Tipo { get => tipo; set => tipo = value; }
         public string Item { get => item; set => item = value; }
+        
     }
 }

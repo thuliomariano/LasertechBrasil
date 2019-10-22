@@ -64,31 +64,6 @@ namespace Registro_de_RMA.DAL
             return mensagem;
         }
 
-       /* public String DeletarSensor(Sensor sensor)
-        {
-            SqlCommand cmd = new SqlCommand();
-            Conexao con = new Conexao();
-
-            cmd.CommandText = @"delete from sensor where idsensor = @id";
-
-            cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
-
-            try
-            {
-                cmd.Connection = con.Conectar();
-                cmd.ExecuteNonQuery();
-                mensagem = "Deletado com sucesso!";
-
-            }
-            catch (Exception)
-            {
-                con.Desconectar();
-                mensagem = "Erro  de comunicação com o banco de dados!";
-               
-            }
-            return mensagem;
-        }*/
-
         public String AtualizarPorId(Sensor sensor)
         {
             SqlCommand cmd = new SqlCommand();
@@ -157,56 +132,6 @@ namespace Registro_de_RMA.DAL
 
             return mensagem;
         }
-
-        /*
-        public Sensor BuscarPorID(Sensor sensor)
-        {
-            SqlCommand cmd = new SqlCommand();
-            Conexao con = new Conexao();
-
-            cmd.CommandText = @"select * from sensor where idsensor = @id";
-
-            cmd.Parameters.AddWithValue("@id", sensor.IdSensor);
-
-            cmd.Connection = con.Conectar();
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-            try
-            {
-                if (dr.HasRows)
-                {
-                    dr.Read();
-                    sensor.NumeroDeSerie = dr["numero"].ToString();
-                    sensor.Cliente = dr["cliente"].ToString();
-                    sensor.Rma = dr["rma"].ToString();
-                    sensor.Patrimonio = Convert.ToInt32(dr["patrimonio"]);
-                    sensor.Recebimento = dr["recebimento"].ToString();
-                    sensor.Os = dr["os"].ToString();
-                    sensor.Apontamento = dr["apontamento"].ToString();
-                    sensor.Observacao = dr["observacao"].ToString();
-
-                }
-                else
-                {
-                    sensor.IdSensor = 0;
-                }
-
-            }
-            catch (Exception)
-            {
-
-                //não ira mensagem por se tratar de leitura de dados
-            }
-            finally
-            {
-                dr.Close();
-                con.Desconectar();
-            }
-            return sensor;
-        }
-        */
-         
-
 
     }
 }

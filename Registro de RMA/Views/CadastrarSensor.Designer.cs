@@ -30,6 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtApontamentos = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.txtPatrimonio = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -46,12 +47,11 @@
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
             this.txtSerie = new System.Windows.Forms.TextBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -81,7 +81,7 @@
             this.groupBox1.Controls.Add(this.txtSerie);
             this.groupBox1.Location = new System.Drawing.Point(23, 82);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(504, 342);
+            this.groupBox1.Size = new System.Drawing.Size(422, 342);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
@@ -94,13 +94,24 @@
             this.txtApontamentos.Size = new System.Drawing.Size(202, 20);
             this.txtApontamentos.TabIndex = 6;
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.Location = new System.Drawing.Point(324, 286);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(79, 38);
+            this.btnCadastrar.TabIndex = 9;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // txtObservacao
             // 
             this.txtObservacao.BackColor = System.Drawing.SystemColors.Info;
             this.txtObservacao.Location = new System.Drawing.Point(24, 213);
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(474, 67);
+            this.txtObservacao.Size = new System.Drawing.Size(379, 67);
             this.txtObservacao.TabIndex = 8;
             // 
             // txtPatrimonio
@@ -231,17 +242,6 @@
             this.txtSerie.Size = new System.Drawing.Size(121, 20);
             this.txtSerie.TabIndex = 1;
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Location = new System.Drawing.Point(419, 295);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(79, 38);
-            this.btnCadastrar.TabIndex = 9;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -251,8 +251,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(539, 76);
+            this.panel1.Size = new System.Drawing.Size(463, 76);
             this.panel1.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(297, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(167, 24);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Cadastrar sensor";
             // 
             // pictureBox3
             // 
@@ -278,7 +289,7 @@
             this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(437, 15);
+            this.btnLimpar.Location = new System.Drawing.Point(352, 15);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(51, 46);
             this.btnLimpar.TabIndex = 10;
@@ -286,22 +297,11 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(297, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 24);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Cadastrar sensor";
-            // 
             // CadastrarSensor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 433);
+            this.ClientSize = new System.Drawing.Size(463, 436);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "CadastrarSensor";

@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Arm.cs" />
+    <Compile Include="Entities\Camera.cs" />
     <Compile Include="Entities\Enum\OrderStatus.cs" />
     <Compile Include="Views\AtualizarSensor.cs">
       <SubType>Form</SubType>
@@ -53,11 +55,23 @@
     <Compile Include="Views\AtualizarSensor.Designer.cs">
       <DependentUpon>AtualizarSensor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastrarArm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CadastrarArm.Designer.cs">
+      <DependentUpon>CadastrarArm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CadastrarSensor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\CadastrarSensor.Designer.cs">
       <DependentUpon>CadastrarSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegistroArm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RegistroArm.Designer.cs">
+      <DependentUpon>RegistroArm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistroCamera.cs">
       <SubType>Form</SubType>
@@ -97,8 +111,14 @@
     <EmbeddedResource Include="Views\AtualizarSensor.resx">
       <DependentUpon>AtualizarSensor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CadastrarArm.resx">
+      <DependentUpon>CadastrarArm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CadastrarSensor.resx">
       <DependentUpon>CadastrarSensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegistroArm.resx">
+      <DependentUpon>RegistroArm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RegistroCamera.resx">
       <DependentUpon>RegistroCamera.cs</DependentUpon>
@@ -180,6 +200,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\21-spotlight-256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-97636_960_7201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\777081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cm-front-icones.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

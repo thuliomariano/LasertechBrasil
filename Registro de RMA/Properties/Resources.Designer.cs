@@ -73,6 +73,26 @@ namespace Registro_de_RMA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _777081 {
+            get {
+                object obj = ResourceManager.GetObject("777081", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cm_front_icones {
+            get {
+                object obj = ResourceManager.GetObject("cm-front-icones", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_icon_1 {
             get {
                 object obj = ResourceManager.GetObject("delete-icon-1", resourceCulture);
@@ -96,6 +116,16 @@ namespace Registro_de_RMA.Properties {
         internal static System.Drawing.Bitmap exit_97636_960_720 {
             get {
                 object obj = ResourceManager.GetObject("exit-97636_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_97636_960_7201 {
+            get {
+                object obj = ResourceManager.GetObject("exit-97636_960_7201", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -27,6 +27,17 @@ namespace Registro_de_RMA
 
         private void cÇAmeraToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            RegistroCamera registroCamera = new RegistroCamera();
+            registroCamera.ShowDialog();
+        }
+
+        private void aRMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void aRMToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
 
         }
     }
