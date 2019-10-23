@@ -32,15 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.macDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.acessorioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDeEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDeSaidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cameraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lasertechbrasilDataSet1 = new Registro_de_RMA.lasertechbrasilDataSet1();
             this.cameraTableAdapter = new Registro_de_RMA.lasertechbrasilDataSet1TableAdapters.cameraTableAdapter();
@@ -51,23 +42,39 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.lasertechbrasilDataSet3 = new Registro_de_RMA.lasertechbrasilDataSet3();
+            this.lasertechbrasilDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cameraBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cameraTableAdapter1 = new Registro_de_RMA.lasertechbrasilDataSet3TableAdapters.cameraTableAdapter();
+            this.idCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.macDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.acessorioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDeEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDeSaidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet3BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cameraBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,76 +117,13 @@
             this.dataDeEntradaDataGridViewTextBoxColumn,
             this.dataDeSaidaDataGridViewTextBoxColumn,
             this.statusCameraDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.cameraBindingSource;
+            this.dataGridView1.DataSource = this.cameraBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 183);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(944, 342);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idCameraDataGridViewTextBoxColumn
-            // 
-            this.idCameraDataGridViewTextBoxColumn.DataPropertyName = "idCamera";
-            this.idCameraDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idCameraDataGridViewTextBoxColumn.Name = "idCameraDataGridViewTextBoxColumn";
-            this.idCameraDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fornecedorDataGridViewTextBoxColumn
-            // 
-            this.fornecedorDataGridViewTextBoxColumn.DataPropertyName = "Fornecedor";
-            this.fornecedorDataGridViewTextBoxColumn.HeaderText = "Fornecedor";
-            this.fornecedorDataGridViewTextBoxColumn.Name = "fornecedorDataGridViewTextBoxColumn";
-            this.fornecedorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cameraDataGridViewTextBoxColumn
-            // 
-            this.cameraDataGridViewTextBoxColumn.DataPropertyName = "camera";
-            this.cameraDataGridViewTextBoxColumn.HeaderText = "Câmera";
-            this.cameraDataGridViewTextBoxColumn.Name = "cameraDataGridViewTextBoxColumn";
-            this.cameraDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // macDataGridViewTextBoxColumn
-            // 
-            this.macDataGridViewTextBoxColumn.DataPropertyName = "mac";
-            this.macDataGridViewTextBoxColumn.HeaderText = "Mac";
-            this.macDataGridViewTextBoxColumn.Name = "macDataGridViewTextBoxColumn";
-            this.macDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // acessorioDataGridViewTextBoxColumn
-            // 
-            this.acessorioDataGridViewTextBoxColumn.DataPropertyName = "acessorio";
-            this.acessorioDataGridViewTextBoxColumn.HeaderText = "Acessório";
-            this.acessorioDataGridViewTextBoxColumn.Name = "acessorioDataGridViewTextBoxColumn";
-            this.acessorioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // observacaoDataGridViewTextBoxColumn
-            // 
-            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "observacao";
-            this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observação";
-            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
-            this.observacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataDeEntradaDataGridViewTextBoxColumn
-            // 
-            this.dataDeEntradaDataGridViewTextBoxColumn.DataPropertyName = "dataDeEntrada";
-            this.dataDeEntradaDataGridViewTextBoxColumn.HeaderText = "Data de entrada";
-            this.dataDeEntradaDataGridViewTextBoxColumn.Name = "dataDeEntradaDataGridViewTextBoxColumn";
-            this.dataDeEntradaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataDeSaidaDataGridViewTextBoxColumn
-            // 
-            this.dataDeSaidaDataGridViewTextBoxColumn.DataPropertyName = "dataDeSaida";
-            this.dataDeSaidaDataGridViewTextBoxColumn.HeaderText = "Data de saída";
-            this.dataDeSaidaDataGridViewTextBoxColumn.Name = "dataDeSaidaDataGridViewTextBoxColumn";
-            this.dataDeSaidaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusCameraDataGridViewTextBoxColumn
-            // 
-            this.statusCameraDataGridViewTextBoxColumn.DataPropertyName = "statusCamera";
-            this.statusCameraDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusCameraDataGridViewTextBoxColumn.Name = "statusCameraDataGridViewTextBoxColumn";
-            this.statusCameraDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cameraBindingSource
             // 
@@ -218,6 +162,7 @@
             // 
             // txtConsulta
             // 
+            this.txtConsulta.BackColor = System.Drawing.SystemColors.Info;
             this.txtConsulta.Location = new System.Drawing.Point(6, 36);
             this.txtConsulta.Name = "txtConsulta";
             this.txtConsulta.Size = new System.Drawing.Size(306, 20);
@@ -256,6 +201,45 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbStatus);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Location = new System.Drawing.Point(434, 108);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(248, 69);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Status da OS";
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.BackColor = System.Drawing.SystemColors.Info;
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Location = new System.Drawing.Point(9, 33);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(121, 21);
+            this.cbStatus.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Status";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(157, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Consultar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Image = global::Registro_de_RMA.Properties.Resources.kisspng_computer_icons_plus_sign_clip_art_plus_sign_5b4bfbdff0b3a7_2950963015317063359859;
@@ -288,44 +272,87 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // groupBox1
+            // lasertechbrasilDataSet3
             // 
-            this.groupBox1.Controls.Add(this.cbStatus);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(434, 108);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(248, 69);
-            this.groupBox1.TabIndex = 30;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Status da OS";
+            this.lasertechbrasilDataSet3.DataSetName = "lasertechbrasilDataSet3";
+            this.lasertechbrasilDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label1
+            // lasertechbrasilDataSet3BindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Status";
+            this.lasertechbrasilDataSet3BindingSource.DataSource = this.lasertechbrasilDataSet3;
+            this.lasertechbrasilDataSet3BindingSource.Position = 0;
             // 
-            // button1
+            // cameraBindingSource1
             // 
-            this.button1.Location = new System.Drawing.Point(157, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cameraBindingSource1.DataMember = "camera";
+            this.cameraBindingSource1.DataSource = this.lasertechbrasilDataSet3BindingSource;
             // 
-            // cbStatus
+            // cameraTableAdapter1
             // 
-            this.cbStatus.BackColor = System.Drawing.SystemColors.Info;
-            this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(9, 33);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(121, 21);
-            this.cbStatus.TabIndex = 33;
+            this.cameraTableAdapter1.ClearBeforeFill = true;
+            // 
+            // idCameraDataGridViewTextBoxColumn
+            // 
+            this.idCameraDataGridViewTextBoxColumn.DataPropertyName = "idCamera";
+            this.idCameraDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idCameraDataGridViewTextBoxColumn.Name = "idCameraDataGridViewTextBoxColumn";
+            this.idCameraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fornecedorDataGridViewTextBoxColumn
+            // 
+            this.fornecedorDataGridViewTextBoxColumn.DataPropertyName = "Fornecedor";
+            this.fornecedorDataGridViewTextBoxColumn.HeaderText = "Fornecedor";
+            this.fornecedorDataGridViewTextBoxColumn.Name = "fornecedorDataGridViewTextBoxColumn";
+            this.fornecedorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cameraDataGridViewTextBoxColumn
+            // 
+            this.cameraDataGridViewTextBoxColumn.DataPropertyName = "camera";
+            this.cameraDataGridViewTextBoxColumn.HeaderText = "Câmera";
+            this.cameraDataGridViewTextBoxColumn.Name = "cameraDataGridViewTextBoxColumn";
+            this.cameraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // macDataGridViewTextBoxColumn
+            // 
+            this.macDataGridViewTextBoxColumn.DataPropertyName = "mac";
+            this.macDataGridViewTextBoxColumn.HeaderText = "MAC";
+            this.macDataGridViewTextBoxColumn.Name = "macDataGridViewTextBoxColumn";
+            this.macDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // acessorioDataGridViewTextBoxColumn
+            // 
+            this.acessorioDataGridViewTextBoxColumn.DataPropertyName = "acessorio";
+            this.acessorioDataGridViewTextBoxColumn.HeaderText = "Acessório(s)";
+            this.acessorioDataGridViewTextBoxColumn.Name = "acessorioDataGridViewTextBoxColumn";
+            this.acessorioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // observacaoDataGridViewTextBoxColumn
+            // 
+            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "observacao";
+            this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observacao";
+            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
+            this.observacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataDeEntradaDataGridViewTextBoxColumn
+            // 
+            this.dataDeEntradaDataGridViewTextBoxColumn.DataPropertyName = "dataDeEntrada";
+            this.dataDeEntradaDataGridViewTextBoxColumn.HeaderText = "Data de entrada";
+            this.dataDeEntradaDataGridViewTextBoxColumn.Name = "dataDeEntradaDataGridViewTextBoxColumn";
+            this.dataDeEntradaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataDeSaidaDataGridViewTextBoxColumn
+            // 
+            this.dataDeSaidaDataGridViewTextBoxColumn.DataPropertyName = "dataDeSaida";
+            this.dataDeSaidaDataGridViewTextBoxColumn.HeaderText = "Data de saída";
+            this.dataDeSaidaDataGridViewTextBoxColumn.Name = "dataDeSaidaDataGridViewTextBoxColumn";
+            this.dataDeSaidaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusCameraDataGridViewTextBoxColumn
+            // 
+            this.statusCameraDataGridViewTextBoxColumn.DataPropertyName = "statusCamera";
+            this.statusCameraDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusCameraDataGridViewTextBoxColumn.Name = "statusCameraDataGridViewTextBoxColumn";
+            this.statusCameraDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // RegistroCamera
             // 
@@ -349,10 +376,13 @@
             this.groupBox4.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet3BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cameraBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,15 +398,6 @@
         private lasertechbrasilDataSet1 lasertechbrasilDataSet1;
         private System.Windows.Forms.BindingSource cameraBindingSource;
         private lasertechbrasilDataSet1TableAdapters.cameraTableAdapter cameraTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCameraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fornecedorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cameraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn macDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn acessorioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observacaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDeEntradaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDeSaidaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusCameraDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblItem;
         private System.Windows.Forms.TextBox txtConsulta;
@@ -390,5 +411,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.BindingSource lasertechbrasilDataSet3BindingSource;
+        private lasertechbrasilDataSet3 lasertechbrasilDataSet3;
+        private System.Windows.Forms.BindingSource cameraBindingSource1;
+        private lasertechbrasilDataSet3TableAdapters.cameraTableAdapter cameraTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCameraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fornecedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cameraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn macDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn acessorioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn observacaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDeEntradaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDeSaidaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusCameraDataGridViewTextBoxColumn;
     }
 }

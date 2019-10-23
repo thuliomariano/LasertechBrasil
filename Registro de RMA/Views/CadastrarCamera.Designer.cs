@@ -1,6 +1,6 @@
-﻿namespace Registro_de_RMA.Apresentacao
+﻿namespace Registro_de_RMA.Views
 {
-    partial class CadastrarSensor
+    partial class CadastrarCamera
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.txtApontamentos = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtObservacao = new System.Windows.Forms.TextBox();
@@ -42,12 +41,11 @@
             this.txtOrdemDeServico = new System.Windows.Forms.TextBox();
             this.lblRecebimento = new System.Windows.Forms.Label();
             this.txtRecebimento = new System.Windows.Forms.TextBox();
-            this.txtRma = new System.Windows.Forms.TextBox();
-            this.lblRma = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
             this.txtSerie = new System.Windows.Forms.TextBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -73,32 +71,16 @@
             this.groupBox1.Controls.Add(this.txtOrdemDeServico);
             this.groupBox1.Controls.Add(this.lblRecebimento);
             this.groupBox1.Controls.Add(this.txtRecebimento);
-            this.groupBox1.Controls.Add(this.txtRma);
-            this.groupBox1.Controls.Add(this.lblRma);
             this.groupBox1.Controls.Add(this.lblCliente);
             this.groupBox1.Controls.Add(this.txtCliente);
             this.groupBox1.Controls.Add(this.lblNumeroDeSerie);
             this.groupBox1.Controls.Add(this.txtSerie);
-            this.groupBox1.Location = new System.Drawing.Point(12, 82);
+            this.groupBox1.Location = new System.Drawing.Point(25, 96);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(408, 342);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(340, 15);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
-            this.btnLimpar.TabIndex = 10;
-            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtApontamentos
             // 
@@ -117,7 +99,6 @@
             this.btnCadastrar.TabIndex = 9;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtObservacao
             // 
@@ -205,31 +186,14 @@
             this.txtRecebimento.Size = new System.Drawing.Size(202, 20);
             this.txtRecebimento.TabIndex = 4;
             // 
-            // txtRma
-            // 
-            this.txtRma.BackColor = System.Drawing.SystemColors.Info;
-            this.txtRma.Location = new System.Drawing.Point(116, 67);
-            this.txtRma.Name = "txtRma";
-            this.txtRma.Size = new System.Drawing.Size(134, 20);
-            this.txtRma.TabIndex = 3;
-            // 
-            // lblRma
-            // 
-            this.lblRma.AutoSize = true;
-            this.lblRma.Location = new System.Drawing.Point(20, 73);
-            this.lblRma.Name = "lblRma";
-            this.lblRma.Size = new System.Drawing.Size(31, 13);
-            this.lblRma.TabIndex = 8;
-            this.lblRma.Text = "RMA";
-            // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Location = new System.Drawing.Point(17, 48);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(39, 13);
+            this.lblCliente.Size = new System.Drawing.Size(30, 13);
             this.lblCliente.TabIndex = 6;
-            this.lblCliente.Text = "Cliente";
+            this.lblCliente.Text = "MAC";
             // 
             // txtCliente
             // 
@@ -244,9 +208,9 @@
             this.lblNumeroDeSerie.AutoSize = true;
             this.lblNumeroDeSerie.Location = new System.Drawing.Point(15, 22);
             this.lblNumeroDeSerie.Name = "lblNumeroDeSerie";
-            this.lblNumeroDeSerie.Size = new System.Drawing.Size(59, 13);
+            this.lblNumeroDeSerie.Size = new System.Drawing.Size(44, 13);
             this.lblNumeroDeSerie.TabIndex = 5;
-            this.lblNumeroDeSerie.Text = "Nº de série";
+            this.lblNumeroDeSerie.Text = "Produto";
             // 
             // txtSerie
             // 
@@ -255,6 +219,19 @@
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(121, 20);
             this.txtSerie.TabIndex = 1;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpar.Location = new System.Drawing.Point(340, 15);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
+            this.btnLimpar.TabIndex = 10;
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpar.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -265,19 +242,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(458, 76);
-            this.panel1.TabIndex = 4;
+            this.panel1.Size = new System.Drawing.Size(469, 76);
+            this.panel1.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(291, 38);
+            this.label4.Location = new System.Drawing.Point(297, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 24);
+            this.label4.Size = new System.Drawing.Size(173, 24);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Cadastrar sensor";
+            this.label4.Text = "Cadastrar câmera";
             // 
             // pictureBox3
             // 
@@ -297,15 +274,15 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // CadastrarSensor
+            // CadastrarCamera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 436);
+            this.ClientSize = new System.Drawing.Size(469, 473);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "CadastrarSensor";
-            this.Text = "Cadastrar";
+            this.Name = "CadastrarCamera";
+            this.Text = "CadastrarCamera";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -321,9 +298,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.TextBox txtApontamentos;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtObservacao;
         private System.Windows.Forms.TextBox txtPatrimonio;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblPatrimonio;
         private System.Windows.Forms.TextBox txtApontamento;
@@ -332,15 +309,13 @@
         private System.Windows.Forms.TextBox txtOrdemDeServico;
         private System.Windows.Forms.Label lblRecebimento;
         private System.Windows.Forms.TextBox txtRecebimento;
-        private System.Windows.Forms.TextBox txtRma;
-        private System.Windows.Forms.Label lblRma;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label lblNumeroDeSerie;
         private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
     }
 }

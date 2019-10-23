@@ -40,5 +40,10 @@ namespace Registro_de_RMA
         {
 
         }
+
+        private void toolStripLabel1_ButtonClick(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

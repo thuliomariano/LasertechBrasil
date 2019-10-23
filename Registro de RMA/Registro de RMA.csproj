@@ -49,6 +49,16 @@
     <Compile Include="Entities\Arm.cs" />
     <Compile Include="Entities\Camera.cs" />
     <Compile Include="Entities\Enum\OrderStatus.cs" />
+    <Compile Include="lasertechbrasilDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lasertechbrasilDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lasertechbrasilDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lasertechbrasilDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Views\AtualizarSensor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +70,12 @@
     </Compile>
     <Compile Include="Views\CadastrarArm.Designer.cs">
       <DependentUpon>CadastrarArm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CadastrarCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CadastrarCamera.Designer.cs">
+      <DependentUpon>CadastrarCamera.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CadastrarSensor.cs">
       <SubType>Form</SubType>
@@ -114,6 +130,9 @@
     <EmbeddedResource Include="Views\CadastrarArm.resx">
       <DependentUpon>CadastrarArm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CadastrarCamera.resx">
+      <DependentUpon>CadastrarCamera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CadastrarSensor.resx">
       <DependentUpon>CadastrarSensor.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +179,28 @@
     </None>
     <None Include="lasertechbrasilDataSet1.xss">
       <DependentUpon>lasertechbrasilDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet2.xsc">
+      <DependentUpon>lasertechbrasilDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lasertechbrasilDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lasertechbrasilDataSet2.xss">
+      <DependentUpon>lasertechbrasilDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet3.xsc">
+      <DependentUpon>lasertechbrasilDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lasertechbrasilDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lasertechbrasilDataSet3.xss">
+      <DependentUpon>lasertechbrasilDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
