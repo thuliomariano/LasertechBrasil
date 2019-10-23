@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Registro_de_RMA.DAL;
+using Registro_de_RMA.Entities;
 
 namespace Registro_de_RMA.Modelo
 {
@@ -19,7 +20,7 @@ namespace Registro_de_RMA.Modelo
             Validacao validacao = new Validacao(sensor);
             if (validacao.Mensagem.Equals(""))
             {
-                SensorDAO sensorDAO = new SensorDAO();
+                SensorDao sensorDAO = new SensorDao();
                 return Mensagem = sensorDAO.CadatrarSensor(sensor);
             }
             else
@@ -37,7 +38,7 @@ namespace Registro_de_RMA.Modelo
             Validacao validacao = new Validacao(sensor);
             if (validacao.Mensagem.Equals(""))
             {
-                SensorDAO sensorDAO = new SensorDAO();
+                SensorDao sensorDAO = new SensorDao();
                 return Mensagem = sensorDAO.AtualizarStatus(sensor);
             }
             else
@@ -47,8 +48,24 @@ namespace Registro_de_RMA.Modelo
             return mensagem;
         }
 
-      
 
-       
+        public String CadastrarCamera(Camera camera)
+        {
+
+            Validacao validacao = new Validacao(camera);
+            if (validacao.Mensagem.Equals(""))
+            {
+                SensorDao sensorDAO = new SensorDao();
+                return Mensagem = sensorDAO.CadatrarSensor(sensor);
+            }
+            else
+            {
+                Mensagem = validacao.Mensagem;
+            }
+
+            return Mensagem;
+        }
+
+
     }
 }

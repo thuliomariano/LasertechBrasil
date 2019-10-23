@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 namespace Registro_de_RMA.DAL
 {
 
-    public class SensorDAO
+    public class SensorDao
     {
 
         private String mensagem;
@@ -26,7 +26,7 @@ namespace Registro_de_RMA.DAL
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"insert into sensor(numero,cliente,rma,patrimonio,recebimento,os,apontamento,observacao, dataDeEntrada, dataDeSaida, statusDaOs) 
                                 values(@numero, @cliente, @rma, @patrimonio, @recebimento, @os, @apontamento, @observacao, @dataDeEntrada, @dataDeSaida, @statusDaOs)";
-            cmd.CommandText = @"DBCC CHECKIDENT('[SENSOR]', RESEED, 0)";
+            
 
             cmd.Parameters.AddWithValue("@numero", sensor.NumeroDeSerie);
             cmd.Parameters.AddWithValue("@cliente", sensor.Cliente);

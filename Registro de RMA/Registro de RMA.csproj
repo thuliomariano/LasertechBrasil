@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ValidaCamera.cs" />
+    <Compile Include="DAL\CameraDao.cs" />
     <Compile Include="Entities\Arm.cs" />
     <Compile Include="Entities\Camera.cs" />
     <Compile Include="Entities\Enum\OrderStatus.cs" />
@@ -108,7 +110,7 @@
       <DependentUpon>RegistroSensor.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Conexao.cs" />
-    <Compile Include="DAL\SensorDAO.cs" />
+    <Compile Include="DAL\SensorDao.cs" />
     <Compile Include="lasertechbrasilDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -121,7 +123,7 @@
     </Compile>
     <Compile Include="Controller\Controle.cs" />
     <Compile Include="Entities\Sensor.cs" />
-    <Compile Include="Controller\Validacao.cs" />
+    <Compile Include="Controller\ValidaSensor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Views\AtualizarSensor.resx">
