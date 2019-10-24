@@ -42,23 +42,23 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCopiarSoftwareTdx = new System.Windows.Forms.Button();
+            this.btnCopiarSoftwareTrufix = new System.Windows.Forms.Button();
+            this.btnCopiarBootLoader = new System.Windows.Forms.Button();
+            this.btnCopiarWindowsCe = new System.Windows.Forms.Button();
+            this.btnCopiarPatrimonio = new System.Windows.Forms.Button();
             this.txtVersaoAtualizadaPatrimonio = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.txtVersaoAtualizadaSoftwareTdx = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtVersaoAtualizadoWindowsCe = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.txtVersaoAtualiadoSoftwareTrufix = new System.Windows.Forms.ComboBox();
+            this.txtVersaoAtualizadaBootLoader = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnLimparArm = new System.Windows.Forms.Button();
             this.txtMacArm = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtColibri = new System.Windows.Forms.TextBox();
@@ -148,7 +148,7 @@
             this.txtVersaoAtualSoftwareTdx.Location = new System.Drawing.Point(122, 97);
             this.txtVersaoAtualSoftwareTdx.Name = "txtVersaoAtualSoftwareTdx";
             this.txtVersaoAtualSoftwareTdx.Size = new System.Drawing.Size(405, 21);
-            this.txtVersaoAtualSoftwareTdx.TabIndex = 33;
+            this.txtVersaoAtualSoftwareTdx.TabIndex = 10;
             // 
             // label14
             // 
@@ -169,7 +169,7 @@
             this.txtVersaoAtualWindowsCe.Location = new System.Drawing.Point(122, 16);
             this.txtVersaoAtualWindowsCe.Name = "txtVersaoAtualWindowsCe";
             this.txtVersaoAtualWindowsCe.Size = new System.Drawing.Size(100, 21);
-            this.txtVersaoAtualWindowsCe.TabIndex = 31;
+            this.txtVersaoAtualWindowsCe.TabIndex = 7;
             // 
             // txtVersaoAtualSoftwareTrufix
             // 
@@ -181,7 +181,7 @@
             this.txtVersaoAtualSoftwareTrufix.Location = new System.Drawing.Point(122, 70);
             this.txtVersaoAtualSoftwareTrufix.Name = "txtVersaoAtualSoftwareTrufix";
             this.txtVersaoAtualSoftwareTrufix.Size = new System.Drawing.Size(405, 21);
-            this.txtVersaoAtualSoftwareTrufix.TabIndex = 30;
+            this.txtVersaoAtualSoftwareTrufix.TabIndex = 9;
             // 
             // txtVersaoAtualBootloader
             // 
@@ -193,7 +193,7 @@
             this.txtVersaoAtualBootloader.Location = new System.Drawing.Point(122, 43);
             this.txtVersaoAtualBootloader.Name = "txtVersaoAtualBootloader";
             this.txtVersaoAtualBootloader.Size = new System.Drawing.Size(100, 21);
-            this.txtVersaoAtualBootloader.TabIndex = 25;
+            this.txtVersaoAtualBootloader.TabIndex = 8;
             // 
             // label10
             // 
@@ -224,18 +224,18 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnCopiarSoftwareTdx);
+            this.groupBox2.Controls.Add(this.btnCopiarSoftwareTrufix);
+            this.groupBox2.Controls.Add(this.btnCopiarBootLoader);
+            this.groupBox2.Controls.Add(this.btnCopiarWindowsCe);
+            this.groupBox2.Controls.Add(this.btnCopiarPatrimonio);
             this.groupBox2.Controls.Add(this.txtVersaoAtualizadaPatrimonio);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.comboBox8);
+            this.groupBox2.Controls.Add(this.txtVersaoAtualizadaSoftwareTdx);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.txtVersaoAtualizadoWindowsCe);
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.txtVersaoAtualiadoSoftwareTrufix);
+            this.groupBox2.Controls.Add(this.txtVersaoAtualizadaBootLoader);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label13);
@@ -246,55 +246,60 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Versão atualizada";
             // 
-            // button4
+            // btnCopiarSoftwareTdx
             // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(455, 122);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(81, 19);
-            this.button4.TabIndex = 39;
-            this.button4.Text = "não alterado";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCopiarSoftwareTdx.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCopiarSoftwareTdx.Location = new System.Drawing.Point(455, 122);
+            this.btnCopiarSoftwareTdx.Name = "btnCopiarSoftwareTdx";
+            this.btnCopiarSoftwareTdx.Size = new System.Drawing.Size(81, 19);
+            this.btnCopiarSoftwareTdx.TabIndex = 20;
+            this.btnCopiarSoftwareTdx.Text = "não alterado";
+            this.btnCopiarSoftwareTdx.UseVisualStyleBackColor = true;
+            this.btnCopiarSoftwareTdx.Click += new System.EventHandler(this.btnCopiarSoftwareTdx_Click);
             // 
-            // button5
+            // btnCopiarSoftwareTrufix
             // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(455, 98);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(81, 19);
-            this.button5.TabIndex = 38;
-            this.button5.Text = "não alterado";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCopiarSoftwareTrufix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCopiarSoftwareTrufix.Location = new System.Drawing.Point(455, 98);
+            this.btnCopiarSoftwareTrufix.Name = "btnCopiarSoftwareTrufix";
+            this.btnCopiarSoftwareTrufix.Size = new System.Drawing.Size(81, 19);
+            this.btnCopiarSoftwareTrufix.TabIndex = 18;
+            this.btnCopiarSoftwareTrufix.Text = "não alterado";
+            this.btnCopiarSoftwareTrufix.UseVisualStyleBackColor = true;
+            this.btnCopiarSoftwareTrufix.Click += new System.EventHandler(this.btnCopiarSoftwareTrufix_Click);
             // 
-            // button3
+            // btnCopiarBootLoader
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(253, 69);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 19);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "não alterado";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCopiarBootLoader.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCopiarBootLoader.Location = new System.Drawing.Point(253, 69);
+            this.btnCopiarBootLoader.Name = "btnCopiarBootLoader";
+            this.btnCopiarBootLoader.Size = new System.Drawing.Size(81, 19);
+            this.btnCopiarBootLoader.TabIndex = 16;
+            this.btnCopiarBootLoader.Text = "não alterado";
+            this.btnCopiarBootLoader.UseVisualStyleBackColor = true;
+            this.btnCopiarBootLoader.Click += new System.EventHandler(this.btnCopiarBootLoader_Click);
             // 
-            // button2
+            // btnCopiarWindowsCe
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(253, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 19);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "não alterado";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCopiarWindowsCe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCopiarWindowsCe.Location = new System.Drawing.Point(253, 45);
+            this.btnCopiarWindowsCe.Name = "btnCopiarWindowsCe";
+            this.btnCopiarWindowsCe.Size = new System.Drawing.Size(81, 19);
+            this.btnCopiarWindowsCe.TabIndex = 14;
+            this.btnCopiarWindowsCe.Text = "não alterado";
+            this.btnCopiarWindowsCe.UseVisualStyleBackColor = true;
+            this.btnCopiarWindowsCe.Click += new System.EventHandler(this.btnCopiarWindowsCe_Click);
             // 
-            // button1
+            // btnCopiarPatrimonio
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(254, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 19);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "não alterado";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCopiarPatrimonio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCopiarPatrimonio.Location = new System.Drawing.Point(254, 19);
+            this.btnCopiarPatrimonio.Name = "btnCopiarPatrimonio";
+            this.btnCopiarPatrimonio.Size = new System.Drawing.Size(81, 19);
+            this.btnCopiarPatrimonio.TabIndex = 12;
+            this.btnCopiarPatrimonio.Text = "não alterado";
+            this.btnCopiarPatrimonio.UseVisualStyleBackColor = true;
+            this.btnCopiarPatrimonio.Click += new System.EventHandler(this.btnCopiarPatrimonio_Click);
             // 
             // txtVersaoAtualizadaPatrimonio
             // 
@@ -302,7 +307,7 @@
             this.txtVersaoAtualizadaPatrimonio.Location = new System.Drawing.Point(122, 17);
             this.txtVersaoAtualizadaPatrimonio.Name = "txtVersaoAtualizadaPatrimonio";
             this.txtVersaoAtualizadaPatrimonio.Size = new System.Drawing.Size(126, 20);
-            this.txtVersaoAtualizadaPatrimonio.TabIndex = 18;
+            this.txtVersaoAtualizadaPatrimonio.TabIndex = 11;
             // 
             // label16
             // 
@@ -313,17 +318,17 @@
             this.label16.TabIndex = 18;
             this.label16.Text = "Patrimônio(PC)";
             // 
-            // comboBox8
+            // txtVersaoAtualizadaSoftwareTdx
             // 
-            this.comboBox8.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.txtVersaoAtualizadaSoftwareTdx.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualizadaSoftwareTdx.FormattingEnabled = true;
+            this.txtVersaoAtualizadaSoftwareTdx.Items.AddRange(new object[] {
             "V1.4.0.4 TD-PU",
             "V1.4.0.4 TD-EN"});
-            this.comboBox8.Location = new System.Drawing.Point(122, 122);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(318, 21);
-            this.comboBox8.TabIndex = 35;
+            this.txtVersaoAtualizadaSoftwareTdx.Location = new System.Drawing.Point(122, 122);
+            this.txtVersaoAtualizadaSoftwareTdx.Name = "txtVersaoAtualizadaSoftwareTdx";
+            this.txtVersaoAtualizadaSoftwareTdx.Size = new System.Drawing.Size(318, 21);
+            this.txtVersaoAtualizadaSoftwareTdx.TabIndex = 19;
             // 
             // label15
             // 
@@ -344,31 +349,31 @@
             this.txtVersaoAtualizadoWindowsCe.Location = new System.Drawing.Point(122, 43);
             this.txtVersaoAtualizadoWindowsCe.Name = "txtVersaoAtualizadoWindowsCe";
             this.txtVersaoAtualizadoWindowsCe.Size = new System.Drawing.Size(100, 21);
-            this.txtVersaoAtualizadoWindowsCe.TabIndex = 32;
+            this.txtVersaoAtualizadoWindowsCe.TabIndex = 13;
             // 
-            // comboBox4
+            // txtVersaoAtualiadoSoftwareTrufix
             // 
-            this.comboBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.txtVersaoAtualiadoSoftwareTrufix.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualiadoSoftwareTrufix.FormattingEnabled = true;
+            this.txtVersaoAtualiadoSoftwareTrufix.Items.AddRange(new object[] {
             "swTrufixToradexProducao_324_NewBoard.hex",
             "swTrufixToradexProducao_324_NewBoard_4X.hex"});
-            this.comboBox4.Location = new System.Drawing.Point(122, 95);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(318, 21);
-            this.comboBox4.TabIndex = 29;
+            this.txtVersaoAtualiadoSoftwareTrufix.Location = new System.Drawing.Point(122, 95);
+            this.txtVersaoAtualiadoSoftwareTrufix.Name = "txtVersaoAtualiadoSoftwareTrufix";
+            this.txtVersaoAtualiadoSoftwareTrufix.Size = new System.Drawing.Size(318, 21);
+            this.txtVersaoAtualiadoSoftwareTrufix.TabIndex = 17;
             // 
-            // comboBox3
+            // txtVersaoAtualizadaBootLoader
             // 
-            this.comboBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.txtVersaoAtualizadaBootLoader.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualizadaBootLoader.FormattingEnabled = true;
+            this.txtVersaoAtualizadaBootLoader.Items.AddRange(new object[] {
             "1.1",
             "1.2"});
-            this.comboBox3.Location = new System.Drawing.Point(122, 69);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
-            this.comboBox3.TabIndex = 26;
+            this.txtVersaoAtualizadaBootLoader.Location = new System.Drawing.Point(122, 69);
+            this.txtVersaoAtualizadaBootLoader.Name = "txtVersaoAtualizadaBootLoader";
+            this.txtVersaoAtualizadaBootLoader.Size = new System.Drawing.Size(100, 21);
+            this.txtVersaoAtualizadaBootLoader.TabIndex = 15;
             // 
             // label12
             // 
@@ -403,22 +408,22 @@
             this.btnCadastrar.Location = new System.Drawing.Point(487, 526);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(79, 31);
-            this.btnCadastrar.TabIndex = 10;
+            this.btnCadastrar.TabIndex = 21;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             // 
-            // btnLimpar
+            // btnLimparArm
             // 
-            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(495, 14);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
-            this.btnLimpar.TabIndex = 11;
-            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimparArm.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
+            this.btnLimparArm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimparArm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparArm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimparArm.Location = new System.Drawing.Point(495, 14);
+            this.btnLimparArm.Name = "btnLimparArm";
+            this.btnLimparArm.Size = new System.Drawing.Size(51, 46);
+            this.btnLimparArm.TabIndex = 22;
+            this.btnLimparArm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimparArm.UseVisualStyleBackColor = true;
             // 
             // txtMacArm
             // 
@@ -429,7 +434,7 @@
             this.txtMacArm.Controls.Add(this.txtIris);
             this.txtMacArm.Controls.Add(this.label5);
             this.txtMacArm.Controls.Add(this.txtVersaoSoftwarePc);
-            this.txtMacArm.Controls.Add(this.btnLimpar);
+            this.txtMacArm.Controls.Add(this.btnLimparArm);
             this.txtMacArm.Controls.Add(this.label3);
             this.txtMacArm.Controls.Add(this.txtVersaoHardwarePc);
             this.txtMacArm.Controls.Add(this.label2);
@@ -457,7 +462,7 @@
             this.txtColibri.Location = new System.Drawing.Point(298, 82);
             this.txtColibri.Name = "txtColibri";
             this.txtColibri.Size = new System.Drawing.Size(171, 20);
-            this.txtColibri.TabIndex = 15;
+            this.txtColibri.TabIndex = 6;
             // 
             // label6
             // 
@@ -474,7 +479,7 @@
             this.txtIris.Location = new System.Drawing.Point(298, 51);
             this.txtIris.Name = "txtIris";
             this.txtIris.Size = new System.Drawing.Size(171, 20);
-            this.txtIris.TabIndex = 13;
+            this.txtIris.TabIndex = 4;
             // 
             // label5
             // 
@@ -543,7 +548,7 @@
             this.maskedTextBox1.Mask = "CC-CC-CC-CC-CC-CC";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(171, 20);
-            this.maskedTextBox1.TabIndex = 17;
+            this.maskedTextBox1.TabIndex = 2;
             // 
             // CadastrarArm
             // 
@@ -580,7 +585,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnLimparArm;
         private System.Windows.Forms.GroupBox txtMacArm;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtColibri;
@@ -604,16 +609,16 @@
         private System.Windows.Forms.ComboBox txtVersaoAtualWindowsCe;
         private System.Windows.Forms.ComboBox txtVersaoAtualSoftwareTrufix;
         private System.Windows.Forms.ComboBox txtVersaoAtualBootloader;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox txtVersaoAtualizadaSoftwareTdx;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox txtVersaoAtualizadoWindowsCe;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox txtVersaoAtualiadoSoftwareTrufix;
+        private System.Windows.Forms.ComboBox txtVersaoAtualizadaBootLoader;
+        private System.Windows.Forms.Button btnCopiarSoftwareTdx;
+        private System.Windows.Forms.Button btnCopiarSoftwareTrufix;
+        private System.Windows.Forms.Button btnCopiarBootLoader;
+        private System.Windows.Forms.Button btnCopiarWindowsCe;
+        private System.Windows.Forms.Button btnCopiarPatrimonio;
         private System.Windows.Forms.TextBox txtVersaoAtualizadaPatrimonio;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;

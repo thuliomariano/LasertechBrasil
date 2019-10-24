@@ -16,5 +16,30 @@ namespace Registro_de_RMA.Views
         {
             InitializeComponent();
         }
+
+        private void btnCopiarPatrimonio_Click(object sender, EventArgs e)
+        {
+            txtVersaoAtualizadaPatrimonio.Text = txtPatrimonioArm.Text;
+        }
+
+        private void btnCopiarWindowsCe_Click(object sender, EventArgs e)
+        {
+            txtVersaoAtualizadoWindowsCe.Text = txtVersaoAtualWindowsCe.Text;
+        }
+
+        private void btnCopiarBootLoader_Click(object sender, EventArgs e)
+        {
+            txtVersaoAtualizadaBootLoader.Text = txtVersaoAtualBootloader.Text;
+        }
+
+        private void btnCopiarSoftwareTrufix_Click(object sender, EventArgs e)
+        {
+            txtVersaoAtualiadoSoftwareTrufix.Text = txtVersaoAtualSoftwareTrufix.Text;
+        }
+
+        private void btnCopiarSoftwareTdx_Click(object sender, EventArgs e)
+        {
+            txtVersaoAtualizadaSoftwareTdx .Text = txtVersaoAtualSoftwareTdx.Text;
+        }
     }
 }
