@@ -428,6 +428,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "RegistroSensor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consulta avançada";
             this.Load += new System.EventHandler(this.Registro_Load);
             this.panel1.ResumeLayout(false);

@@ -41,7 +41,6 @@
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnLimpar = new System.Windows.Forms.Button();
@@ -61,7 +60,6 @@
             this.groupBox1.Controls.Add(this.txtProduto);
             this.groupBox1.Controls.Add(this.btnLimpar);
             this.groupBox1.Controls.Add(this.txtObservacaoCamera);
-            this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(this.txtPatrimonioCamera);
             this.groupBox1.Controls.Add(this.lblPatrimonio);
             this.groupBox1.Controls.Add(this.txtApontamento);
@@ -71,9 +69,9 @@
             this.groupBox1.Controls.Add(this.lblRecebimento);
             this.groupBox1.Controls.Add(this.lblCliente);
             this.groupBox1.Controls.Add(this.lblNumeroDeSerie);
-            this.groupBox1.Location = new System.Drawing.Point(37, 95);
+            this.groupBox1.Location = new System.Drawing.Point(12, 82);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(389, 300);
+            this.groupBox1.Size = new System.Drawing.Size(361, 226);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
@@ -81,7 +79,7 @@
             // txtObservacaoCamera
             // 
             this.txtObservacaoCamera.BackColor = System.Drawing.SystemColors.Info;
-            this.txtObservacaoCamera.Location = new System.Drawing.Point(92, 180);
+            this.txtObservacaoCamera.Location = new System.Drawing.Point(79, 173);
             this.txtObservacaoCamera.Multiline = true;
             this.txtObservacaoCamera.Name = "txtObservacaoCamera";
             this.txtObservacaoCamera.Size = new System.Drawing.Size(275, 45);
@@ -90,7 +88,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Location = new System.Drawing.Point(288, 247);
+            this.btnCadastrar.Location = new System.Drawing.Point(293, 314);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(79, 38);
             this.btnCadastrar.TabIndex = 6;
@@ -101,7 +99,7 @@
             // txtPatrimonioCamera
             // 
             this.txtPatrimonioCamera.BackColor = System.Drawing.SystemColors.Info;
-            this.txtPatrimonioCamera.Location = new System.Drawing.Point(92, 97);
+            this.txtPatrimonioCamera.Location = new System.Drawing.Point(79, 90);
             this.txtPatrimonioCamera.Name = "txtPatrimonioCamera";
             this.txtPatrimonioCamera.Size = new System.Drawing.Size(121, 20);
             this.txtPatrimonioCamera.TabIndex = 3;
@@ -109,7 +107,7 @@
             // lblPatrimonio
             // 
             this.lblPatrimonio.AutoSize = true;
-            this.lblPatrimonio.Location = new System.Drawing.Point(21, 100);
+            this.lblPatrimonio.Location = new System.Drawing.Point(6, 93);
             this.lblPatrimonio.Name = "lblPatrimonio";
             this.lblPatrimonio.Size = new System.Drawing.Size(56, 13);
             this.lblPatrimonio.TabIndex = 17;
@@ -126,7 +124,7 @@
             // lblApontamento
             // 
             this.lblApontamento.AutoSize = true;
-            this.lblApontamento.Location = new System.Drawing.Point(21, 183);
+            this.lblApontamento.Location = new System.Drawing.Point(8, 176);
             this.lblApontamento.Name = "lblApontamento";
             this.lblApontamento.Size = new System.Drawing.Size(65, 13);
             this.lblApontamento.TabIndex = 14;
@@ -135,7 +133,7 @@
             // lblOs
             // 
             this.lblOs.AutoSize = true;
-            this.lblOs.Location = new System.Drawing.Point(18, 127);
+            this.lblOs.Location = new System.Drawing.Point(5, 120);
             this.lblOs.Name = "lblOs";
             this.lblOs.Size = new System.Drawing.Size(53, 13);
             this.lblOs.TabIndex = 12;
@@ -144,7 +142,7 @@
             // txtAcessório
             // 
             this.txtAcessório.BackColor = System.Drawing.SystemColors.Info;
-            this.txtAcessório.Location = new System.Drawing.Point(92, 124);
+            this.txtAcessório.Location = new System.Drawing.Point(79, 117);
             this.txtAcessório.Multiline = true;
             this.txtAcessório.Name = "txtAcessório";
             this.txtAcessório.Size = new System.Drawing.Size(275, 50);
@@ -153,7 +151,7 @@
             // lblRecebimento
             // 
             this.lblRecebimento.AutoSize = true;
-            this.lblRecebimento.Location = new System.Drawing.Point(18, 23);
+            this.lblRecebimento.Location = new System.Drawing.Point(5, 16);
             this.lblRecebimento.Name = "lblRecebimento";
             this.lblRecebimento.Size = new System.Drawing.Size(61, 13);
             this.lblRecebimento.TabIndex = 10;
@@ -162,7 +160,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(17, 75);
+            this.lblCliente.Location = new System.Drawing.Point(4, 68);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(30, 13);
             this.lblCliente.TabIndex = 6;
@@ -171,7 +169,7 @@
             // lblNumeroDeSerie
             // 
             this.lblNumeroDeSerie.AutoSize = true;
-            this.lblNumeroDeSerie.Location = new System.Drawing.Point(18, 49);
+            this.lblNumeroDeSerie.Location = new System.Drawing.Point(5, 42);
             this.lblNumeroDeSerie.Name = "lblNumeroDeSerie";
             this.lblNumeroDeSerie.Size = new System.Drawing.Size(44, 13);
             this.lblNumeroDeSerie.TabIndex = 5;
@@ -180,25 +178,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 76);
+            this.panel1.Size = new System.Drawing.Size(384, 76);
             this.panel1.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(297, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 24);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Cadastrar câmera";
             // 
             // pictureBox3
             // 
@@ -224,7 +210,7 @@
             this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(316, 19);
+            this.btnLimpar.Location = new System.Drawing.Point(303, 12);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(51, 46);
             this.btnLimpar.TabIndex = 7;
@@ -236,7 +222,7 @@
             // 
             this.txtProduto.BackColor = System.Drawing.SystemColors.Info;
             this.txtProduto.FormattingEnabled = true;
-            this.txtProduto.Location = new System.Drawing.Point(92, 45);
+            this.txtProduto.Location = new System.Drawing.Point(79, 38);
             this.txtProduto.Name = "txtProduto";
             this.txtProduto.Size = new System.Drawing.Size(121, 21);
             this.txtProduto.TabIndex = 18;
@@ -245,7 +231,7 @@
             // 
             this.txtFornecedor.BackColor = System.Drawing.SystemColors.Info;
             this.txtFornecedor.FormattingEnabled = true;
-            this.txtFornecedor.Location = new System.Drawing.Point(92, 18);
+            this.txtFornecedor.Location = new System.Drawing.Point(79, 11);
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(202, 21);
             this.txtFornecedor.TabIndex = 19;
@@ -253,7 +239,7 @@
             // txtMac
             // 
             this.txtMac.BackColor = System.Drawing.SystemColors.Info;
-            this.txtMac.Location = new System.Drawing.Point(92, 71);
+            this.txtMac.Location = new System.Drawing.Point(79, 64);
             this.txtMac.Mask = "CC-CC-CC-CC-CC-CC";
             this.txtMac.Name = "txtMac";
             this.txtMac.Size = new System.Drawing.Size(202, 20);
@@ -263,16 +249,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 419);
+            this.ClientSize = new System.Drawing.Size(384, 357);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnCadastrar);
             this.Name = "CadastrarCamera";
             this.Text = "CadastrarCamera";
             this.Load += new System.EventHandler(this.CadastrarCamera_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -294,7 +280,6 @@
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblNumeroDeSerie;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblPatrimonio;
