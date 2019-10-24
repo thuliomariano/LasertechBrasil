@@ -45,5 +45,11 @@ namespace Registro_de_RMA.Views
             txtPatrimonioCamera.Text = "";
             txtProduto.Text = "";
         }
+
+        private void CadastrarCamera_Load(object sender, EventArgs e)
+        {
+            txtProduto.DataSource = Enum.GetValues(typeof(Entities.Enum.ModeloCamera));
+            txtFornecedor.DataSource = Enum.GetValues(typeof(Entities.Enum.Fornecedor));
+        }
     }
 }

@@ -29,29 +29,27 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbStatusCamera = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLimparCamera = new System.Windows.Forms.Button();
             this.txtObservacaoCamera = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtApontamento = new System.Windows.Forms.TextBox();
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
             this.txtIdCamera = new System.Windows.Forms.TextBox();
-            this.btnLimparCamera = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnCadastrarCamera = new System.Windows.Forms.Button();
+            this.btnAtualizarCamera = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -60,16 +58,23 @@
             this.panel1.Size = new System.Drawing.Size(387, 76);
             this.panel1.TabIndex = 6;
             // 
-            // label4
+            // pictureBox3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(298, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 24);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Editar";
+            this.pictureBox3.Image = global::Registro_de_RMA.Properties.Resources.LTI_Logo;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(279, 63);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // groupBox1
             // 
@@ -96,7 +101,8 @@
             this.cbStatusCamera.Location = new System.Drawing.Point(58, 39);
             this.cbStatusCamera.Name = "cbStatusCamera";
             this.cbStatusCamera.Size = new System.Drawing.Size(121, 21);
-            this.cbStatusCamera.TabIndex = 32;
+            this.cbStatusCamera.TabIndex = 1;
+            this.cbStatusCamera.SelectedIndexChanged += new System.EventHandler(this.cbStatusCamera_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -107,6 +113,20 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Status";
             // 
+            // btnLimparCamera
+            // 
+            this.btnLimparCamera.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
+            this.btnLimparCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimparCamera.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparCamera.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimparCamera.Location = new System.Drawing.Point(299, 19);
+            this.btnLimparCamera.Name = "btnLimparCamera";
+            this.btnLimparCamera.Size = new System.Drawing.Size(51, 46);
+            this.btnLimparCamera.TabIndex = 4;
+            this.btnLimparCamera.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimparCamera.UseVisualStyleBackColor = true;
+            this.btnLimparCamera.Click += new System.EventHandler(this.btnLimparCamera_Click);
+            // 
             // txtObservacaoCamera
             // 
             this.txtObservacaoCamera.BackColor = System.Drawing.SystemColors.Info;
@@ -114,7 +134,7 @@
             this.txtObservacaoCamera.Multiline = true;
             this.txtObservacaoCamera.Name = "txtObservacaoCamera";
             this.txtObservacaoCamera.Size = new System.Drawing.Size(332, 43);
-            this.txtObservacaoCamera.TabIndex = 20;
+            this.txtObservacaoCamera.TabIndex = 2;
             // 
             // label11
             // 
@@ -148,65 +168,35 @@
             this.txtIdCamera.Location = new System.Drawing.Point(58, 15);
             this.txtIdCamera.Name = "txtIdCamera";
             this.txtIdCamera.Size = new System.Drawing.Size(121, 20);
-            this.txtIdCamera.TabIndex = 5;
+            this.txtIdCamera.TabIndex = 0;
             // 
-            // btnLimparCamera
+            // btnAtualizarCamera
             // 
-            this.btnLimparCamera.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
-            this.btnLimparCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLimparCamera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimparCamera.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimparCamera.Location = new System.Drawing.Point(299, 19);
-            this.btnLimparCamera.Name = "btnLimparCamera";
-            this.btnLimparCamera.Size = new System.Drawing.Size(51, 46);
-            this.btnLimparCamera.TabIndex = 26;
-            this.btnLimparCamera.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimparCamera.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Registro_de_RMA.Properties.Resources.LTI_Logo;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(279, 63);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnCadastrarCamera
-            // 
-            this.btnCadastrarCamera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrarCamera.Location = new System.Drawing.Point(296, 239);
-            this.btnCadastrarCamera.Name = "btnCadastrarCamera";
-            this.btnCadastrarCamera.Size = new System.Drawing.Size(78, 31);
-            this.btnCadastrarCamera.TabIndex = 8;
-            this.btnCadastrarCamera.Text = "Atualizar";
-            this.btnCadastrarCamera.UseVisualStyleBackColor = true;
+            this.btnAtualizarCamera.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizarCamera.Location = new System.Drawing.Point(296, 239);
+            this.btnAtualizarCamera.Name = "btnAtualizarCamera";
+            this.btnAtualizarCamera.Size = new System.Drawing.Size(78, 31);
+            this.btnAtualizarCamera.TabIndex = 3;
+            this.btnAtualizarCamera.Text = "Atualizar";
+            this.btnAtualizarCamera.UseVisualStyleBackColor = true;
+            this.btnAtualizarCamera.Click += new System.EventHandler(this.btnAtualizarCamera_Click);
             // 
             // AtualizarCamera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 278);
-            this.Controls.Add(this.btnCadastrarCamera);
+            this.Controls.Add(this.btnAtualizarCamera);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "AtualizarCamera";
             this.Text = "AtualizarCamera";
+            this.Load += new System.EventHandler(this.AtualizarCamera_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -214,7 +204,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -226,6 +215,6 @@
         private System.Windows.Forms.TextBox txtApontamento;
         private System.Windows.Forms.Label lblNumeroDeSerie;
         private System.Windows.Forms.TextBox txtIdCamera;
-        private System.Windows.Forms.Button btnCadastrarCamera;
+        private System.Windows.Forms.Button btnAtualizarCamera;
     }
 }

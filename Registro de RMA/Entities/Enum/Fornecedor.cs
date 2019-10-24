@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Registro_de_RMA.Entities.Enum
 {
-    enum OrderStatus
+    enum Fornecedor
     {
-        ABERTO,
-        ANDAMENTO,
-        PAUSA,
-        CANCELADO,
-        FECHADO
+        PUMATRONIX,
+        ENSITECH
     }
 }

@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Registro_de_RMA.Entities.Enum
 {
-    enum OrderStatus
+    enum ModeloCamera
     {
-        ABERTO,
-        ANDAMENTO,
-        PAUSA,
-        CANCELADO,
-        FECHADO
+        ITSCAM401,
+        ITSCAM401LM84,
+        ITSCAM403,
+        ITSCAM403LM84
     }
 }

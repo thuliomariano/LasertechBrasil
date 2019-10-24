@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.txtObservacaoCamera = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtPatrimonioCamera = new System.Windows.Forms.TextBox();
@@ -39,15 +38,16 @@
             this.lblOs = new System.Windows.Forms.Label();
             this.txtAcessório = new System.Windows.Forms.TextBox();
             this.lblRecebimento = new System.Windows.Forms.Label();
-            this.txtFornecedor = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.txtMac = new System.Windows.Forms.TextBox();
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
-            this.txtProduto = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.txtProduto = new System.Windows.Forms.ComboBox();
+            this.txtFornecedor = new System.Windows.Forms.ComboBox();
+            this.txtMac = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -56,6 +56,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtMac);
+            this.groupBox1.Controls.Add(this.txtFornecedor);
+            this.groupBox1.Controls.Add(this.txtProduto);
             this.groupBox1.Controls.Add(this.btnLimpar);
             this.groupBox1.Controls.Add(this.txtObservacaoCamera);
             this.groupBox1.Controls.Add(this.btnCadastrar);
@@ -66,31 +69,14 @@
             this.groupBox1.Controls.Add(this.lblOs);
             this.groupBox1.Controls.Add(this.txtAcessório);
             this.groupBox1.Controls.Add(this.lblRecebimento);
-            this.groupBox1.Controls.Add(this.txtFornecedor);
             this.groupBox1.Controls.Add(this.lblCliente);
-            this.groupBox1.Controls.Add(this.txtMac);
             this.groupBox1.Controls.Add(this.lblNumeroDeSerie);
-            this.groupBox1.Controls.Add(this.txtProduto);
             this.groupBox1.Location = new System.Drawing.Point(37, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(389, 300);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(316, 19);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
-            this.btnLimpar.TabIndex = 7;
-            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // txtObservacaoCamera
             // 
@@ -173,14 +159,6 @@
             this.lblRecebimento.TabIndex = 10;
             this.lblRecebimento.Text = "Fornecedor";
             // 
-            // txtFornecedor
-            // 
-            this.txtFornecedor.BackColor = System.Drawing.SystemColors.Info;
-            this.txtFornecedor.Location = new System.Drawing.Point(92, 20);
-            this.txtFornecedor.Name = "txtFornecedor";
-            this.txtFornecedor.Size = new System.Drawing.Size(202, 20);
-            this.txtFornecedor.TabIndex = 0;
-            // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
@@ -190,14 +168,6 @@
             this.lblCliente.TabIndex = 6;
             this.lblCliente.Text = "MAC";
             // 
-            // txtMac
-            // 
-            this.txtMac.BackColor = System.Drawing.SystemColors.Info;
-            this.txtMac.Location = new System.Drawing.Point(92, 72);
-            this.txtMac.Name = "txtMac";
-            this.txtMac.Size = new System.Drawing.Size(202, 20);
-            this.txtMac.TabIndex = 2;
-            // 
             // lblNumeroDeSerie
             // 
             this.lblNumeroDeSerie.AutoSize = true;
@@ -206,14 +176,6 @@
             this.lblNumeroDeSerie.Size = new System.Drawing.Size(44, 13);
             this.lblNumeroDeSerie.TabIndex = 5;
             this.lblNumeroDeSerie.Text = "Produto";
-            // 
-            // txtProduto
-            // 
-            this.txtProduto.BackColor = System.Drawing.SystemColors.Info;
-            this.txtProduto.Location = new System.Drawing.Point(92, 46);
-            this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(121, 20);
-            this.txtProduto.TabIndex = 1;
             // 
             // panel1
             // 
@@ -256,6 +218,47 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpar.Location = new System.Drawing.Point(316, 19);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
+            this.btnLimpar.TabIndex = 7;
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // txtProduto
+            // 
+            this.txtProduto.BackColor = System.Drawing.SystemColors.Info;
+            this.txtProduto.FormattingEnabled = true;
+            this.txtProduto.Location = new System.Drawing.Point(92, 45);
+            this.txtProduto.Name = "txtProduto";
+            this.txtProduto.Size = new System.Drawing.Size(121, 21);
+            this.txtProduto.TabIndex = 18;
+            // 
+            // txtFornecedor
+            // 
+            this.txtFornecedor.BackColor = System.Drawing.SystemColors.Info;
+            this.txtFornecedor.FormattingEnabled = true;
+            this.txtFornecedor.Location = new System.Drawing.Point(92, 18);
+            this.txtFornecedor.Name = "txtFornecedor";
+            this.txtFornecedor.Size = new System.Drawing.Size(202, 21);
+            this.txtFornecedor.TabIndex = 19;
+            // 
+            // txtMac
+            // 
+            this.txtMac.BackColor = System.Drawing.SystemColors.Info;
+            this.txtMac.Location = new System.Drawing.Point(92, 71);
+            this.txtMac.Mask = "CC-CC-CC-CC-CC-CC";
+            this.txtMac.Name = "txtMac";
+            this.txtMac.Size = new System.Drawing.Size(202, 20);
+            this.txtMac.TabIndex = 20;
+            // 
             // CadastrarCamera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +268,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CadastrarCamera";
             this.Text = "CadastrarCamera";
+            this.Load += new System.EventHandler(this.CadastrarCamera_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -287,15 +291,15 @@
         private System.Windows.Forms.Label lblOs;
         private System.Windows.Forms.TextBox txtAcessório;
         private System.Windows.Forms.Label lblRecebimento;
-        private System.Windows.Forms.TextBox txtFornecedor;
         private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox txtMac;
         private System.Windows.Forms.Label lblNumeroDeSerie;
-        private System.Windows.Forms.TextBox txtProduto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblPatrimonio;
+        private System.Windows.Forms.ComboBox txtProduto;
+        private System.Windows.Forms.ComboBox txtFornecedor;
+        private System.Windows.Forms.MaskedTextBox txtMac;
     }
 }

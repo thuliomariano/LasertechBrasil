@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Registro_de_RMA.Apresentacao;
+using Registro_de_RMA.Views;
 
 
 namespace Registro_de_RMA
@@ -38,7 +39,8 @@ namespace Registro_de_RMA
 
         private void aRMToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            RegistroArm registroArm = new RegistroArm();
+            registroArm.ShowDialog();
         }
 
         private void toolStripLabel1_ButtonClick(object sender, EventArgs e)

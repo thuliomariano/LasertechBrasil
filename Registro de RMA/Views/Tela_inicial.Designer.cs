@@ -37,15 +37,13 @@
             this.cÇAmeraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripSplitButton();
-            this.trucamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trufixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aRMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aRMToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.oRÇAMENTOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oRDEMDESERVIÇOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -86,9 +84,9 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.Info;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox1,
-            this.toolStripSeparator1,
             this.toolStripLabel2,
+            this.toolStripSeparator1,
+            this.toolStripTextBox1,
             this.toolStripSeparator2,
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 76);
@@ -130,7 +128,6 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trucamToolStripMenuItem,
             this.trufixToolStripMenuItem,
             this.oRÇAMENTOToolStripMenuItem,
             this.oRDEMDESERVIÇOToolStripMenuItem});
@@ -139,52 +136,45 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(106, 22);
             this.toolStripLabel2.Text = "Manutenção";
             // 
-            // trucamToolStripMenuItem
-            // 
-            this.trucamToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
-            this.trucamToolStripMenuItem.Name = "trucamToolStripMenuItem";
-            this.trucamToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.trucamToolStripMenuItem.Text = "REGISTROS TRUCAM";
-            // 
             // trufixToolStripMenuItem
             // 
             this.trufixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aRMToolStripMenuItem,
             this.aRMToolStripMenuItem1});
             this.trufixToolStripMenuItem.Name = "trufixToolStripMenuItem";
-            this.trufixToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.trufixToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.trufixToolStripMenuItem.Text = "REGISTROS TRUFIX";
-            // 
-            // aRMToolStripMenuItem
-            // 
-            this.aRMToolStripMenuItem.Name = "aRMToolStripMenuItem";
-            this.aRMToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.aRMToolStripMenuItem.Text = "COMPLETO";
-            this.aRMToolStripMenuItem.Click += new System.EventHandler(this.aRMToolStripMenuItem_Click);
             // 
             // aRMToolStripMenuItem1
             // 
             this.aRMToolStripMenuItem1.Name = "aRMToolStripMenuItem1";
-            this.aRMToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+            this.aRMToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.aRMToolStripMenuItem1.Text = "ARM";
             this.aRMToolStripMenuItem1.Click += new System.EventHandler(this.aRMToolStripMenuItem1_Click);
             // 
             // oRÇAMENTOToolStripMenuItem
             // 
             this.oRÇAMENTOToolStripMenuItem.Name = "oRÇAMENTOToolStripMenuItem";
-            this.oRÇAMENTOToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.oRÇAMENTOToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.oRÇAMENTOToolStripMenuItem.Text = "ORÇAMENTO";
             // 
             // oRDEMDESERVIÇOToolStripMenuItem
             // 
             this.oRDEMDESERVIÇOToolStripMenuItem.Name = "oRDEMDESERVIÇOToolStripMenuItem";
-            this.oRDEMDESERVIÇOToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.oRDEMDESERVIÇOToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.oRDEMDESERVIÇOToolStripMenuItem.Text = "ORDEM DE SERVIÇO";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Image = global::Registro_de_RMA.Properties.Resources.exit_97636_960_7201;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(58, 22);
+            this.toolStripLabel1.Text = "Sair";
+            this.toolStripLabel1.ButtonClick += new System.EventHandler(this.toolStripLabel1_ButtonClick);
             // 
             // pictureBox1
             // 
@@ -198,14 +188,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Image = global::Registro_de_RMA.Properties.Resources.exit_97636_960_7201;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(58, 22);
-            this.toolStripLabel1.Text = "Sair";
-            this.toolStripLabel1.ButtonClick += new System.EventHandler(this.toolStripLabel1_ButtonClick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,7 +198,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Menu";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -241,9 +223,7 @@
         private System.Windows.Forms.ToolStripMenuItem cÇAmeraToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSplitButton toolStripLabel2;
-        private System.Windows.Forms.ToolStripMenuItem trucamToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trufixToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aRMToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aRMToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem oRÇAMENTOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oRDEMDESERVIÇOToolStripMenuItem;

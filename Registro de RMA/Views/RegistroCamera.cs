@@ -25,6 +25,8 @@ namespace Registro_de_RMA.Apresentacao
             // TODO: esta linha de código carrega dados na tabela 'lasertechbrasilDataSet1.camera'. Você pode movê-la ou removê-la conforme necessário.
             this.cameraTableAdapter.Fill(this.lasertechbrasilDataSet1.camera);
 
+            cbStatus.DataSource = Enum.GetValues(typeof( Entities.Enum.OrderStatus));
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -37,12 +39,57 @@ namespace Registro_de_RMA.Apresentacao
         {
             CadastrarCamera camera = new CadastrarCamera();
             camera.ShowDialog();
-            this.cameraTableAdapter.Fill(this.lasertechbrasilDataSet1.camera);
+            this.cameraTableAdapter1.Fill(this.lasertechbrasilDataSet3.camera);
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
-            this.cameraTableAdapter.Fill(this.lasertechbrasilDataSet1.camera);
+            AtualizarCamera atualizarCamera = new AtualizarCamera();
+            atualizarCamera.ShowDialog();
+            this.cameraTableAdapter1.Fill(this.lasertechbrasilDataSet3.camera);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.cameraTableAdapter1.Fill(this.lasertechbrasilDataSet3.camera);
+        }
+
+        private void consultatatusToolStripButton_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void consultaStatusToolStripButton_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.cameraTableAdapter1.ConsultaStatus(this.lasertechbrasilDataSet3.camera, "%" + cbStatus.Text + "%");
+        }
+
+        private void consultaMacToolStripButton_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void consultaMacToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btnConsultarSerie_Click(object sender, EventArgs e)
+        {
+            this.cameraTableAdapter1.ConsultaMac(this.lasertechbrasilDataSet3.camera,"%" + txtConsulta.Text + "%");
+        }
+
+        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -48,5 +48,37 @@ namespace Registro_de_RMA.DAL
             return Mensagem;
         }
 
+        public String AtualizarCamera(Camera camera)
+        {
+            Conexao con = new Conexao();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = @"update camera set observacao = @observacao, dataDeSaida = @dataDeSaida, statusCamera = @status where idCamera = @idCamera ";
+
+            cmd.Parameters.AddWithValue("@idCamera", camera.idCamera);
+            cmd.Parameters.AddWithValue("@observacao", camera.Observacao);
+            cmd.Parameters.AddWithValue("@dataDeSaida", camera.CameraDataDeSaida);
+            cmd.Parameters.AddWithValue("@status", camera.CameraStatus);
+
+            try
+            {
+                cmd.Connection = con.Conectar();
+                cmd.ExecuteNonQuery();
+                Mensagem = "Atualização realizada com sucesso!";
+            }
+            catch (SqlException erroAtualização)
+            {
+
+                Mensagem = erroAtualização.ToString();
+            }
+            finally
+            {
+                con.Desconectar();
+            }
+
+
+            return Mensagem;
+        }
+
     }
 }
