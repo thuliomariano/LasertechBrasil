@@ -37,6 +37,12 @@ namespace Registro_de_RMA.Apresentacao
         {
             CadastrarCamera camera = new CadastrarCamera();
             camera.ShowDialog();
+            this.cameraTableAdapter.Fill(this.lasertechbrasilDataSet1.camera);
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            this.cameraTableAdapter.Fill(this.lasertechbrasilDataSet1.camera);
         }
     }
 }

@@ -34,5 +34,16 @@ namespace Registro_de_RMA.Views
             controle.CadastrarCamera(camera);
             MessageBox.Show(controle.Mensagem, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtAcessório.Text = "";
+            txtApontamento.Text = "";
+            txtFornecedor.Text = "";
+            txtMac.Text = "";
+            txtObservacaoCamera.Text = "";
+            txtPatrimonioCamera.Text = "";
+            txtProduto.Text = "";
+        }
     }
 }

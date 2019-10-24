@@ -18,7 +18,7 @@ namespace Registro_de_RMA.DAL
             SqlCommand cmd = new SqlCommand();
 
             cmd.CommandText = @"insert into camera(fornecedor, camera, mac, acessorio, observacao, dataDeEntrada, dataDeSaida, statusCamera)
-                                values(fornecedor = @fornecedor,camera = @camera, mac = @mac, acessorio = @acessorio, observacao = @observacao, dataDeEntrada = @dataDeEntrada, dataDeSaida = @dataDeSaida, statusCamera = @statusCamera)";
+                                values(@fornecedor,@camera,@mac,@acessorio,@observacao,@dataDeEntrada,@dataDeSaida,@statusCamera)";
 
             cmd.Parameters.AddWithValue("@fornecedor", camera.Fornecedor);
             cmd.Parameters.AddWithValue("@camera", camera.CameraPuma);
