@@ -33,11 +33,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.txtVersaoAtualSoftwareTdx = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtVersaoAtualWindowsCe = new System.Windows.Forms.ComboBox();
+            this.txtVersaoAtualSoftwareTrufix = new System.Windows.Forms.ComboBox();
+            this.txtVersaoAtualBootloader = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,11 +47,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtVersaoAtualizadaPatrimonio = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.txtVersaoAtualizadoWindowsCe = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -59,25 +59,25 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtMacArm = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtColibri = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtIris = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtVersaoSoftwarePc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtVersaoHardwarePc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPatrimonioArm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.txtMacArm.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,11 +123,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox7);
+            this.groupBox1.Controls.Add(this.txtVersaoAtualSoftwareTdx);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.txtVersaoAtualWindowsCe);
+            this.groupBox1.Controls.Add(this.txtVersaoAtualSoftwareTrufix);
+            this.groupBox1.Controls.Add(this.txtVersaoAtualBootloader);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -138,17 +138,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Versão Atual";
             // 
-            // comboBox7
+            // txtVersaoAtualSoftwareTdx
             // 
-            this.comboBox7.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.txtVersaoAtualSoftwareTdx.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualSoftwareTdx.FormattingEnabled = true;
+            this.txtVersaoAtualSoftwareTdx.Items.AddRange(new object[] {
             "V1.4.0.4 TD-PU",
             "V1.4.0.4 TD-EN"});
-            this.comboBox7.Location = new System.Drawing.Point(122, 97);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(405, 21);
-            this.comboBox7.TabIndex = 33;
+            this.txtVersaoAtualSoftwareTdx.Location = new System.Drawing.Point(122, 97);
+            this.txtVersaoAtualSoftwareTdx.Name = "txtVersaoAtualSoftwareTdx";
+            this.txtVersaoAtualSoftwareTdx.Size = new System.Drawing.Size(405, 21);
+            this.txtVersaoAtualSoftwareTdx.TabIndex = 33;
             // 
             // label14
             // 
@@ -159,41 +159,41 @@
             this.label14.TabIndex = 32;
             this.label14.Text = "Programa TDX";
             // 
-            // comboBox1
+            // txtVersaoAtualWindowsCe
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.txtVersaoAtualWindowsCe.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualWindowsCe.FormattingEnabled = true;
+            this.txtVersaoAtualWindowsCe.Items.AddRange(new object[] {
             "1.1",
             "1.2"});
-            this.comboBox1.Location = new System.Drawing.Point(122, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 31;
+            this.txtVersaoAtualWindowsCe.Location = new System.Drawing.Point(122, 16);
+            this.txtVersaoAtualWindowsCe.Name = "txtVersaoAtualWindowsCe";
+            this.txtVersaoAtualWindowsCe.Size = new System.Drawing.Size(100, 21);
+            this.txtVersaoAtualWindowsCe.TabIndex = 31;
             // 
-            // comboBox5
+            // txtVersaoAtualSoftwareTrufix
             // 
-            this.comboBox5.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.txtVersaoAtualSoftwareTrufix.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualSoftwareTrufix.FormattingEnabled = true;
+            this.txtVersaoAtualSoftwareTrufix.Items.AddRange(new object[] {
             "swTrufixToradexProducao_324_NewBoard.hex",
             "swTrufixToradexProducao_324_NewBoard_4X.hex"});
-            this.comboBox5.Location = new System.Drawing.Point(122, 70);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(405, 21);
-            this.comboBox5.TabIndex = 30;
+            this.txtVersaoAtualSoftwareTrufix.Location = new System.Drawing.Point(122, 70);
+            this.txtVersaoAtualSoftwareTrufix.Name = "txtVersaoAtualSoftwareTrufix";
+            this.txtVersaoAtualSoftwareTrufix.Size = new System.Drawing.Size(405, 21);
+            this.txtVersaoAtualSoftwareTrufix.TabIndex = 30;
             // 
-            // comboBox2
+            // txtVersaoAtualBootloader
             // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.txtVersaoAtualBootloader.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualBootloader.FormattingEnabled = true;
+            this.txtVersaoAtualBootloader.Items.AddRange(new object[] {
             "1.1",
             "1.2"});
-            this.comboBox2.Location = new System.Drawing.Point(122, 43);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 21);
-            this.comboBox2.TabIndex = 25;
+            this.txtVersaoAtualBootloader.Location = new System.Drawing.Point(122, 43);
+            this.txtVersaoAtualBootloader.Name = "txtVersaoAtualBootloader";
+            this.txtVersaoAtualBootloader.Size = new System.Drawing.Size(100, 21);
+            this.txtVersaoAtualBootloader.TabIndex = 25;
             // 
             // label10
             // 
@@ -229,11 +229,11 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.txtVersaoAtualizadaPatrimonio);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.comboBox8);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.comboBox6);
+            this.groupBox2.Controls.Add(this.txtVersaoAtualizadoWindowsCe);
             this.groupBox2.Controls.Add(this.comboBox4);
             this.groupBox2.Controls.Add(this.comboBox3);
             this.groupBox2.Controls.Add(this.label12);
@@ -296,13 +296,13 @@
             this.button1.Text = "não alterado";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txtVersaoAtualizadaPatrimonio
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox7.Location = new System.Drawing.Point(122, 17);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(126, 20);
-            this.textBox7.TabIndex = 18;
+            this.txtVersaoAtualizadaPatrimonio.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualizadaPatrimonio.Location = new System.Drawing.Point(122, 17);
+            this.txtVersaoAtualizadaPatrimonio.Name = "txtVersaoAtualizadaPatrimonio";
+            this.txtVersaoAtualizadaPatrimonio.Size = new System.Drawing.Size(126, 20);
+            this.txtVersaoAtualizadaPatrimonio.TabIndex = 18;
             // 
             // label16
             // 
@@ -334,17 +334,17 @@
             this.label15.TabIndex = 34;
             this.label15.Text = "Programa TDX";
             // 
-            // comboBox6
+            // txtVersaoAtualizadoWindowsCe
             // 
-            this.comboBox6.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.txtVersaoAtualizadoWindowsCe.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualizadoWindowsCe.FormattingEnabled = true;
+            this.txtVersaoAtualizadoWindowsCe.Items.AddRange(new object[] {
             "1.1",
             "1.2"});
-            this.comboBox6.Location = new System.Drawing.Point(122, 43);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(100, 21);
-            this.comboBox6.TabIndex = 32;
+            this.txtVersaoAtualizadoWindowsCe.Location = new System.Drawing.Point(122, 43);
+            this.txtVersaoAtualizadoWindowsCe.Name = "txtVersaoAtualizadoWindowsCe";
+            this.txtVersaoAtualizadoWindowsCe.Size = new System.Drawing.Size(100, 21);
+            this.txtVersaoAtualizadoWindowsCe.TabIndex = 32;
             // 
             // comboBox4
             // 
@@ -420,35 +420,27 @@
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // txtMacArm
             // 
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.btnLimpar);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Location = new System.Drawing.Point(12, 82);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(552, 111);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Panorâma";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox6.Location = new System.Drawing.Point(298, 24);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(171, 20);
-            this.textBox6.TabIndex = 17;
+            this.txtMacArm.Controls.Add(this.maskedTextBox1);
+            this.txtMacArm.Controls.Add(this.label7);
+            this.txtMacArm.Controls.Add(this.txtColibri);
+            this.txtMacArm.Controls.Add(this.label6);
+            this.txtMacArm.Controls.Add(this.txtIris);
+            this.txtMacArm.Controls.Add(this.label5);
+            this.txtMacArm.Controls.Add(this.txtVersaoSoftwarePc);
+            this.txtMacArm.Controls.Add(this.btnLimpar);
+            this.txtMacArm.Controls.Add(this.label3);
+            this.txtMacArm.Controls.Add(this.txtVersaoHardwarePc);
+            this.txtMacArm.Controls.Add(this.label2);
+            this.txtMacArm.Controls.Add(this.txtPatrimonioArm);
+            this.txtMacArm.Controls.Add(this.label1);
+            this.txtMacArm.Location = new System.Drawing.Point(12, 82);
+            this.txtMacArm.Name = "txtMacArm";
+            this.txtMacArm.Size = new System.Drawing.Size(552, 111);
+            this.txtMacArm.TabIndex = 7;
+            this.txtMacArm.TabStop = false;
+            this.txtMacArm.Text = "Panorâma";
             // 
             // label7
             // 
@@ -459,13 +451,13 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "MAC";
             // 
-            // textBox5
+            // txtColibri
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox5.Location = new System.Drawing.Point(298, 82);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(171, 20);
-            this.textBox5.TabIndex = 15;
+            this.txtColibri.BackColor = System.Drawing.SystemColors.Info;
+            this.txtColibri.Location = new System.Drawing.Point(298, 82);
+            this.txtColibri.Name = "txtColibri";
+            this.txtColibri.Size = new System.Drawing.Size(171, 20);
+            this.txtColibri.TabIndex = 15;
             // 
             // label6
             // 
@@ -476,13 +468,13 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Colibri";
             // 
-            // textBox4
+            // txtIris
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox4.Location = new System.Drawing.Point(298, 51);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 20);
-            this.textBox4.TabIndex = 13;
+            this.txtIris.BackColor = System.Drawing.SystemColors.Info;
+            this.txtIris.Location = new System.Drawing.Point(298, 51);
+            this.txtIris.Name = "txtIris";
+            this.txtIris.Size = new System.Drawing.Size(171, 20);
+            this.txtIris.TabIndex = 13;
             // 
             // label5
             // 
@@ -493,13 +485,13 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "CB Iris";
             // 
-            // textBox3
+            // txtVersaoSoftwarePc
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox3.Location = new System.Drawing.Point(125, 82);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(111, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtVersaoSoftwarePc.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoSoftwarePc.Location = new System.Drawing.Point(125, 82);
+            this.txtVersaoSoftwarePc.Name = "txtVersaoSoftwarePc";
+            this.txtVersaoSoftwarePc.Size = new System.Drawing.Size(111, 20);
+            this.txtVersaoSoftwarePc.TabIndex = 5;
             // 
             // label3
             // 
@@ -510,13 +502,13 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Versão do Software";
             // 
-            // textBox2
+            // txtVersaoHardwarePc
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(125, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(111, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtVersaoHardwarePc.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoHardwarePc.Location = new System.Drawing.Point(125, 51);
+            this.txtVersaoHardwarePc.Name = "txtVersaoHardwarePc";
+            this.txtVersaoHardwarePc.Size = new System.Drawing.Size(111, 20);
+            this.txtVersaoHardwarePc.TabIndex = 3;
             // 
             // label2
             // 
@@ -527,13 +519,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Versão do Hardware";
             // 
-            // textBox1
+            // txtPatrimonioArm
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(125, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtPatrimonioArm.BackColor = System.Drawing.SystemColors.Info;
+            this.txtPatrimonioArm.Location = new System.Drawing.Point(125, 25);
+            this.txtPatrimonioArm.Name = "txtPatrimonioArm";
+            this.txtPatrimonioArm.Size = new System.Drawing.Size(111, 20);
+            this.txtPatrimonioArm.TabIndex = 1;
             // 
             // label1
             // 
@@ -544,12 +536,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Patrimônio(PC)";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.Info;
+            this.maskedTextBox1.Location = new System.Drawing.Point(298, 25);
+            this.maskedTextBox1.Mask = "CC-CC-CC-CC-CC-CC";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(171, 20);
+            this.maskedTextBox1.TabIndex = 17;
+            // 
             // CadastrarArm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 568);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.txtMacArm);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -564,8 +565,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.txtMacArm.ResumeLayout(false);
+            this.txtMacArm.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -580,18 +581,17 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.GroupBox txtMacArm;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtColibri;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtIris;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtVersaoSoftwarePc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtVersaoHardwarePc;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPatrimonioArm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -599,14 +599,14 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox txtVersaoAtualSoftwareTdx;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox txtVersaoAtualWindowsCe;
+        private System.Windows.Forms.ComboBox txtVersaoAtualSoftwareTrufix;
+        private System.Windows.Forms.ComboBox txtVersaoAtualBootloader;
         private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox txtVersaoAtualizadoWindowsCe;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Button button4;
@@ -614,7 +614,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtVersaoAtualizadaPatrimonio;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

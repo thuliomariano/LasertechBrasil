@@ -38,7 +38,6 @@
             this.cameraTableAdapter = new Registro_de_RMA.lasertechbrasilDataSet1TableAdapters.cameraTableAdapter();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblItem = new System.Windows.Forms.Label();
-            this.txtConsulta = new System.Windows.Forms.TextBox();
             this.btnConsultarSerie = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -64,6 +63,7 @@
             this.lasertechbrasilDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lasertechbrasilDataSet3 = new Registro_de_RMA.lasertechbrasilDataSet3();
             this.cameraTableAdapter1 = new Registro_de_RMA.lasertechbrasilDataSet3TableAdapters.cameraTableAdapter();
+            this.txtConsulta = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBindingSource1)).BeginInit();
@@ -147,8 +147,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lblItem);
             this.groupBox4.Controls.Add(this.txtConsulta);
+            this.groupBox4.Controls.Add(this.lblItem);
             this.groupBox4.Controls.Add(this.btnConsultarSerie);
             this.groupBox4.Location = new System.Drawing.Point(12, 108);
             this.groupBox4.Name = "groupBox4";
@@ -165,14 +165,6 @@
             this.lblItem.Size = new System.Drawing.Size(30, 13);
             this.lblItem.TabIndex = 29;
             this.lblItem.Text = "MAC";
-            // 
-            // txtConsulta
-            // 
-            this.txtConsulta.BackColor = System.Drawing.SystemColors.Info;
-            this.txtConsulta.Location = new System.Drawing.Point(6, 36);
-            this.txtConsulta.Name = "txtConsulta";
-            this.txtConsulta.Size = new System.Drawing.Size(306, 20);
-            this.txtConsulta.TabIndex = 3;
             // 
             // btnConsultarSerie
             // 
@@ -370,6 +362,14 @@
             // 
             this.cameraTableAdapter1.ClearBeforeFill = true;
             // 
+            // txtConsulta
+            // 
+            this.txtConsulta.BackColor = System.Drawing.SystemColors.Info;
+            this.txtConsulta.Location = new System.Drawing.Point(9, 36);
+            this.txtConsulta.Name = "txtConsulta";
+            this.txtConsulta.Size = new System.Drawing.Size(292, 20);
+            this.txtConsulta.TabIndex = 30;
+            // 
             // RegistroCamera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,7 +417,6 @@
         private lasertechbrasilDataSet1TableAdapters.cameraTableAdapter cameraTableAdapter;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblItem;
-        private System.Windows.Forms.TextBox txtConsulta;
         private System.Windows.Forms.Button btnConsultarSerie;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
@@ -442,5 +441,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDeSaidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusCameraDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtConsulta;
     }
 }
