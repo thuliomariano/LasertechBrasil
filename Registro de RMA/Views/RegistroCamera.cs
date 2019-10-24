@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Registro_de_RMA.Views;
 
 namespace Registro_de_RMA.Apresentacao
 {
@@ -30,6 +31,12 @@ namespace Registro_de_RMA.Apresentacao
         {
             
             
+        }
+
+        private void toolStripLabel3_Click(object sender, EventArgs e)
+        {
+            CadastrarCamera camera = new CadastrarCamera();
+            camera.ShowDialog();
         }
     }
 }

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Registro_de_RMA.DAL;
 using Registro_de_RMA.Entities;
+using Registro_de_RMA.Modelo;
+using Registro_de_RMA.Controller;
 
 namespace Registro_de_RMA.Modelo
 {
@@ -52,15 +54,15 @@ namespace Registro_de_RMA.Modelo
         public String CadastrarCamera(Camera camera)
         {
 
-            Validacao validacao = new Validacao(camera);
-            if (validacao.Mensagem.Equals(""))
+            ValidaCamera validaCamera = new ValidaCamera(camera);
+            if (validaCamera.Mensagem.Equals(""))
             {
-                SensorDao sensorDAO = new SensorDao();
-                return Mensagem = sensorDAO.CadatrarSensor(sensor);
+                CameraDao cameraDao = new CameraDao();
+                return Mensagem = cameraDao.CadastrarCamera(camera);
             }
             else
             {
-                Mensagem = validacao.Mensagem;
+                Mensagem = validaCamera.Mensagem;
             }
 
             return Mensagem;

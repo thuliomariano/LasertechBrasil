@@ -30,6 +30,9 @@ namespace Registro_de_RMA.Views
             camera.Acessorio = txtAcessório.Text.ToUpper();
             camera.CameraPuma = txtProduto.Text.ToUpper();
             camera.CameraStatus = "ABERTO";
+            Controle controle = new Controle();
+            controle.CadastrarCamera(camera);
+            MessageBox.Show(controle.Mensagem, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

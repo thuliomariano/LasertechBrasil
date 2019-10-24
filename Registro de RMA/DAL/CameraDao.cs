@@ -17,13 +17,14 @@ namespace Registro_de_RMA.DAL
             Conexao con = new Conexao();
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = @"insert into camera(fornecedor, camera, mac, acessorio, observacao, dataDeEntrada, dataDeSaida, satusCamera)
-                                values(@fornecedor, @camera, @mac, @acessorio, @dataDeEntrada, @dataDeSaida, @statusCamera)";
+            cmd.CommandText = @"insert into camera(fornecedor, camera, mac, acessorio, observacao, dataDeEntrada, dataDeSaida, statusCamera)
+                                values(fornecedor = @fornecedor,camera = @camera, mac = @mac, acessorio = @acessorio, observacao = @observacao, dataDeEntrada = @dataDeEntrada, dataDeSaida = @dataDeSaida, statusCamera = @statusCamera)";
 
             cmd.Parameters.AddWithValue("@fornecedor", camera.Fornecedor);
             cmd.Parameters.AddWithValue("@camera", camera.CameraPuma);
             cmd.Parameters.AddWithValue("@mac", camera.Mac);
             cmd.Parameters.AddWithValue("@acessorio", camera.Acessorio);
+            cmd.Parameters.AddWithValue("@observacao", camera.Observacao);
             cmd.Parameters.AddWithValue("@dataDeEntrada", camera.CameraDataDeEntrada);
             cmd.Parameters.AddWithValue("@dataDeSaida", camera.CameraDataDeSaida);
             cmd.Parameters.AddWithValue("@statusCamera", camera.CameraStatus);
@@ -34,10 +35,10 @@ namespace Registro_de_RMA.DAL
                 cmd.ExecuteNonQuery();
                 Mensagem = "Cadastrado o item com sucesso!";
             }
-            catch (Exception)
+            catch (SqlException erro)
             {
 
-                Mensagem = "Erro de comunicação com o banco de dados";
+                Mensagem = erro.ToString();
             }
             finally
             {

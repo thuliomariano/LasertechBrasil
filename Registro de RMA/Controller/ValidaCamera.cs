@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Registro_de_RMA.Entities;
 
 namespace Registro_de_RMA.Controller
 {
@@ -10,7 +11,7 @@ namespace Registro_de_RMA.Controller
     {
         //pendência de validação, sera o ultimo ponto a ser verificado
         private String mensagem = "";
-        public Validacao()
+        public ValidaCamera(Camera camera)
         {
 
         }
@@ -18,4 +19,4 @@ namespace Registro_de_RMA.Controller
         public string Mensagem { get => mensagem; set => mensagem = value; }
     }
 }
-}
+
