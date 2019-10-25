@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ValidaArm.cs" />
     <Compile Include="Controller\ValidaCamera.cs" />
+    <Compile Include="DAL\ArmDao.cs" />
     <Compile Include="DAL\CameraDao.cs" />
     <Compile Include="Entities\Arm.cs" />
     <Compile Include="Entities\Camera.cs" />

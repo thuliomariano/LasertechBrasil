@@ -16,5 +16,11 @@ namespace Registro_de_RMA.Views
         {
             InitializeComponent();
         }
+
+        private void toolStripLabel3_Click(object sender, EventArgs e)
+        {
+            CadastrarArm cadastrarArm = new CadastrarArm();
+            cadastrarArm.ShowDialog();
+        }
     }
 }

@@ -41,5 +41,10 @@ namespace Registro_de_RMA.Views
         {
             txtVersaoAtualizadaSoftwareTdx .Text = txtVersaoAtualSoftwareTdx.Text;
         }
+
+        private void btnLimparArm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

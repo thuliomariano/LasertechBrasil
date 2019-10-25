@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMac = new System.Windows.Forms.MaskedTextBox();
+            this.txtFornecedor = new System.Windows.Forms.ComboBox();
+            this.txtProduto = new System.Windows.Forms.ComboBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.txtObservacaoCamera = new System.Windows.Forms.TextBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtPatrimonioCamera = new System.Windows.Forms.TextBox();
             this.lblPatrimonio = new System.Windows.Forms.Label();
             this.txtApontamento = new System.Windows.Forms.TextBox();
@@ -40,13 +43,10 @@
             this.lblRecebimento = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.txtProduto = new System.Windows.Forms.ComboBox();
-            this.txtFornecedor = new System.Windows.Forms.ComboBox();
-            this.txtMac = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -76,6 +76,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar";
             // 
+            // txtMac
+            // 
+            this.txtMac.BackColor = System.Drawing.SystemColors.Info;
+            this.txtMac.Location = new System.Drawing.Point(79, 64);
+            this.txtMac.Mask = "CC-CC-CC-CC-CC-CC";
+            this.txtMac.Name = "txtMac";
+            this.txtMac.Size = new System.Drawing.Size(202, 20);
+            this.txtMac.TabIndex = 2;
+            // 
+            // txtFornecedor
+            // 
+            this.txtFornecedor.BackColor = System.Drawing.SystemColors.Info;
+            this.txtFornecedor.FormattingEnabled = true;
+            this.txtFornecedor.Location = new System.Drawing.Point(79, 11);
+            this.txtFornecedor.Name = "txtFornecedor";
+            this.txtFornecedor.Size = new System.Drawing.Size(202, 21);
+            this.txtFornecedor.TabIndex = 0;
+            // 
+            // txtProduto
+            // 
+            this.txtProduto.BackColor = System.Drawing.SystemColors.Info;
+            this.txtProduto.FormattingEnabled = true;
+            this.txtProduto.Location = new System.Drawing.Point(79, 38);
+            this.txtProduto.Name = "txtProduto";
+            this.txtProduto.Size = new System.Drawing.Size(121, 21);
+            this.txtProduto.TabIndex = 1;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpar.Location = new System.Drawing.Point(303, 12);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
+            this.btnLimpar.TabIndex = 7;
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // txtObservacaoCamera
             // 
             this.txtObservacaoCamera.BackColor = System.Drawing.SystemColors.Info;
@@ -84,17 +125,6 @@
             this.txtObservacaoCamera.Name = "txtObservacaoCamera";
             this.txtObservacaoCamera.Size = new System.Drawing.Size(275, 45);
             this.txtObservacaoCamera.TabIndex = 5;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Location = new System.Drawing.Point(293, 314);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(79, 38);
-            this.btnCadastrar.TabIndex = 6;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtPatrimonioCamera
             // 
@@ -175,6 +205,17 @@
             this.lblNumeroDeSerie.TabIndex = 5;
             this.lblNumeroDeSerie.Text = "Produto";
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.Location = new System.Drawing.Point(293, 314);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(79, 38);
+            this.btnCadastrar.TabIndex = 6;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -203,47 +244,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(303, 12);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
-            this.btnLimpar.TabIndex = 7;
-            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // txtProduto
-            // 
-            this.txtProduto.BackColor = System.Drawing.SystemColors.Info;
-            this.txtProduto.FormattingEnabled = true;
-            this.txtProduto.Location = new System.Drawing.Point(79, 38);
-            this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(121, 21);
-            this.txtProduto.TabIndex = 18;
-            // 
-            // txtFornecedor
-            // 
-            this.txtFornecedor.BackColor = System.Drawing.SystemColors.Info;
-            this.txtFornecedor.FormattingEnabled = true;
-            this.txtFornecedor.Location = new System.Drawing.Point(79, 11);
-            this.txtFornecedor.Name = "txtFornecedor";
-            this.txtFornecedor.Size = new System.Drawing.Size(202, 21);
-            this.txtFornecedor.TabIndex = 19;
-            // 
-            // txtMac
-            // 
-            this.txtMac.BackColor = System.Drawing.SystemColors.Info;
-            this.txtMac.Location = new System.Drawing.Point(79, 64);
-            this.txtMac.Mask = "CC-CC-CC-CC-CC-CC";
-            this.txtMac.Name = "txtMac";
-            this.txtMac.Size = new System.Drawing.Size(202, 20);
-            this.txtMac.TabIndex = 20;
             // 
             // CadastrarCamera
             // 
