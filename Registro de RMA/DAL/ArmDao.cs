@@ -14,26 +14,44 @@ namespace Registro_de_RMA.DAL
             Conexao con = new Conexao();
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = @"";
+            cmd.CommandText = @"insert into arm(patrimonio, versaoDeHardwarePc, versaoDeSoftwarePc, serialIris, SerialColibri, windowsCe, bootloader, softwareTrufix, softwareToradex, patrimonioPcAtualizado, versaoDeHardwareAtualizadoPc, versaoDeSoftwareAtualizadoPc, windowsCeAtualizado, bootLoaderAtualizado, softwareTrufixAtualizado, softwareToradexAtualizado, dataDeEntrada, dataDesaida) 
+                                values(@Patrimonio, @VersaoDeHardwarePC, @SerialIris, @SerialColibri, @WindowsCe, @BootLoader, @SoftwareTrufix, @SoftwareToradex, @PatrimonioPcAtualizado, @VersaoDeHardwareAtualizadoPc, @VersaoDeSoftwareAtualizadoPC, @WindowsCeAtualizado, @BootLoaderAtualizado, @SoftwareTrufixAtualizado, @SoftwareToradexAtualizado, @DataDeEntrada, @DataDeSaida)";
 
-            /*cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.VersaoDeHardware);
-            cmd.Parameters.AddWithValue("", arm.VersaoDeSoftwarer);
-            cmd.Parameters.AddWithValue("", arm.Mac);
-            cmd.Parameters.AddWithValue("", arm.seria);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);
-            cmd.Parameters.AddWithValue("", arm.PatrimonioPc);*/
+            
+            cmd.Parameters.AddWithValue("@Patrimonio", arm.Patrimonio);
+            cmd.Parameters.AddWithValue("@VersaoDeHardwarePC", arm.VersaoDeHardwarePC);
+            cmd.Parameters.AddWithValue("@VersaoDeSoftwarerPC", arm.VersaoDeSoftwarerPC);
+            cmd.Parameters.AddWithValue("@SerialIris", arm.SerialIris);
+            cmd.Parameters.AddWithValue("@SerialColibri", arm.SerialColibri);
+            cmd.Parameters.AddWithValue("@WindowsCe", arm.WindowsCe);
+            cmd.Parameters.AddWithValue("@BootLoader", arm.BootLoader);
+            cmd.Parameters.AddWithValue("@SoftwareTrufix", arm.SoftwareTrufix);
+            cmd.Parameters.AddWithValue("@SoftwareToradex", arm.SoftwareToradex);
+            cmd.Parameters.AddWithValue("@PatrimonioPcAtualizado", arm.PatrimonioPcAtualizado);
+            cmd.Parameters.AddWithValue("@VersaoDeHardwareAtualizadoPc", arm.VersaoDeHardwareAtualizadoPc);
+            cmd.Parameters.AddWithValue("@VersaoDeSoftwareAtualizadoPC", arm.VersaoDeSoftwareAtualizadoPC);
+            cmd.Parameters.AddWithValue("@WindowsCeAtualizado", arm.WindowsCeAtualizado);
+            cmd.Parameters.AddWithValue("@BootLoaderAtualizado", arm.BootLoaderAtualizado);
+            cmd.Parameters.AddWithValue("@SoftwareTrufixAtualizado", arm.SoftwareTrufixAtualizado);
+            cmd.Parameters.AddWithValue("@SoftwareToradexAtualizado", arm.SoftwareToradexAtualizado);
+            cmd.Parameters.AddWithValue("@DataDeEntrada", arm.DataDeEntrada);
+            cmd.Parameters.AddWithValue("@DataDeSaida", arm.DataDeSaida);
+
+            try
+            {
+                cmd.Connection = con.Conectar();
+                cmd.ExecuteNonQuery();
+                Mensagem = "Cadastrado com sucesso!";
+            }
+            catch (System.Exception)
+            {
+
+                Mensagem = "Erro de comunicação com o banco de dados";
+            }
+            finally
+            {
+                con.Desconectar();
+            }
 
             return Mensagem;
         }
