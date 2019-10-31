@@ -76,6 +76,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPatrimonioArm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtVersaoAtualizadaSoftware = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnCopiarVersaoSoftware = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -228,6 +231,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnCopiarVersaoSoftware);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.txtVersaoAtualizadaSoftware);
             this.groupBox2.Controls.Add(this.btnCopiarTodos);
             this.groupBox2.Controls.Add(this.btnCopiarVersaoHardware);
             this.groupBox2.Controls.Add(this.txtVersaoAtualizadaHardware);
@@ -249,7 +255,7 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Location = new System.Drawing.Point(12, 357);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(554, 179);
+            this.groupBox2.Size = new System.Drawing.Size(554, 235);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Versão atualizada";
@@ -261,7 +267,7 @@
             this.btnCopiarTodos.Name = "btnCopiarTodos";
             this.btnCopiarTodos.Size = new System.Drawing.Size(117, 36);
             this.btnCopiarTodos.TabIndex = 36;
-            this.btnCopiarTodos.Text = "Não alterar todos";
+            this.btnCopiarTodos.Text = "Sem alterações";
             this.btnCopiarTodos.UseVisualStyleBackColor = true;
             this.btnCopiarTodos.Click += new System.EventHandler(this.btnCopiarTodos_Click);
             // 
@@ -302,7 +308,7 @@
             // btnCopiarSoftwareTdx
             // 
             this.btnCopiarSoftwareTdx.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCopiarSoftwareTdx.Location = new System.Drawing.Point(455, 146);
+            this.btnCopiarSoftwareTdx.Location = new System.Drawing.Point(455, 175);
             this.btnCopiarSoftwareTdx.Name = "btnCopiarSoftwareTdx";
             this.btnCopiarSoftwareTdx.Size = new System.Drawing.Size(81, 19);
             this.btnCopiarSoftwareTdx.TabIndex = 22;
@@ -313,7 +319,7 @@
             // btnCopiarSoftwareTrufix
             // 
             this.btnCopiarSoftwareTrufix.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCopiarSoftwareTrufix.Location = new System.Drawing.Point(455, 122);
+            this.btnCopiarSoftwareTrufix.Location = new System.Drawing.Point(455, 151);
             this.btnCopiarSoftwareTrufix.Name = "btnCopiarSoftwareTrufix";
             this.btnCopiarSoftwareTrufix.Size = new System.Drawing.Size(81, 19);
             this.btnCopiarSoftwareTrufix.TabIndex = 20;
@@ -324,7 +330,7 @@
             // btnCopiarBootLoader
             // 
             this.btnCopiarBootLoader.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCopiarBootLoader.Location = new System.Drawing.Point(253, 93);
+            this.btnCopiarBootLoader.Location = new System.Drawing.Point(253, 122);
             this.btnCopiarBootLoader.Name = "btnCopiarBootLoader";
             this.btnCopiarBootLoader.Size = new System.Drawing.Size(81, 19);
             this.btnCopiarBootLoader.TabIndex = 20;
@@ -335,7 +341,7 @@
             // btnCopiarWindowsCe
             // 
             this.btnCopiarWindowsCe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCopiarWindowsCe.Location = new System.Drawing.Point(253, 69);
+            this.btnCopiarWindowsCe.Location = new System.Drawing.Point(253, 98);
             this.btnCopiarWindowsCe.Name = "btnCopiarWindowsCe";
             this.btnCopiarWindowsCe.Size = new System.Drawing.Size(81, 19);
             this.btnCopiarWindowsCe.TabIndex = 18;
@@ -378,15 +384,16 @@
             this.txtVersaoAtualizadaSoftwareTdx.Items.AddRange(new object[] {
             "V1.4.0.4 TD-PU",
             "V1.4.0.4 TD-EN"});
-            this.txtVersaoAtualizadaSoftwareTdx.Location = new System.Drawing.Point(122, 146);
+            this.txtVersaoAtualizadaSoftwareTdx.Location = new System.Drawing.Point(122, 175);
             this.txtVersaoAtualizadaSoftwareTdx.Name = "txtVersaoAtualizadaSoftwareTdx";
             this.txtVersaoAtualizadaSoftwareTdx.Size = new System.Drawing.Size(318, 21);
             this.txtVersaoAtualizadaSoftwareTdx.TabIndex = 21;
+            this.txtVersaoAtualizadaSoftwareTdx.SelectedIndexChanged += new System.EventHandler(this.txtVersaoAtualizadaSoftwareTdx_SelectedIndexChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 156);
+            this.label15.Location = new System.Drawing.Point(15, 185);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(77, 13);
             this.label15.TabIndex = 34;
@@ -399,7 +406,7 @@
             this.txtVersaoAtualizadoWindowsCe.Items.AddRange(new object[] {
             "1.1",
             "1.2"});
-            this.txtVersaoAtualizadoWindowsCe.Location = new System.Drawing.Point(122, 67);
+            this.txtVersaoAtualizadoWindowsCe.Location = new System.Drawing.Point(122, 96);
             this.txtVersaoAtualizadoWindowsCe.Name = "txtVersaoAtualizadoWindowsCe";
             this.txtVersaoAtualizadoWindowsCe.Size = new System.Drawing.Size(100, 21);
             this.txtVersaoAtualizadoWindowsCe.TabIndex = 17;
@@ -411,7 +418,7 @@
             this.txtVersaoAtualiadoSoftwareTrufix.Items.AddRange(new object[] {
             "swTrufixToradexProducao_324_NewBoard.hex",
             "swTrufixToradexProducao_324_NewBoard_4X.hex"});
-            this.txtVersaoAtualiadoSoftwareTrufix.Location = new System.Drawing.Point(122, 119);
+            this.txtVersaoAtualiadoSoftwareTrufix.Location = new System.Drawing.Point(122, 148);
             this.txtVersaoAtualiadoSoftwareTrufix.Name = "txtVersaoAtualiadoSoftwareTrufix";
             this.txtVersaoAtualiadoSoftwareTrufix.Size = new System.Drawing.Size(318, 21);
             this.txtVersaoAtualiadoSoftwareTrufix.TabIndex = 19;
@@ -423,7 +430,7 @@
             this.txtVersaoAtualizadaBootLoader.Items.AddRange(new object[] {
             "1.1",
             "1.2"});
-            this.txtVersaoAtualizadaBootLoader.Location = new System.Drawing.Point(122, 93);
+            this.txtVersaoAtualizadaBootLoader.Location = new System.Drawing.Point(122, 122);
             this.txtVersaoAtualizadaBootLoader.Name = "txtVersaoAtualizadaBootLoader";
             this.txtVersaoAtualizadaBootLoader.Size = new System.Drawing.Size(100, 21);
             this.txtVersaoAtualizadaBootLoader.TabIndex = 19;
@@ -431,7 +438,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 101);
+            this.label12.Location = new System.Drawing.Point(15, 130);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(93, 13);
             this.label12.TabIndex = 26;
@@ -440,7 +447,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 127);
+            this.label11.Location = new System.Drawing.Point(15, 156);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(78, 13);
             this.label11.TabIndex = 28;
@@ -449,7 +456,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 75);
+            this.label13.Location = new System.Drawing.Point(15, 104);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(101, 13);
             this.label13.TabIndex = 24;
@@ -458,7 +465,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Location = new System.Drawing.Point(487, 542);
+            this.btnCadastrar.Location = new System.Drawing.Point(479, 598);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(79, 31);
             this.btnCadastrar.TabIndex = 23;
@@ -535,6 +542,7 @@
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(171, 20);
             this.maskedTextBox1.TabIndex = 2;
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // label7
             // 
@@ -614,11 +622,43 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Patrimônio(PC)";
             // 
+            // txtVersaoAtualizadaSoftware
+            // 
+            this.txtVersaoAtualizadaSoftware.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualizadaSoftware.FormattingEnabled = true;
+            this.txtVersaoAtualizadaSoftware.Items.AddRange(new object[] {
+            "1.1",
+            "1.2"});
+            this.txtVersaoAtualizadaSoftware.Location = new System.Drawing.Point(122, 69);
+            this.txtVersaoAtualizadaSoftware.Name = "txtVersaoAtualizadaSoftware";
+            this.txtVersaoAtualizadaSoftware.Size = new System.Drawing.Size(100, 21);
+            this.txtVersaoAtualizadaSoftware.TabIndex = 37;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(15, 77);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(100, 13);
+            this.label18.TabIndex = 38;
+            this.label18.Text = "Versão de Software";
+            // 
+            // btnCopiarVersaoSoftware
+            // 
+            this.btnCopiarVersaoSoftware.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCopiarVersaoSoftware.Location = new System.Drawing.Point(253, 71);
+            this.btnCopiarVersaoSoftware.Name = "btnCopiarVersaoSoftware";
+            this.btnCopiarVersaoSoftware.Size = new System.Drawing.Size(81, 19);
+            this.btnCopiarVersaoSoftware.TabIndex = 39;
+            this.btnCopiarVersaoSoftware.Text = " não alterado";
+            this.btnCopiarVersaoSoftware.UseVisualStyleBackColor = true;
+            this.btnCopiarVersaoSoftware.Click += new System.EventHandler(this.btnCopiarVersaoSoftware_Click);
+            // 
             // CadastrarArm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 585);
+            this.ClientSize = new System.Drawing.Size(578, 641);
             this.Controls.Add(this.txtMacArm);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox2);
@@ -690,5 +730,8 @@
         private System.Windows.Forms.ComboBox txtVersaoAtualizadaHardware;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox txtVersaoHardware;
+        private System.Windows.Forms.Button btnCopiarVersaoSoftware;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox txtVersaoAtualizadaSoftware;
     }
 }
