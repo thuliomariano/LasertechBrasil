@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Registro_de_RMA.Modelo
 {
@@ -42,6 +38,6 @@ namespace Registro_de_RMA.Modelo
         public string Mensagem { get => mensagem; set => mensagem = value; }
         public string Tipo { get => tipo; set => tipo = value; }
         public string Item { get => item; set => item = value; }
-        
+
     }
 }
