@@ -1,9 +1,5 @@
 ﻿using Registro_de_RMA.Modelo;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 namespace Registro_de_RMA.DAL
@@ -26,7 +22,7 @@ namespace Registro_de_RMA.DAL
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"insert into sensor(numero,cliente,rma,patrimonio,recebimento,os,apontamento,observacao, dataDeEntrada, dataDeSaida, statusDaOs) 
                                 values(@numero, @cliente, @rma, @patrimonio, @recebimento, @os, @apontamento, @observacao, @dataDeEntrada, @dataDeSaida, @statusDaOs)";
-            
+
 
             cmd.Parameters.AddWithValue("@numero", sensor.NumeroDeSerie);
             cmd.Parameters.AddWithValue("@cliente", sensor.Cliente);

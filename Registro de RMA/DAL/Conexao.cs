@@ -14,7 +14,7 @@ namespace Registro_de_RMA.DAL
             connection = new SqlConnection();
 
             connection.ConnectionString = @"Data Source=Manutenção;Initial Catalog=lasertechbrasil;Integrated Security=True";
-   
+
         }
         //se a conexão estiver fechada o método abre a conexão
         public SqlConnection Conectar()

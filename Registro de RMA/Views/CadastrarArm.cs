@@ -46,5 +46,25 @@ namespace Registro_de_RMA.Views
         {
 
         }
+
+        private void btnCopiarVersaoHardware_Click(object sender, EventArgs e)
+        {
+            txtVersaoAtualizadaHardware.Text = txtVersaoHardware.Text;
+        }
+
+        private void txtVersaoAtualizadaHardware_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCopiarTodos_Click(object sender, EventArgs e)
+        {
+            txtVersaoAtualizadaPatrimonio.Text = txtPatrimonioArm.Text;
+            txtVersaoAtualizadaHardware.Text = txtVersaoHardware.Text;
+            txtVersaoAtualizadoWindowsCe.Text = txtVersaoAtualWindowsCe.Text;
+            txtVersaoAtualizadaBootLoader.Text = txtVersaoAtualBootloader.Text;
+            txtVersaoAtualiadoSoftwareTrufix.Text = txtVersaoAtualSoftwareTrufix.Text;
+            txtVersaoAtualizadaSoftwareTdx.Text = txtVersaoAtualSoftwareTdx.Text;
+        }
     }
 }

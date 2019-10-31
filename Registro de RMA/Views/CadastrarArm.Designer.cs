@@ -42,6 +42,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCopiarTodos = new System.Windows.Forms.Button();
+            this.btnCopiarVersaoHardware = new System.Windows.Forms.Button();
+            this.txtVersaoAtualizadaHardware = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.btnCopiarSoftwareTdx = new System.Windows.Forms.Button();
             this.btnCopiarSoftwareTrufix = new System.Windows.Forms.Button();
             this.btnCopiarBootLoader = new System.Windows.Forms.Button();
@@ -60,7 +64,8 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnLimparArm = new System.Windows.Forms.Button();
             this.txtMacArm = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtVersaoHardware = new System.Windows.Forms.ComboBox();
+            this.txtVersaoSoftwarePc = new System.Windows.Forms.ComboBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtColibri = new System.Windows.Forms.TextBox();
@@ -71,11 +76,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPatrimonioArm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtVersaoSoftwarePc = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btnCopiarVersaoHardware = new System.Windows.Forms.Button();
-            this.btnCopiarTodos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -230,7 +230,7 @@
             // 
             this.groupBox2.Controls.Add(this.btnCopiarTodos);
             this.groupBox2.Controls.Add(this.btnCopiarVersaoHardware);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.txtVersaoAtualizadaHardware);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.btnCopiarSoftwareTdx);
             this.groupBox2.Controls.Add(this.btnCopiarSoftwareTrufix);
@@ -253,6 +253,51 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Versão atualizada";
+            // 
+            // btnCopiarTodos
+            // 
+            this.btnCopiarTodos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCopiarTodos.Location = new System.Drawing.Point(410, 25);
+            this.btnCopiarTodos.Name = "btnCopiarTodos";
+            this.btnCopiarTodos.Size = new System.Drawing.Size(117, 36);
+            this.btnCopiarTodos.TabIndex = 36;
+            this.btnCopiarTodos.Text = "Não alterar todos";
+            this.btnCopiarTodos.UseVisualStyleBackColor = true;
+            this.btnCopiarTodos.Click += new System.EventHandler(this.btnCopiarTodos_Click);
+            // 
+            // btnCopiarVersaoHardware
+            // 
+            this.btnCopiarVersaoHardware.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCopiarVersaoHardware.Location = new System.Drawing.Point(253, 42);
+            this.btnCopiarVersaoHardware.Name = "btnCopiarVersaoHardware";
+            this.btnCopiarVersaoHardware.Size = new System.Drawing.Size(81, 19);
+            this.btnCopiarVersaoHardware.TabIndex = 16;
+            this.btnCopiarVersaoHardware.Text = " não alterado";
+            this.btnCopiarVersaoHardware.UseVisualStyleBackColor = true;
+            this.btnCopiarVersaoHardware.Click += new System.EventHandler(this.btnCopiarVersaoHardware_Click);
+            // 
+            // txtVersaoAtualizadaHardware
+            // 
+            this.txtVersaoAtualizadaHardware.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualizadaHardware.FormattingEnabled = true;
+            this.txtVersaoAtualizadaHardware.Items.AddRange(new object[] {
+            "RFL_BASE TDX",
+            "BASE TRUFIX-544_V0",
+            "BASE TRUFIX-544_V1"});
+            this.txtVersaoAtualizadaHardware.Location = new System.Drawing.Point(122, 42);
+            this.txtVersaoAtualizadaHardware.Name = "txtVersaoAtualizadaHardware";
+            this.txtVersaoAtualizadaHardware.Size = new System.Drawing.Size(126, 21);
+            this.txtVersaoAtualizadaHardware.TabIndex = 15;
+            this.txtVersaoAtualizadaHardware.SelectedIndexChanged += new System.EventHandler(this.txtVersaoAtualizadaHardware_SelectedIndexChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(12, 50);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(104, 13);
+            this.label17.TabIndex = 24;
+            this.label17.Text = "Versão do Hardware";
             // 
             // btnCopiarSoftwareTdx
             // 
@@ -436,8 +481,8 @@
             // 
             // txtMacArm
             // 
+            this.txtMacArm.Controls.Add(this.txtVersaoHardware);
             this.txtMacArm.Controls.Add(this.txtVersaoSoftwarePc);
-            this.txtMacArm.Controls.Add(this.comboBox1);
             this.txtMacArm.Controls.Add(this.maskedTextBox1);
             this.txtMacArm.Controls.Add(this.label7);
             this.txtMacArm.Controls.Add(this.txtColibri);
@@ -456,18 +501,31 @@
             this.txtMacArm.TabStop = false;
             this.txtMacArm.Text = "Panorâma";
             // 
-            // comboBox1
+            // txtVersaoHardware
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.txtVersaoHardware.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoHardware.FormattingEnabled = true;
+            this.txtVersaoHardware.Items.AddRange(new object[] {
+            "RFL_BASE TDX",
+            "BASE TRUFIX-544_V0",
+            "BASE TRUFIX-544_V1"});
+            this.txtVersaoHardware.Location = new System.Drawing.Point(125, 50);
+            this.txtVersaoHardware.Name = "txtVersaoHardware";
+            this.txtVersaoHardware.Size = new System.Drawing.Size(136, 21);
+            this.txtVersaoHardware.TabIndex = 3;
+            // 
+            // txtVersaoSoftwarePc
+            // 
+            this.txtVersaoSoftwarePc.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoSoftwarePc.FormattingEnabled = true;
+            this.txtVersaoSoftwarePc.Items.AddRange(new object[] {
             "4.X",
             "4.4",
             "N.W"});
-            this.comboBox1.Location = new System.Drawing.Point(125, 81);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 21);
-            this.comboBox1.TabIndex = 5;
+            this.txtVersaoSoftwarePc.Location = new System.Drawing.Point(125, 81);
+            this.txtVersaoSoftwarePc.Name = "txtVersaoSoftwarePc";
+            this.txtVersaoSoftwarePc.Size = new System.Drawing.Size(136, 21);
+            this.txtVersaoSoftwarePc.TabIndex = 5;
             // 
             // maskedTextBox1
             // 
@@ -556,61 +614,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Patrimônio(PC)";
             // 
-            // txtVersaoSoftwarePc
-            // 
-            this.txtVersaoSoftwarePc.BackColor = System.Drawing.SystemColors.Info;
-            this.txtVersaoSoftwarePc.FormattingEnabled = true;
-            this.txtVersaoSoftwarePc.Items.AddRange(new object[] {
-            "RFL_BASE TDX",
-            "BASE TRUFIX-544_V0",
-            "BASE TRUFIX-544_V1"});
-            this.txtVersaoSoftwarePc.Location = new System.Drawing.Point(125, 50);
-            this.txtVersaoSoftwarePc.Name = "txtVersaoSoftwarePc";
-            this.txtVersaoSoftwarePc.Size = new System.Drawing.Size(136, 21);
-            this.txtVersaoSoftwarePc.TabIndex = 3;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "RFL_BASE TDX",
-            "BASE TRUFIX-544_V0",
-            "BASE TRUFIX-544_V1"});
-            this.comboBox2.Location = new System.Drawing.Point(122, 42);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(126, 21);
-            this.comboBox2.TabIndex = 15;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(12, 50);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(104, 13);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "Versão do Hardware";
-            // 
-            // btnCopiarVersaoHardware
-            // 
-            this.btnCopiarVersaoHardware.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCopiarVersaoHardware.Location = new System.Drawing.Point(253, 42);
-            this.btnCopiarVersaoHardware.Name = "btnCopiarVersaoHardware";
-            this.btnCopiarVersaoHardware.Size = new System.Drawing.Size(81, 19);
-            this.btnCopiarVersaoHardware.TabIndex = 16;
-            this.btnCopiarVersaoHardware.Text = " não alterado";
-            this.btnCopiarVersaoHardware.UseVisualStyleBackColor = true;
-            // 
-            // btnCopiarTodos
-            // 
-            this.btnCopiarTodos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCopiarTodos.Location = new System.Drawing.Point(410, 25);
-            this.btnCopiarTodos.Name = "btnCopiarTodos";
-            this.btnCopiarTodos.Size = new System.Drawing.Size(117, 36);
-            this.btnCopiarTodos.TabIndex = 36;
-            this.btnCopiarTodos.Text = "Não alterar todos";
-            this.btnCopiarTodos.UseVisualStyleBackColor = true;
-            // 
             // CadastrarArm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -681,11 +684,11 @@
         private System.Windows.Forms.TextBox txtVersaoAtualizadaPatrimonio;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox txtVersaoSoftwarePc;
         private System.Windows.Forms.Button btnCopiarTodos;
         private System.Windows.Forms.Button btnCopiarVersaoHardware;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox txtVersaoAtualizadaHardware;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox txtVersaoSoftwarePc;
+        private System.Windows.Forms.ComboBox txtVersaoHardware;
     }
 }

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Registro_de_RMA.Modelo;
+﻿using Registro_de_RMA.Entities;
+using System;
 using System.Data.SqlClient;
-using Registro_de_RMA.Entities;
 
 namespace Registro_de_RMA.DAL
 {

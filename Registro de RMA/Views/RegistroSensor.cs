@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Registro_de_RMA.Modelo;
+using System;
 using System.Windows.Forms;
-using Registro_de_RMA.Modelo;
-using System.Globalization;
-using System.Data.SqlClient;
-using Registro_de_RMA.DAL;
 namespace Registro_de_RMA.Apresentacao
 {
     public partial class RegistroSensor : Form
@@ -79,17 +69,17 @@ namespace Registro_de_RMA.Apresentacao
             {
                 this.sensorTableAdapter1.ConsultaContemAvancada(this.lasertechbrasilDataSet21.Sensor, "%" + txtConsulta.Text + "%", cbStatus.Text);
             }
-           
+
         }
 
         private void btnDeletarSerie_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -99,7 +89,7 @@ namespace Registro_de_RMA.Apresentacao
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
+
 
         }
 
@@ -129,12 +119,12 @@ namespace Registro_de_RMA.Apresentacao
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
         private void consultaStatusToolStripButton_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -146,12 +136,12 @@ namespace Registro_de_RMA.Apresentacao
         private void button2_Click_1(object sender, EventArgs e)
         {
             this.sensorTableAdapter.ConsultaStatus(this.lasertechbrasilDataSet.Sensor, cbStatus.Text);
-            
+
         }
 
         private void consultarTudoToolStripButton_Click(object sender, EventArgs e)
         {
-          
+
 
         }
 
@@ -162,13 +152,13 @@ namespace Registro_de_RMA.Apresentacao
 
         private void consultaAvancadaToolStripButton_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
         private void consultaContemAvancadaToolStripButton_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -179,13 +169,13 @@ namespace Registro_de_RMA.Apresentacao
 
         private void consultaStatusToolStripButton_Click_1(object sender, EventArgs e)
         {
-           
+
 
         }
 
         private void consultaNumeroSerialToolStripButton_Click(object sender, EventArgs e)
         {
-       
+
 
         }
     }

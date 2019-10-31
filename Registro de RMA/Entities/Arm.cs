@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Registro_de_RMA.Entities
 {
@@ -15,7 +11,7 @@ namespace Registro_de_RMA.Entities
         public int CbIris { get; set; }
         public int Colibri { get; set; }
         public String VersaoDeHardware { get; set; }
-        public String VersaoDeSoftwarer{ get; set; }
+        public String VersaoDeSoftwarer { get; set; }
 
         //atual
         public String WindowsCe { get; set; }
@@ -31,4 +27,3 @@ namespace Registro_de_RMA.Entities
         public int MyProperty { get; set; }
     }
 }
-    
