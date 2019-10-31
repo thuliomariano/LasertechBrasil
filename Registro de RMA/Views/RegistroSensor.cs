@@ -12,14 +12,11 @@ namespace Registro_de_RMA.Apresentacao
 
         private void Registro_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'lasertechbrasilDataSet21.Sensor'. Você pode movê-la ou removê-la conforme necessário.
             this.sensorTableAdapter1.Fill(this.lasertechbrasilDataSet21.Sensor);
-            // TODO: esta linha de código carrega dados na tabela 'lasertechbrasilDataSet.Sensor'. Você pode movê-la ou removê-la conforme necessário.
             this.sensorTableAdapter.Fill(this.lasertechbrasilDataSet.Sensor);
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
             cbStatus.DataSource = Enum.GetValues(typeof(Entities.Enum.OrderStatus));
-
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
