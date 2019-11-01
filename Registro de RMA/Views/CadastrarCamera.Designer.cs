@@ -44,13 +44,7 @@
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -69,7 +63,7 @@
             this.groupBox1.Controls.Add(this.lblRecebimento);
             this.groupBox1.Controls.Add(this.lblCliente);
             this.groupBox1.Controls.Add(this.lblNumeroDeSerie);
-            this.groupBox1.Location = new System.Drawing.Point(12, 82);
+            this.groupBox1.Location = new System.Drawing.Point(11, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(361, 226);
             this.groupBox1.TabIndex = 4;
@@ -208,7 +202,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Location = new System.Drawing.Point(293, 314);
+            this.btnCadastrar.Location = new System.Drawing.Point(293, 236);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(79, 38);
             this.btnCadastrar.TabIndex = 6;
@@ -216,41 +210,11 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(384, 76);
-            this.panel1.TabIndex = 6;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Registro_de_RMA.Properties.Resources.LTI_Logo;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(279, 63);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // CadastrarCamera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 357);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(384, 282);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "CadastrarCamera";
@@ -258,9 +222,6 @@
             this.Load += new System.EventHandler(this.CadastrarCamera_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,9 +240,6 @@
         private System.Windows.Forms.Label lblRecebimento;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblNumeroDeSerie;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblPatrimonio;
         private System.Windows.Forms.ComboBox txtProduto;
         private System.Windows.Forms.ComboBox txtFornecedor;

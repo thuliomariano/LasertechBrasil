@@ -32,15 +32,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.sensorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cÇAmeraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripSplitButton();
             this.trufixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aRMToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.oRÇAMENTOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.oRDEMDESERVIÇOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.sensorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cÇAmeraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripSplitButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -95,6 +93,35 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trufixToolStripMenuItem});
+            this.toolStripLabel2.Image = global::Registro_de_RMA.Properties.Resources._777081;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(106, 22);
+            this.toolStripLabel2.Text = "Manutenção";
+            // 
+            // trufixToolStripMenuItem
+            // 
+            this.trufixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aRMToolStripMenuItem1});
+            this.trufixToolStripMenuItem.Name = "trufixToolStripMenuItem";
+            this.trufixToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.trufixToolStripMenuItem.Text = "REGISTROS TRUFIX";
+            // 
+            // aRMToolStripMenuItem1
+            // 
+            this.aRMToolStripMenuItem1.Name = "aRMToolStripMenuItem1";
+            this.aRMToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.aRMToolStripMenuItem1.Text = "ARM";
+            this.aRMToolStripMenuItem1.Click += new System.EventHandler(this.aRMToolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // toolStripTextBox1
             // 
             this.toolStripTextBox1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -109,59 +136,16 @@
             // 
             this.sensorToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.sensorToolStripMenuItem.Name = "sensorToolStripMenuItem";
-            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.sensorToolStripMenuItem.Text = "SENSOR";
             this.sensorToolStripMenuItem.Click += new System.EventHandler(this.sensorToolStripMenuItem_Click);
             // 
             // cÇAmeraToolStripMenuItem
             // 
             this.cÇAmeraToolStripMenuItem.Name = "cÇAmeraToolStripMenuItem";
-            this.cÇAmeraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cÇAmeraToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.cÇAmeraToolStripMenuItem.Text = "CÂMERA";
             this.cÇAmeraToolStripMenuItem.Click += new System.EventHandler(this.cÇAmeraToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trufixToolStripMenuItem,
-            this.oRÇAMENTOToolStripMenuItem,
-            this.oRDEMDESERVIÇOToolStripMenuItem});
-            this.toolStripLabel2.Image = global::Registro_de_RMA.Properties.Resources._777081;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(106, 22);
-            this.toolStripLabel2.Text = "Manutenção";
-            // 
-            // trufixToolStripMenuItem
-            // 
-            this.trufixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aRMToolStripMenuItem1});
-            this.trufixToolStripMenuItem.Name = "trufixToolStripMenuItem";
-            this.trufixToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.trufixToolStripMenuItem.Text = "REGISTROS TRUFIX";
-            // 
-            // aRMToolStripMenuItem1
-            // 
-            this.aRMToolStripMenuItem1.Name = "aRMToolStripMenuItem1";
-            this.aRMToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.aRMToolStripMenuItem1.Text = "ARM";
-            this.aRMToolStripMenuItem1.Click += new System.EventHandler(this.aRMToolStripMenuItem1_Click);
-            // 
-            // oRÇAMENTOToolStripMenuItem
-            // 
-            this.oRÇAMENTOToolStripMenuItem.Name = "oRÇAMENTOToolStripMenuItem";
-            this.oRÇAMENTOToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.oRÇAMENTOToolStripMenuItem.Text = "ORÇAMENTO";
-            // 
-            // oRDEMDESERVIÇOToolStripMenuItem
-            // 
-            this.oRDEMDESERVIÇOToolStripMenuItem.Name = "oRDEMDESERVIÇOToolStripMenuItem";
-            this.oRDEMDESERVIÇOToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.oRDEMDESERVIÇOToolStripMenuItem.Text = "ORDEM DE SERVIÇO";
             // 
             // toolStripSeparator2
             // 
@@ -226,8 +210,6 @@
         private System.Windows.Forms.ToolStripSplitButton toolStripLabel2;
         private System.Windows.Forms.ToolStripMenuItem trufixToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aRMToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem oRÇAMENTOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem oRDEMDESERVIÇOToolStripMenuItem;
         private System.Windows.Forms.ToolStripSplitButton toolStripLabel1;
     }
 }
