@@ -1,8 +1,7 @@
 ﻿using Registro_de_RMA.Entities;
+using Registro_de_RMA.Modelo;
 using System;
 using System.Windows.Forms;
-using Registro_de_RMA.Controller;
-using Registro_de_RMA.Modelo;
 
 namespace Registro_de_RMA.Views
 {
@@ -100,28 +99,30 @@ namespace Registro_de_RMA.Views
             Arm arm = new Arm();
             arm.Patrimonio = txtPatrimonioArm.Text.ToUpper();
             arm.Mac = txtMac.Text.ToUpper();
-            arm.VersaoDeHardwareAtualizadoPc = txtVersaoHardware.Text.ToUpper();
+            
+            arm.VersaoDeHardwarePC = txtVersaoHardware.Text.ToUpper();
             arm.SerialIris = Convert.ToInt16(txtIris.Text);
-            arm.VersaoDeSoftwareAtualizadoPC = txtVersaoSoftwarePc.Text.ToUpper();
+            arm.VersaoDeSoftwarerPC = txtVersaoSoftwarePc.Text.ToUpper();
             arm.SerialColibri = Convert.ToInt16(txtColibri.Text);
 
             //Atual
             arm.WindowsCe = txtVersaoAtualWindowsCe.Text.ToUpper();
             arm.BootLoader = txtVersaoAtualBootloader.Text.ToUpper();
-            arm.SoftwareTrufixAtualizado = txtVersaoAtualSoftwareTrufix.Text.ToUpper();
+            arm.SoftwareTrufix = txtVersaoAtualSoftwareTrufix.Text.ToUpper();
             arm.SoftwareToradex = txtVersaoAtualSoftwareTdx.Text.ToUpper();
-
-            //Versão atualizada
+            
+            //Versão atua   lizada
             arm.PatrimonioPcAtualizado = txtVersaoAtualizadaPatrimonio.Text.ToUpper();
             arm.VersaoDeHardwareAtualizadoPc = txtVersaoAtualizadaHardware.Text.ToUpper();
             arm.WindowsCeAtualizado = txtVersaoAtualizadoWindowsCe.Text.ToUpper();
             arm.BootLoaderAtualizado = txtVersaoAtualizadaBootLoader.Text.ToUpper();
+            arm.SoftwareTrufixAtualizado = txtVersaoAtualiadoSoftwareTrufix.Text.ToUpper();
             arm.VersaoDeSoftwareAtualizadoPC = txtVersaoAtualiadoSoftwareTrufix.Text.ToUpper();
             arm.SoftwareToradexAtualizado = txtVersaoAtualizadaSoftwareTdx.Text.ToUpper();
-            arm.DataDeEntrada = DateTime.Now;
-            arm.DataDeSaida = DateTime.Now;
-            arm.DataDeEntrada.ToString("dd-MM-yyyy HH:mm:ss");
-            arm.DataDeSaida.ToString("dd-MM-yyyy HH:mm:ss");
+            string data1 = DateTime.Now.ToString("yyyy-dd-MM HH:mm:ss");
+            string data2 = DateTime.Now.ToString("yyyy-dd-MM HH:mm:ss");
+            arm.DataDeEntrada = Convert.ToDateTime(data1);
+            arm.DataDeSaida = Convert.ToDateTime(data2);
             Controle controle = new Controle();
             MessageBox.Show(controle.CadastrarArm(arm), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

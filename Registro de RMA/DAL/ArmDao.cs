@@ -14,13 +14,14 @@ namespace Registro_de_RMA.DAL
             Conexao con = new Conexao();
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = @"insert into arm(patrimonio, versaoDeHardwarePc, versaoDeSoftwarePc, serialIris, SerialColibri, windowsCe, bootloader, softwareTrufix, softwareToradex, patrimonioPcAtualizado, versaoDeHardwareAtualizadoPc, versaoDeSoftwareAtualizadoPc, windowsCeAtualizado, bootLoaderAtualizado, softwareTrufixAtualizado, softwareToradexAtualizado, dataDeEntrada, dataDesaida) 
-                                values(@Patrimonio, @VersaoDeHardwarePC, @SerialIris, @SerialColibri, @WindowsCe, @BootLoader, @SoftwareTrufix, @SoftwareToradex, @PatrimonioPcAtualizado, @VersaoDeHardwareAtualizadoPc, @VersaoDeSoftwareAtualizadoPC, @WindowsCeAtualizado, @BootLoaderAtualizado, @SoftwareTrufixAtualizado, @SoftwareToradexAtualizado, @DataDeEntrada, @DataDeSaida)";
+            cmd.CommandText = @"insert into arm(patrimonio, versaoDeHardwarePc, versaoDeSoftwarePc, mac, serialIris, SerialColibri, windowsCe, bootloader, softwareTrufix, softwareToradex, patrimonioPcAtualizado, versaoDeHardwareAtualizadoPc, versaoDeSoftwareAtualizadoPc, windowsCeAtualizado, bootLoaderAtualizado, softwareTrufixAtualizado, softwareToradexAtualizado, dataDeEntrada, dataDesaida) 
+                                values(@Patrimonio, @VersaoDeHardwarePC,@VersaoDeSoftwarerPC, @Mac, @SerialIris, @SerialColibri, @WindowsCe, @BootLoader, @SoftwareTrufix, @SoftwareToradex, @PatrimonioPcAtualizado, @VersaoDeHardwareAtualizadoPc, @VersaoDeSoftwareAtualizadoPC, @WindowsCeAtualizado, @BootLoaderAtualizado, @SoftwareTrufixAtualizado, @SoftwareToradexAtualizado, @DataDeEntrada, @DataDeSaida)";
 
             
             cmd.Parameters.AddWithValue("@Patrimonio", arm.Patrimonio);
             cmd.Parameters.AddWithValue("@VersaoDeHardwarePC", arm.VersaoDeHardwarePC);
             cmd.Parameters.AddWithValue("@VersaoDeSoftwarerPC", arm.VersaoDeSoftwarerPC);
+            cmd.Parameters.AddWithValue("@Mac", arm.Mac);
             cmd.Parameters.AddWithValue("@SerialIris", arm.SerialIris);
             cmd.Parameters.AddWithValue("@SerialColibri", arm.SerialColibri);
             cmd.Parameters.AddWithValue("@WindowsCe", arm.WindowsCe);
@@ -43,10 +44,10 @@ namespace Registro_de_RMA.DAL
                 cmd.ExecuteNonQuery();
                 Mensagem = "Cadastrado com sucesso!";
             }
-            catch (System.Exception)
+            catch (SqlException erro)
             {
 
-                Mensagem = "Erro de comunicação com o banco de dados";
+                Mensagem = erro.ToString();
             }
             finally
             {

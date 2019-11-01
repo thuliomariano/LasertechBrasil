@@ -44,7 +44,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCopiarVersaoSoftware = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtVersaoAtualizadaSoftware = new System.Windows.Forms.ComboBox();
             this.btnCopiarTodos = new System.Windows.Forms.Button();
             this.btnCopiarVersaoHardware = new System.Windows.Forms.Button();
             this.txtVersaoAtualizadaHardware = new System.Windows.Forms.ComboBox();
@@ -79,6 +78,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPatrimonioArm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtVersaoAtualizadaSoftware = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -231,9 +231,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtVersaoAtualizadaSoftware);
             this.groupBox2.Controls.Add(this.btnCopiarVersaoSoftware);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.txtVersaoAtualizadaSoftware);
             this.groupBox2.Controls.Add(this.btnCopiarTodos);
             this.groupBox2.Controls.Add(this.btnCopiarVersaoHardware);
             this.groupBox2.Controls.Add(this.txtVersaoAtualizadaHardware);
@@ -279,18 +279,6 @@
             this.label18.Size = new System.Drawing.Size(100, 13);
             this.label18.TabIndex = 38;
             this.label18.Text = "Versão de Software";
-            // 
-            // txtVersaoAtualizadaSoftware
-            // 
-            this.txtVersaoAtualizadaSoftware.BackColor = System.Drawing.SystemColors.Info;
-            this.txtVersaoAtualizadaSoftware.FormattingEnabled = true;
-            this.txtVersaoAtualizadaSoftware.Items.AddRange(new object[] {
-            "1.1",
-            "1.2"});
-            this.txtVersaoAtualizadaSoftware.Location = new System.Drawing.Point(122, 69);
-            this.txtVersaoAtualizadaSoftware.Name = "txtVersaoAtualizadaSoftware";
-            this.txtVersaoAtualizadaSoftware.Size = new System.Drawing.Size(100, 21);
-            this.txtVersaoAtualizadaSoftware.TabIndex = 37;
             // 
             // btnCopiarTodos
             // 
@@ -654,6 +642,19 @@
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Patrimônio(PC)";
+            // 
+            // txtVersaoAtualizadaSoftware
+            // 
+            this.txtVersaoAtualizadaSoftware.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualizadaSoftware.FormattingEnabled = true;
+            this.txtVersaoAtualizadaSoftware.Items.AddRange(new object[] {
+            "4.X",
+            "4.4",
+            "N.W"});
+            this.txtVersaoAtualizadaSoftware.Location = new System.Drawing.Point(121, 69);
+            this.txtVersaoAtualizadaSoftware.Name = "txtVersaoAtualizadaSoftware";
+            this.txtVersaoAtualizadaSoftware.Size = new System.Drawing.Size(127, 21);
+            this.txtVersaoAtualizadaSoftware.TabIndex = 25;
             // 
             // CadastrarArm
             // 
