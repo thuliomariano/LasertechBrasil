@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Registro_de_RMA.Entities;
 using Registro_de_RMA.Modelo;
+using Registro_de_RMA.Entities.Enum;
 
 namespace Registro_de_RMA.Views
 {
@@ -33,6 +34,7 @@ namespace Registro_de_RMA.Views
             Controle controle = new Controle();
             controle.CadastrarCamera(camera);
             MessageBox.Show(controle.Mensagem, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

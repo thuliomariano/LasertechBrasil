@@ -118,8 +118,12 @@ namespace Registro_de_RMA.Views
             arm.BootLoaderAtualizado = txtVersaoAtualizadaBootLoader.Text.ToUpper();
             arm.VersaoDeSoftwareAtualizadoPC = txtVersaoAtualiadoSoftwareTrufix.Text.ToUpper();
             arm.SoftwareToradexAtualizado = txtVersaoAtualizadaSoftwareTdx.Text.ToUpper();
+            arm.DataDeEntrada = DateTime.Now;
+            arm.DataDeSaida = DateTime.Now;
+            arm.DataDeEntrada.ToString("dd-MM-yyyy HH:mm:ss");
+            arm.DataDeSaida.ToString("dd-MM-yyyy HH:mm:ss");
             Controle controle = new Controle();
-            MessageBox.Show(controle.CadastrarArm(arm),"Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(controle.CadastrarArm(arm), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
