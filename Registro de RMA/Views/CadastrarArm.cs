@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Registro_de_RMA.Entities;
+using System;
 using System.Windows.Forms;
+using Registro_de_RMA.Controller;
+using Registro_de_RMA.Modelo;
 
 namespace Registro_de_RMA.Views
 {
@@ -39,13 +35,13 @@ namespace Registro_de_RMA.Views
 
         private void btnCopiarSoftwareTdx_Click(object sender, EventArgs e)
         {
-            txtVersaoAtualizadaSoftwareTdx .Text = txtVersaoAtualSoftwareTdx.Text;
+            txtVersaoAtualizadaSoftwareTdx.Text = txtVersaoAtualSoftwareTdx.Text;
         }
 
         private void btnLimparArm_Click(object sender, EventArgs e)
         {
             txtPatrimonioArm.Text = "";
-            maskedTextBox1.Text = "";
+            txtMac.Text = "";
             txtVersaoHardware.Text = "";
             txtIris.Text = "";
             txtVersaoSoftwarePc.Text = "";
@@ -96,6 +92,34 @@ namespace Registro_de_RMA.Views
         private void btnCopiarVersaoSoftware_Click(object sender, EventArgs e)
         {
             txtVersaoAtualizadaSoftware.Text = txtVersaoSoftwarePc.Text;
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            //Padrão
+            Arm arm = new Arm();
+            arm.Patrimonio = txtPatrimonioArm.Text.ToUpper();
+            arm.Mac = txtMac.Text.ToUpper();
+            arm.VersaoDeHardwareAtualizadoPc = txtVersaoHardware.Text.ToUpper();
+            arm.SerialIris = Convert.ToInt16(txtIris.Text);
+            arm.VersaoDeSoftwareAtualizadoPC = txtVersaoSoftwarePc.Text.ToUpper();
+            arm.SerialColibri = Convert.ToInt16(txtColibri.Text);
+
+            //Atual
+            arm.WindowsCe = txtVersaoAtualWindowsCe.Text.ToUpper();
+            arm.BootLoader = txtVersaoAtualBootloader.Text.ToUpper();
+            arm.SoftwareTrufixAtualizado = txtVersaoAtualSoftwareTrufix.Text.ToUpper();
+            arm.SoftwareToradex = txtVersaoAtualSoftwareTdx.Text.ToUpper();
+
+            //Versão atualizada
+            arm.PatrimonioPcAtualizado = txtVersaoAtualizadaPatrimonio.Text.ToUpper();
+            arm.VersaoDeHardwareAtualizadoPc = txtVersaoAtualizadaHardware.Text.ToUpper();
+            arm.WindowsCeAtualizado = txtVersaoAtualizadoWindowsCe.Text.ToUpper();
+            arm.BootLoaderAtualizado = txtVersaoAtualizadaBootLoader.Text.ToUpper();
+            arm.VersaoDeSoftwareAtualizadoPC = txtVersaoAtualiadoSoftwareTrufix.Text.ToUpper();
+            arm.SoftwareToradexAtualizado = txtVersaoAtualizadaSoftwareTdx.Text.ToUpper();
+            Controle controle = new Controle();
+            MessageBox.Show(controle.CadastrarArm(arm),"Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

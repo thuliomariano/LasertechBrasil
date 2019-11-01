@@ -42,6 +42,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCopiarVersaoSoftware = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtVersaoAtualizadaSoftware = new System.Windows.Forms.ComboBox();
             this.btnCopiarTodos = new System.Windows.Forms.Button();
             this.btnCopiarVersaoHardware = new System.Windows.Forms.Button();
             this.txtVersaoAtualizadaHardware = new System.Windows.Forms.ComboBox();
@@ -66,7 +69,7 @@
             this.txtMacArm = new System.Windows.Forms.GroupBox();
             this.txtVersaoHardware = new System.Windows.Forms.ComboBox();
             this.txtVersaoSoftwarePc = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtMac = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtColibri = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -76,9 +79,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPatrimonioArm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtVersaoAtualizadaSoftware = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.btnCopiarVersaoSoftware = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -259,6 +259,38 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Versão atualizada";
+            // 
+            // btnCopiarVersaoSoftware
+            // 
+            this.btnCopiarVersaoSoftware.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCopiarVersaoSoftware.Location = new System.Drawing.Point(253, 71);
+            this.btnCopiarVersaoSoftware.Name = "btnCopiarVersaoSoftware";
+            this.btnCopiarVersaoSoftware.Size = new System.Drawing.Size(81, 19);
+            this.btnCopiarVersaoSoftware.TabIndex = 39;
+            this.btnCopiarVersaoSoftware.Text = " não alterado";
+            this.btnCopiarVersaoSoftware.UseVisualStyleBackColor = true;
+            this.btnCopiarVersaoSoftware.Click += new System.EventHandler(this.btnCopiarVersaoSoftware_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(15, 77);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(100, 13);
+            this.label18.TabIndex = 38;
+            this.label18.Text = "Versão de Software";
+            // 
+            // txtVersaoAtualizadaSoftware
+            // 
+            this.txtVersaoAtualizadaSoftware.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualizadaSoftware.FormattingEnabled = true;
+            this.txtVersaoAtualizadaSoftware.Items.AddRange(new object[] {
+            "1.1",
+            "1.2"});
+            this.txtVersaoAtualizadaSoftware.Location = new System.Drawing.Point(122, 69);
+            this.txtVersaoAtualizadaSoftware.Name = "txtVersaoAtualizadaSoftware";
+            this.txtVersaoAtualizadaSoftware.Size = new System.Drawing.Size(100, 21);
+            this.txtVersaoAtualizadaSoftware.TabIndex = 37;
             // 
             // btnCopiarTodos
             // 
@@ -471,6 +503,7 @@
             this.btnCadastrar.TabIndex = 23;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnLimparArm
             // 
@@ -490,7 +523,7 @@
             // 
             this.txtMacArm.Controls.Add(this.txtVersaoHardware);
             this.txtMacArm.Controls.Add(this.txtVersaoSoftwarePc);
-            this.txtMacArm.Controls.Add(this.maskedTextBox1);
+            this.txtMacArm.Controls.Add(this.txtMac);
             this.txtMacArm.Controls.Add(this.label7);
             this.txtMacArm.Controls.Add(this.txtColibri);
             this.txtMacArm.Controls.Add(this.label6);
@@ -534,15 +567,15 @@
             this.txtVersaoSoftwarePc.Size = new System.Drawing.Size(136, 21);
             this.txtVersaoSoftwarePc.TabIndex = 5;
             // 
-            // maskedTextBox1
+            // txtMac
             // 
-            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.maskedTextBox1.Location = new System.Drawing.Point(320, 27);
-            this.maskedTextBox1.Mask = "CC-CC-CC-CC-CC-CC";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(171, 20);
-            this.maskedTextBox1.TabIndex = 2;
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.txtMac.BackColor = System.Drawing.SystemColors.Info;
+            this.txtMac.Location = new System.Drawing.Point(320, 27);
+            this.txtMac.Mask = "CC-CC-CC-CC-CC-CC";
+            this.txtMac.Name = "txtMac";
+            this.txtMac.Size = new System.Drawing.Size(171, 20);
+            this.txtMac.TabIndex = 2;
+            this.txtMac.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // label7
             // 
@@ -622,38 +655,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Patrimônio(PC)";
             // 
-            // txtVersaoAtualizadaSoftware
-            // 
-            this.txtVersaoAtualizadaSoftware.BackColor = System.Drawing.SystemColors.Info;
-            this.txtVersaoAtualizadaSoftware.FormattingEnabled = true;
-            this.txtVersaoAtualizadaSoftware.Items.AddRange(new object[] {
-            "1.1",
-            "1.2"});
-            this.txtVersaoAtualizadaSoftware.Location = new System.Drawing.Point(122, 69);
-            this.txtVersaoAtualizadaSoftware.Name = "txtVersaoAtualizadaSoftware";
-            this.txtVersaoAtualizadaSoftware.Size = new System.Drawing.Size(100, 21);
-            this.txtVersaoAtualizadaSoftware.TabIndex = 37;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(15, 77);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(100, 13);
-            this.label18.TabIndex = 38;
-            this.label18.Text = "Versão de Software";
-            // 
-            // btnCopiarVersaoSoftware
-            // 
-            this.btnCopiarVersaoSoftware.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCopiarVersaoSoftware.Location = new System.Drawing.Point(253, 71);
-            this.btnCopiarVersaoSoftware.Name = "btnCopiarVersaoSoftware";
-            this.btnCopiarVersaoSoftware.Size = new System.Drawing.Size(81, 19);
-            this.btnCopiarVersaoSoftware.TabIndex = 39;
-            this.btnCopiarVersaoSoftware.Text = " não alterado";
-            this.btnCopiarVersaoSoftware.UseVisualStyleBackColor = true;
-            this.btnCopiarVersaoSoftware.Click += new System.EventHandler(this.btnCopiarVersaoSoftware_Click);
-            // 
             // CadastrarArm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -723,7 +724,7 @@
         private System.Windows.Forms.Button btnCopiarPatrimonio;
         private System.Windows.Forms.TextBox txtVersaoAtualizadaPatrimonio;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtMac;
         private System.Windows.Forms.ComboBox txtVersaoSoftwarePc;
         private System.Windows.Forms.Button btnCopiarTodos;
         private System.Windows.Forms.Button btnCopiarVersaoHardware;
