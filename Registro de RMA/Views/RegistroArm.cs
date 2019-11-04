@@ -41,5 +41,11 @@ namespace Registro_de_RMA.Views
         private void toolStripLabel2_ButtonClick(object sender, EventArgs e)
         {
             Close();        }
+
+        private void btnConsultarSerie_Click(object sender, EventArgs e)
+        {
+           
+        }
+        
     }
 }

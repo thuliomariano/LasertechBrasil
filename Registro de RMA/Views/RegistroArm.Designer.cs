@@ -157,13 +157,13 @@
             // 
             // btnConsultarSerie
             // 
-            this.btnConsultarSerie.FlatAppearance.BorderSize = 3;
             this.btnConsultarSerie.Location = new System.Drawing.Point(318, 34);
             this.btnConsultarSerie.Name = "btnConsultarSerie";
             this.btnConsultarSerie.Size = new System.Drawing.Size(75, 23);
             this.btnConsultarSerie.TabIndex = 1;
             this.btnConsultarSerie.Text = "Consultar";
             this.btnConsultarSerie.UseVisualStyleBackColor = true;
+            this.btnConsultarSerie.Click += new System.EventHandler(this.btnConsultarSerie_Click);
             // 
             // toolStrip1
             // 
@@ -209,6 +209,7 @@
             this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataDeEntradaDataGridViewTextBoxColumn1,
@@ -240,6 +241,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.windowsCeDataGridViewTextBoxColumn,
@@ -259,6 +261,7 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.patrimonioPcAtualizadoDataGridViewTextBoxColumn,
@@ -323,6 +326,7 @@
             this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.AutoGenerateColumns = false;
             this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataDeEntradaDataGridViewTextBoxColumn});
@@ -561,6 +565,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "RegistroArm";
             this.Text = "RegistroArm";
             this.Load += new System.EventHandler(this.RegistroArm_Load);
