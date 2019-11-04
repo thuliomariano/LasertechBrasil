@@ -47,5 +47,10 @@ namespace Registro_de_RMA
         {
             Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

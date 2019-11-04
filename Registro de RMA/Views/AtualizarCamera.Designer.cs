@@ -31,13 +31,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbStatusCamera = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLimparCamera = new System.Windows.Forms.Button();
             this.txtObservacaoCamera = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtApontamento = new System.Windows.Forms.TextBox();
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
             this.txtIdCamera = new System.Windows.Forms.TextBox();
             this.btnAtualizarCamera = new System.Windows.Forms.Button();
+            this.btnLimparCamera = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,20 +77,6 @@
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 31;
             this.label1.Text = "Status";
-            // 
-            // btnLimparCamera
-            // 
-            this.btnLimparCamera.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
-            this.btnLimparCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLimparCamera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimparCamera.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimparCamera.Location = new System.Drawing.Point(299, 19);
-            this.btnLimparCamera.Name = "btnLimparCamera";
-            this.btnLimparCamera.Size = new System.Drawing.Size(51, 46);
-            this.btnLimparCamera.TabIndex = 4;
-            this.btnLimparCamera.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimparCamera.UseVisualStyleBackColor = true;
-            this.btnLimparCamera.Click += new System.EventHandler(this.btnLimparCamera_Click);
             // 
             // txtObservacaoCamera
             // 
@@ -146,10 +132,25 @@
             this.btnAtualizarCamera.UseVisualStyleBackColor = true;
             this.btnAtualizarCamera.Click += new System.EventHandler(this.btnAtualizarCamera_Click);
             // 
+            // btnLimparCamera
+            // 
+            this.btnLimparCamera.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
+            this.btnLimparCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimparCamera.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparCamera.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimparCamera.Location = new System.Drawing.Point(299, 19);
+            this.btnLimparCamera.Name = "btnLimparCamera";
+            this.btnLimparCamera.Size = new System.Drawing.Size(51, 46);
+            this.btnLimparCamera.TabIndex = 4;
+            this.btnLimparCamera.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimparCamera.UseVisualStyleBackColor = true;
+            this.btnLimparCamera.Click += new System.EventHandler(this.btnLimparCamera_Click);
+            // 
             // AtualizarCamera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(387, 210);
             this.Controls.Add(this.btnAtualizarCamera);
             this.Controls.Add(this.groupBox1);
