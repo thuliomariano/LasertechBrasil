@@ -38,6 +38,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtVersaoAtualizadaSoftware = new System.Windows.Forms.ComboBox();
             this.btnCopiarVersaoSoftware = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.btnCopiarTodos = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnLimparArm = new System.Windows.Forms.Button();
             this.txtMacArm = new System.Windows.Forms.GroupBox();
             this.txtVersaoHardware = new System.Windows.Forms.ComboBox();
             this.txtVersaoSoftwarePc = new System.Windows.Forms.ComboBox();
@@ -74,7 +74,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPatrimonioArm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtVersaoAtualizadaSoftware = new System.Windows.Forms.ComboBox();
+            this.btnLimparArm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.txtMacArm.SuspendLayout();
@@ -211,6 +211,19 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Versão atualizada";
+            // 
+            // txtVersaoAtualizadaSoftware
+            // 
+            this.txtVersaoAtualizadaSoftware.BackColor = System.Drawing.SystemColors.Info;
+            this.txtVersaoAtualizadaSoftware.FormattingEnabled = true;
+            this.txtVersaoAtualizadaSoftware.Items.AddRange(new object[] {
+            "4.X",
+            "4.4",
+            "N.W"});
+            this.txtVersaoAtualizadaSoftware.Location = new System.Drawing.Point(121, 69);
+            this.txtVersaoAtualizadaSoftware.Name = "txtVersaoAtualizadaSoftware";
+            this.txtVersaoAtualizadaSoftware.Size = new System.Drawing.Size(127, 21);
+            this.txtVersaoAtualizadaSoftware.TabIndex = 25;
             // 
             // btnCopiarVersaoSoftware
             // 
@@ -445,20 +458,6 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // btnLimparArm
-            // 
-            this.btnLimparArm.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
-            this.btnLimparArm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLimparArm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimparArm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimparArm.Location = new System.Drawing.Point(495, 14);
-            this.btnLimparArm.Name = "btnLimparArm";
-            this.btnLimparArm.Size = new System.Drawing.Size(51, 46);
-            this.btnLimparArm.TabIndex = 24;
-            this.btnLimparArm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimparArm.UseVisualStyleBackColor = true;
-            this.btnLimparArm.Click += new System.EventHandler(this.btnLimparArm_Click);
-            // 
             // txtMacArm
             // 
             this.txtMacArm.Controls.Add(this.txtVersaoHardware);
@@ -595,23 +594,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Patrimônio(PC)";
             // 
-            // txtVersaoAtualizadaSoftware
+            // btnLimparArm
             // 
-            this.txtVersaoAtualizadaSoftware.BackColor = System.Drawing.SystemColors.Info;
-            this.txtVersaoAtualizadaSoftware.FormattingEnabled = true;
-            this.txtVersaoAtualizadaSoftware.Items.AddRange(new object[] {
-            "4.X",
-            "4.4",
-            "N.W"});
-            this.txtVersaoAtualizadaSoftware.Location = new System.Drawing.Point(121, 69);
-            this.txtVersaoAtualizadaSoftware.Name = "txtVersaoAtualizadaSoftware";
-            this.txtVersaoAtualizadaSoftware.Size = new System.Drawing.Size(127, 21);
-            this.txtVersaoAtualizadaSoftware.TabIndex = 25;
+            this.btnLimparArm.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
+            this.btnLimparArm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimparArm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparArm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimparArm.Location = new System.Drawing.Point(495, 14);
+            this.btnLimparArm.Name = "btnLimparArm";
+            this.btnLimparArm.Size = new System.Drawing.Size(51, 46);
+            this.btnLimparArm.TabIndex = 24;
+            this.btnLimparArm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimparArm.UseVisualStyleBackColor = true;
+            this.btnLimparArm.Click += new System.EventHandler(this.btnLimparArm_Click);
             // 
             // CadastrarArm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(578, 571);
             this.Controls.Add(this.txtMacArm);
             this.Controls.Add(this.btnCadastrar);

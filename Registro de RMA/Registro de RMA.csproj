@@ -50,6 +50,11 @@
     <Compile Include="Controller\ValidaCamera.cs" />
     <Compile Include="DAL\ArmDao.cs" />
     <Compile Include="DAL\CameraDao.cs" />
+    <Compile Include="DataSetGeralArm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetGeralArm.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Arm.cs" />
     <Compile Include="Entities\Camera.cs" />
     <Compile Include="Entities\Enum\Fornecedor.cs" />
@@ -64,6 +69,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>lasertechbrasilDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lasertechbrasilDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lasertechbrasilDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lasertechbrasilDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lasertechbrasilDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lasertechbrasilDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lasertechbrasilDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lasertechbrasilDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lasertechbrasilDataSet7.xsd</DependentUpon>
     </Compile>
     <Compile Include="Views\AtualizarCamera.cs">
       <SubType>Form</SubType>
@@ -173,6 +198,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSetGeralArm.xsc">
+      <DependentUpon>DataSetGeralArm.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetGeralArm.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetGeralArm.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetGeralArm.xss">
+      <DependentUpon>DataSetGeralArm.xsd</DependentUpon>
+    </None>
     <None Include="lasertechbrasilDataSet.xsc">
       <DependentUpon>lasertechbrasilDataSet.xsd</DependentUpon>
     </None>
@@ -216,6 +252,50 @@
     </None>
     <None Include="lasertechbrasilDataSet3.xss">
       <DependentUpon>lasertechbrasilDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet4.xsc">
+      <DependentUpon>lasertechbrasilDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lasertechbrasilDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lasertechbrasilDataSet4.xss">
+      <DependentUpon>lasertechbrasilDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet5.xsc">
+      <DependentUpon>lasertechbrasilDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lasertechbrasilDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lasertechbrasilDataSet5.xss">
+      <DependentUpon>lasertechbrasilDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet6.xsc">
+      <DependentUpon>lasertechbrasilDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lasertechbrasilDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lasertechbrasilDataSet6.xss">
+      <DependentUpon>lasertechbrasilDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet7.xsc">
+      <DependentUpon>lasertechbrasilDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="lasertechbrasilDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lasertechbrasilDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lasertechbrasilDataSet7.xss">
+      <DependentUpon>lasertechbrasilDataSet7.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -265,6 +345,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cm-front-icones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-cadastro-png-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc-document-copy-file-blue-round-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload-97640_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2080887.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
