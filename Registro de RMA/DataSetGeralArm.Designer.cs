@@ -1568,11 +1568,27 @@ namespace Registro_de_RMA.DataSetGeralArmTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT patrimonio, versaoDeHardwarePc, versaoDeSoftwarePc, mac, serialIris, SerialColibri, windowsCe, bootloader, softwareTrufix, softwareToradex, patrimonioPcAtualizado, versaoDeHardwareAtualizadoPc, versaoDeSoftwareAtualizadoPc, windowsCeAtualizado, bootLoaderAtualizado, softwareTrufixAtualizado, softwareToradexAtualizado, dataDeEntrada, dataDesaida FROM dbo.arm";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        patrimonio, versaoDeHardwarePc, versaoDeSoftwarePc, mac, serialIris, SerialColibri, windowsCe, bootloader, softwareTrufix, softwareToradex, patrimonioPcAtualizado, versaoDeHardwareAtualizadoPc, 
+                         versaoDeSoftwareAtualizadoPc, windowsCeAtualizado, bootLoaderAtualizado, softwareTrufixAtualizado, softwareToradexAtualizado, dataDeEntrada, dataDesaida
+FROM            arm
+WHERE        (patrimonioPcAtualizado LIKE @txtPatrimonioArmAtualizado)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txtPatrimonioArmAtualizado", global::System.Data.SqlDbType.VarChar, 40, global::System.Data.ParameterDirection.Input, 0, 0, "patrimonioPcAtualizado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        patrimonio, versaoDeHardwarePc, versaoDeSoftwarePc, mac, serialIris, SerialColibri, windowsCe, bootloader, softwareTrufix, softwareToradex, patrimonioPcAtualizado, versaoDeHardwareAtualizadoPc, 
+                         versaoDeSoftwareAtualizadoPc, windowsCeAtualizado, bootLoaderAtualizado, softwareTrufixAtualizado, softwareToradexAtualizado, dataDeEntrada, dataDesaida
+FROM            arm
+WHERE        (patrimonio LIKE @txtPatrimonioArm)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txtPatrimonioArm", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "patrimonio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1597,6 +1613,44 @@ namespace Registro_de_RMA.DataSetGeralArmTableAdapters {
             DataSetGeralArm.armDataTable dataTable = new DataSetGeralArm.armDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int ConsultaPatrimonioAtualizado(DataSetGeralArm.armDataTable dataTable, string txtPatrimonioArmAtualizado) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((txtPatrimonioArmAtualizado == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(txtPatrimonioArmAtualizado));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int ConsultaPCI(DataSetGeralArm.armDataTable dataTable, string txtPatrimonioArm) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((txtPatrimonioArm == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(txtPatrimonioArm));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

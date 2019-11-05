@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Registro_de_RMA.Views
@@ -40,12 +33,48 @@ namespace Registro_de_RMA.Views
 
         private void toolStripLabel2_ButtonClick(object sender, EventArgs e)
         {
-            Close();        }
+            Close();
+        }
 
         private void btnConsultarSerie_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                this.armTableAdapter4.ConsultaPCI(this.dataSetGeralArm.arm, "%" + txtConsulta.Text + "%");
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
-        
+
+        private void consultaPCIToolStripButton_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void consultaPatrimonioAtualizadoToolStripButton_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void consultaPatrimonioAtualizadoToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.armTableAdapter4.ConsultaPatrimonioAtualizado(this.dataSetGeralArm.arm,  "%" + txtPatrimonioArmAtualizado.Text + "%");
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
