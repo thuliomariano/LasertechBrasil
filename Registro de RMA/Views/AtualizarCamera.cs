@@ -29,12 +29,51 @@ namespace Registro_de_RMA.Views
         private void btnAtualizarCamera_Click(object sender, EventArgs e)
         {
             Camera camera = new Camera();
+            try
+            {
             camera.CameraDataDeSaida = DateTime.Now.ToString("yyyy-dd-MM HH:mm:ss");
-            camera.idCamera = Convert.ToInt16(txtIdCamera.Text.ToUpper());
-            camera.Observacao = txtObservacaoCamera.Text.ToUpper();
-            camera.CameraStatus = cbStatusCamera.Text.ToUpper();
+            if (txtIdCamera.Text == "")
+            {
+                camera.idCamera = 0;
+            }
+            else
+            {
+                camera.idCamera = Convert.ToInt16(txtIdCamera.Text.ToUpper());
+            }
+            if (cbStatusCamera.Text == "")
+            {
+                camera.CameraStatus = "";
+            }
+            else
+            {
+                camera.CameraStatus = cbStatusCamera.Text.ToUpper();
+            }
+            if (txtObservacaoCamera.Text == "")
+            {
+                camera.Observacao = "";
+            }
+            else
+            {
+                camera.Observacao = txtObservacaoCamera.Text.ToUpper();
+                }
+            }
+            catch (Exception errorCamera)
+            {
+
+                MessageBox.Show(errorCamera.ToString(), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            try
+            {
             Controle controle = new Controle();
             MessageBox.Show( controle.AtualizarCamera(camera), "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void cbStatusCamera_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,9 +88,17 @@ private void AtualizarCamera_Load(object sender, EventArgs e)
 
         private void btnLimparCamera_Click(object sender, EventArgs e)
         {
+            try
+            {     
             txtObservacaoCamera.Text = "";
             cbStatusCamera.Text = "";
             txtIdCamera.Text = "";
+            }
+            catch (Exception errorEntradaDadosCamera)
+            {
+                MessageBox.Show(errorEntradaDadosCamera.ToString(), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
         }
     }
 }

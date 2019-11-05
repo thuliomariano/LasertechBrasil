@@ -21,7 +21,7 @@ namespace Registro_de_RMA.Controller
             {
                 mensagem = "Favor Inserir no campo 'Câmera' valor menor que 50 caracteres!";
             }
-            if (camera.Mac.Length > 16)
+            if (camera.Mac.Length > 17)
             {
                 mensagem = "Favor Inserir no campo 'MAC adress' valor menor que 12 caracteres!";
             }
