@@ -75,6 +75,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(805, 32);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // toolStripSeparator1
             // 
@@ -103,21 +104,23 @@
             // 
             this.toolStripLabel2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trufixToolStripMenuItem});
-            this.toolStripLabel2.Image = global::Registro_de_RMA.Properties.Resources._777081;
+            this.toolStripLabel2.Image = global::Registro_de_RMA.Properties.Resources.Cabinet_icon_1;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(150, 29);
-            this.toolStripLabel2.Text = "Manutenção";
+            this.toolStripLabel2.Size = new System.Drawing.Size(120, 29);
+            this.toolStripLabel2.Text = "Registros";
             // 
             // trufixToolStripMenuItem
             // 
             this.trufixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aRMToolStripMenuItem1});
+            this.trufixToolStripMenuItem.Image = global::Registro_de_RMA.Properties.Resources.maintenance_icon_png_29;
             this.trufixToolStripMenuItem.Name = "trufixToolStripMenuItem";
-            this.trufixToolStripMenuItem.Size = new System.Drawing.Size(242, 30);
-            this.trufixToolStripMenuItem.Text = "REGISTROS TRUFIX";
+            this.trufixToolStripMenuItem.Size = new System.Drawing.Size(143, 30);
+            this.trufixToolStripMenuItem.Text = "TRUFIX";
             // 
             // aRMToolStripMenuItem1
             // 
+            this.aRMToolStripMenuItem1.Image = global::Registro_de_RMA.Properties.Resources.Diagrama_da_placa;
             this.aRMToolStripMenuItem1.Name = "aRMToolStripMenuItem1";
             this.aRMToolStripMenuItem1.Size = new System.Drawing.Size(124, 30);
             this.aRMToolStripMenuItem1.Text = "ARM";
@@ -128,7 +131,7 @@
             this.toolStripTextBox1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sensorToolStripMenuItem,
             this.cÇAmeraToolStripMenuItem});
-            this.toolStripTextBox1.Image = global::Registro_de_RMA.Properties.Resources.cm_front_icones;
+            this.toolStripTextBox1.Image = global::Registro_de_RMA.Properties.Resources._777081;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(218, 29);
             this.toolStripTextBox1.Text = "Manutenção externa";
@@ -136,21 +139,23 @@
             // sensorToolStripMenuItem
             // 
             this.sensorToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sensorToolStripMenuItem.Image = global::Registro_de_RMA.Properties.Resources.sensor_device_542254;
             this.sensorToolStripMenuItem.Name = "sensorToolStripMenuItem";
-            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(158, 30);
+            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.sensorToolStripMenuItem.Text = "SENSOR";
             this.sensorToolStripMenuItem.Click += new System.EventHandler(this.sensorToolStripMenuItem_Click);
             // 
             // cÇAmeraToolStripMenuItem
             // 
+            this.cÇAmeraToolStripMenuItem.Image = global::Registro_de_RMA.Properties.Resources.Pumatronix;
             this.cÇAmeraToolStripMenuItem.Name = "cÇAmeraToolStripMenuItem";
-            this.cÇAmeraToolStripMenuItem.Size = new System.Drawing.Size(158, 30);
+            this.cÇAmeraToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.cÇAmeraToolStripMenuItem.Text = "CÂMERA";
             this.cÇAmeraToolStripMenuItem.Click += new System.EventHandler(this.cÇAmeraToolStripMenuItem_Click);
             // 
             // toolStripLabel1
             // 
-            this.toolStripLabel1.Image = global::Registro_de_RMA.Properties.Resources.exit_97636_960_7201;
+            this.toolStripLabel1.Image = global::Registro_de_RMA.Properties.Resources.logout_icon;
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(76, 29);
             this.toolStripLabel1.Text = "Sair";

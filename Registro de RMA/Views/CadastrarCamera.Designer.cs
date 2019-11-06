@@ -32,7 +32,6 @@
             this.txtMac = new System.Windows.Forms.MaskedTextBox();
             this.txtFornecedor = new System.Windows.Forms.ComboBox();
             this.txtProduto = new System.Windows.Forms.ComboBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.txtObservacaoCamera = new System.Windows.Forms.TextBox();
             this.txtPatrimonioCamera = new System.Windows.Forms.TextBox();
             this.lblPatrimonio = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.lblRecebimento = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblNumeroDeSerie = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -96,20 +96,6 @@
             this.txtProduto.Name = "txtProduto";
             this.txtProduto.Size = new System.Drawing.Size(121, 21);
             this.txtProduto.TabIndex = 1;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(303, 12);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
-            this.btnLimpar.TabIndex = 7;
-            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // txtObservacaoCamera
             // 
@@ -199,14 +185,29 @@
             this.lblNumeroDeSerie.TabIndex = 5;
             this.lblNumeroDeSerie.Text = "Produto";
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackgroundImage = global::Registro_de_RMA.Properties.Resources.wipe_97583_960_720;
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpar.Location = new System.Drawing.Point(303, 12);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(51, 46);
+            this.btnLimpar.TabIndex = 7;
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // btnCadastrar
             // 
+            this.btnCadastrar.BackgroundImage = global::Registro_de_RMA.Properties.Resources._0_Weij_cGNU7_9RcFl;
+            this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Location = new System.Drawing.Point(293, 244);
+            this.btnCadastrar.Location = new System.Drawing.Point(303, 244);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(79, 38);
+            this.btnCadastrar.Size = new System.Drawing.Size(69, 51);
             this.btnCadastrar.TabIndex = 6;
-            this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
@@ -215,7 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(384, 285);
+            this.ClientSize = new System.Drawing.Size(384, 307);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "CadastrarCamera";

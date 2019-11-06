@@ -31,16 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblItem = new System.Windows.Forms.Label();
             this.txtConsulta = new System.Windows.Forms.TextBox();
             this.btnConsultarSerie = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -86,9 +82,11 @@
             this.txtPatrimonioArmAtualizado = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.armTableAdapter4 = new Registro_de_RMA.DataSetGeralArmTableAdapters.armTableAdapter();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripSplitButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -106,6 +104,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.armBindingSource3)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -130,24 +130,6 @@
             this.label4.Size = new System.Drawing.Size(143, 24);
             this.label4.TabIndex = 35;
             this.label4.Text = "TRUFIX(ARM)";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Registro_de_RMA.Properties.Resources.LTI_Logo;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(279, 63);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // groupBox4
             // 
@@ -180,11 +162,12 @@
             // 
             // btnConsultarSerie
             // 
-            this.btnConsultarSerie.Location = new System.Drawing.Point(318, 34);
+            this.btnConsultarSerie.BackgroundImage = global::Registro_de_RMA.Properties.Resources._24b34c036ba57900bb23711e12818c84;
+            this.btnConsultarSerie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConsultarSerie.Location = new System.Drawing.Point(334, 17);
             this.btnConsultarSerie.Name = "btnConsultarSerie";
-            this.btnConsultarSerie.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultarSerie.Size = new System.Drawing.Size(57, 39);
             this.btnConsultarSerie.TabIndex = 1;
-            this.btnConsultarSerie.Text = "Consultar";
             this.btnConsultarSerie.UseVisualStyleBackColor = true;
             this.btnConsultarSerie.Click += new System.EventHandler(this.btnConsultarSerie_Click);
             // 
@@ -203,26 +186,10 @@
             this.toolStrip1.TabIndex = 18;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.Image = global::Registro_de_RMA.Properties.Resources.kisspng_computer_icons_plus_sign_clip_art_plus_sign_5b4bfbdff0b3a7_2950963015317063359859;
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(109, 29);
-            this.toolStripLabel3.Text = "Cadastrar";
-            this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Image = global::Registro_de_RMA.Properties.Resources.exit_97636_960_720;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(76, 29);
-            this.toolStripLabel2.Text = "Sair";
-            this.toolStripLabel2.ButtonClick += new System.EventHandler(this.toolStripLabel2_ButtonClick);
             // 
             // toolStripSeparator2
             // 
@@ -581,17 +548,52 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(318, 34);
+            this.button1.BackgroundImage = global::Registro_de_RMA.Properties.Resources._24b34c036ba57900bb23711e12818c84;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(329, 17);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(59, 39);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Consultar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // armTableAdapter4
             // 
             this.armTableAdapter4.ClearBeforeFill = true;
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Image = global::Registro_de_RMA.Properties.Resources._2080887;
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(109, 29);
+            this.toolStripLabel3.Text = "Cadastrar";
+            this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Image = global::Registro_de_RMA.Properties.Resources.logout_icon;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(76, 29);
+            this.toolStripLabel2.Text = "Sair";
+            this.toolStripLabel2.ButtonClick += new System.EventHandler(this.toolStripLabel2_ButtonClick);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Registro_de_RMA.Properties.Resources.LTI_Logo;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(279, 63);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // RegistroArm
             // 
@@ -616,8 +618,6 @@
             this.Load += new System.EventHandler(this.RegistroArm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -638,6 +638,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.armBindingSource3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

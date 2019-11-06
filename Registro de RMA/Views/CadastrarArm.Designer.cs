@@ -60,7 +60,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtMacArm = new System.Windows.Forms.GroupBox();
             this.txtVersaoHardware = new System.Windows.Forms.ComboBox();
             this.txtVersaoSoftwarePc = new System.Windows.Forms.ComboBox();
@@ -75,6 +74,7 @@
             this.txtPatrimonioArm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimparArm = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.txtMacArm.SuspendLayout();
@@ -447,17 +447,6 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "Versão windows CE";
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Location = new System.Drawing.Point(479, 528);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(79, 31);
-            this.btnCadastrar.TabIndex = 23;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
             // txtMacArm
             // 
             this.txtMacArm.Controls.Add(this.txtVersaoHardware);
@@ -608,12 +597,24 @@
             this.btnLimparArm.UseVisualStyleBackColor = true;
             this.btnLimparArm.Click += new System.EventHandler(this.btnLimparArm_Click);
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackgroundImage = global::Registro_de_RMA.Properties.Resources._0_Weij_cGNU7_9RcFl;
+            this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.Location = new System.Drawing.Point(490, 528);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(68, 56);
+            this.btnCadastrar.TabIndex = 23;
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // CadastrarArm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(578, 571);
+            this.ClientSize = new System.Drawing.Size(578, 594);
             this.Controls.Add(this.txtMacArm);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox2);

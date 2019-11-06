@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,22 +50,22 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtConsulta = new System.Windows.Forms.TextBox();
             this.lblItem = new System.Windows.Forms.Label();
-            this.btnConsultarSerie = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripSplitButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.cameraTableAdapter1 = new Registro_de_RMA.lasertechbrasilDataSet3TableAdapters.cameraTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.btnConsultarSerie = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet3BindingSource)).BeginInit();
@@ -77,6 +75,8 @@
             this.groupBox4.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -101,24 +101,6 @@
             this.label4.Size = new System.Drawing.Size(82, 24);
             this.label4.TabIndex = 30;
             this.label4.Text = "Câmera";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Registro_de_RMA.Properties.Resources.LTI_Logo;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(279, 70);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -266,16 +248,6 @@
             this.lblItem.TabIndex = 29;
             this.lblItem.Text = "MAC";
             // 
-            // btnConsultarSerie
-            // 
-            this.btnConsultarSerie.Location = new System.Drawing.Point(318, 34);
-            this.btnConsultarSerie.Name = "btnConsultarSerie";
-            this.btnConsultarSerie.Size = new System.Drawing.Size(75, 23);
-            this.btnConsultarSerie.TabIndex = 1;
-            this.btnConsultarSerie.Text = "Consultar";
-            this.btnConsultarSerie.UseVisualStyleBackColor = true;
-            this.btnConsultarSerie.Click += new System.EventHandler(this.btnConsultarSerie_Click);
-            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.MediumAquamarine;
@@ -292,38 +264,15 @@
             this.toolStrip1.TabIndex = 18;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.Image = global::Registro_de_RMA.Properties.Resources._2080887;
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(109, 29);
-            this.toolStripLabel3.Text = "Cadastrar";
-            this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Image = global::Registro_de_RMA.Properties.Resources.reload_97640_960_720;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(103, 29);
-            this.toolStripLabel1.Text = "Atualizar";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Image = global::Registro_de_RMA.Properties.Resources.exit_97636_960_720;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(76, 29);
-            this.toolStripTextBox1.Text = "Sair";
             // 
             // groupBox1
             // 
@@ -356,16 +305,6 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Status";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(157, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(864, 154);
@@ -379,6 +318,71 @@
             // cameraTableAdapter1
             // 
             this.cameraTableAdapter1.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Registro_de_RMA.Properties.Resources._24b34c036ba57900bb23711e12818c84;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.ForeColor = System.Drawing.Color.Coral;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(170, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(58, 37);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Image = global::Registro_de_RMA.Properties.Resources._2080887;
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(109, 29);
+            this.toolStripLabel3.Text = "Cadastrar";
+            this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Image = global::Registro_de_RMA.Properties.Resources.icon_1294539_960_720;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(103, 29);
+            this.toolStripLabel1.Text = "Atualizar";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Image = global::Registro_de_RMA.Properties.Resources.logout_icon;
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(76, 29);
+            this.toolStripTextBox1.Text = "Sair";
+            // 
+            // btnConsultarSerie
+            // 
+            this.btnConsultarSerie.BackgroundImage = global::Registro_de_RMA.Properties.Resources._24b34c036ba57900bb23711e12818c84;
+            this.btnConsultarSerie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConsultarSerie.Location = new System.Drawing.Point(330, 19);
+            this.btnConsultarSerie.Name = "btnConsultarSerie";
+            this.btnConsultarSerie.Size = new System.Drawing.Size(58, 37);
+            this.btnConsultarSerie.TabIndex = 1;
+            this.btnConsultarSerie.UseVisualStyleBackColor = true;
+            this.btnConsultarSerie.Click += new System.EventHandler(this.btnConsultarSerie_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Registro_de_RMA.Properties.Resources.LTI_Logo;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(279, 70);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // RegistroCamera
             // 
@@ -397,8 +401,6 @@
             this.Load += new System.EventHandler(this.RegistroCamera_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet3BindingSource)).EndInit();
@@ -411,6 +413,8 @@
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

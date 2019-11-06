@@ -118,26 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="maintenance-icon-png-29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maintenance-icon-png-29.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0_Weij-cGNU7_9RcFl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0_Weij-cGNU7_9RcFl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="777081" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\777081.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete-icon-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-icon-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="21-spotlight-256x256" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\21-spotlight-256x256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sensor_device_542254" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sensor_device_542254.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cm-front-icones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cm-front-icones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LTI_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LTI_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete-icon-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete-icon-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="21-spotlight-256x256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\21-spotlight-256x256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PgImg_6_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PgImg_6_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wipe-97583_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wipe-97583_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2080887" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2080887.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cabinet-icon-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cabinet-icon-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-computer-icons-plus-sign-clip-art-plus-sign-5b4bfbdff0b3a7.2950963015317063359859" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-plus-sign-clip-art-plus-sign-5b4bfbdff0b3a7.2950963015317063359859.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,22 +160,40 @@
   <data name="exit-97636_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit-97636_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reload-97640_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reload-97640_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wipe-97583_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wipe-97583_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-computer-icons-button-update-clip-art-alexis-snchez-5b516c3b6d9af0.831798481532062779449" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-button-update-clip-art-alexis-snchez-5b516c3b6d9af0.831798481532062779449.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logout-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="emergency-exit-98585_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emergency-exit-98585_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete-icon-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-icon-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="doc-document-copy-file-blue-round-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doc-document-copy-file-blue-round-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cm-front-icones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cm-front-icones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Diagrama da placa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diagrama da placa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reload-97640_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reload-97640_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone-cadastro-png-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-cadastro-png-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2080887" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2080887.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="24b34c036ba57900bb23711e12818c84" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24b34c036ba57900bb23711e12818c84.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pumatronix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pumatronix.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-1294539_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-1294539_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

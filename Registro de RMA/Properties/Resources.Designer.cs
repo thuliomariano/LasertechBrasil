@@ -63,6 +63,16 @@ namespace Registro_de_RMA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0_Weij_cGNU7_9RcFl {
+            get {
+                object obj = ResourceManager.GetObject("0_Weij-cGNU7_9RcFl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2080887 {
             get {
                 object obj = ResourceManager.GetObject("2080887", resourceCulture);
@@ -83,9 +93,29 @@ namespace Registro_de_RMA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _24b34c036ba57900bb23711e12818c84 {
+            get {
+                object obj = ResourceManager.GetObject("24b34c036ba57900bb23711e12818c84", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _777081 {
             get {
                 object obj = ResourceManager.GetObject("777081", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cabinet_icon_1 {
+            get {
+                object obj = ResourceManager.GetObject("Cabinet-icon-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +153,29 @@ namespace Registro_de_RMA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Diagrama_da_placa {
+            get {
+                object obj = ResourceManager.GetObject("Diagrama da placa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doc_document_copy_file_blue_round_512 {
             get {
                 object obj = ResourceManager.GetObject("doc-document-copy-file-blue-round-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emergency_exit_98585_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("emergency-exit-98585_960_720", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +196,16 @@ namespace Registro_de_RMA.Properties {
         internal static System.Drawing.Bitmap exit_97636_960_7201 {
             get {
                 object obj = ResourceManager.GetObject("exit-97636_960_7201", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_1294539_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("icon-1294539_960_720", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -185,9 +245,29 @@ namespace Registro_de_RMA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logout_icon {
+            get {
+                object obj = ResourceManager.GetObject("logout-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LTI_Logo {
             get {
                 object obj = ResourceManager.GetObject("LTI_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maintenance_icon_png_29 {
+            get {
+                object obj = ResourceManager.GetObject("maintenance-icon-png-29", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -205,9 +285,29 @@ namespace Registro_de_RMA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pumatronix {
+            get {
+                object obj = ResourceManager.GetObject("Pumatronix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reload_97640_960_720 {
             get {
                 object obj = ResourceManager.GetObject("reload-97640_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sensor_device_542254 {
+            get {
+                object obj = ResourceManager.GetObject("sensor_device_542254", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

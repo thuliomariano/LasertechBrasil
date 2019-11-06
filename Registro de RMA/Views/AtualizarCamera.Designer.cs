@@ -123,12 +123,13 @@
             // 
             // btnAtualizarCamera
             // 
+            this.btnAtualizarCamera.BackgroundImage = global::Registro_de_RMA.Properties.Resources.reload_97640_960_720;
+            this.btnAtualizarCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAtualizarCamera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtualizarCamera.Location = new System.Drawing.Point(297, 169);
+            this.btnAtualizarCamera.Location = new System.Drawing.Point(311, 169);
             this.btnAtualizarCamera.Name = "btnAtualizarCamera";
-            this.btnAtualizarCamera.Size = new System.Drawing.Size(78, 31);
+            this.btnAtualizarCamera.Size = new System.Drawing.Size(64, 45);
             this.btnAtualizarCamera.TabIndex = 3;
-            this.btnAtualizarCamera.Text = "Atualizar";
             this.btnAtualizarCamera.UseVisualStyleBackColor = true;
             this.btnAtualizarCamera.Click += new System.EventHandler(this.btnAtualizarCamera_Click);
             // 
@@ -151,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(387, 210);
+            this.ClientSize = new System.Drawing.Size(387, 226);
             this.Controls.Add(this.btnAtualizarCamera);
             this.Controls.Add(this.groupBox1);
             this.Name = "AtualizarCamera";

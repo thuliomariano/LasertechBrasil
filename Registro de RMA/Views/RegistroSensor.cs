@@ -184,5 +184,10 @@ namespace Registro_de_RMA.Apresentacao
 
 
         }
+
+        private void toolStripLabel2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

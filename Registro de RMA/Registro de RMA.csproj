@@ -358,5 +358,35 @@
   <ItemGroup>
     <None Include="Resources\2080887.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_Weij-cGNU7_9RcFl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24b34c036ba57900bb23711e12818c84.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cabinet-icon-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency-exit-98585_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenance-icon-png-29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diagrama da placa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pumatronix.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensor_device_542254.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-1294539_960_720.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
