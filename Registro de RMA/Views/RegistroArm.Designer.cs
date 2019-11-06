@@ -45,14 +45,28 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataDeEntradaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDesaidaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.versaoDeSoftwarePc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serialIris = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SerialColibri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.armBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetGeralArm = new Registro_de_RMA.DataSetGeralArm();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.windowsCeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bootloader = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.softwareTrufixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.softwareToradexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.windowsCeAtualizadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bootLoaderAtualizadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.softwareToradexAtualizadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lasertechbrasilDataSet4 = new Registro_de_RMA.lasertechbrasilDataSet4();
             this.armBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.armTableAdapter = new Registro_de_RMA.lasertechbrasilDataSet4TableAdapters.armTableAdapter();
@@ -63,6 +77,7 @@
             this.armBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.armTableAdapter2 = new Registro_de_RMA.lasertechbrasilDataSet6TableAdapters.armTableAdapter();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataDeEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lasertechbrasilDataSet7 = new Registro_de_RMA.lasertechbrasilDataSet7();
             this.armBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.armTableAdapter3 = new Registro_de_RMA.lasertechbrasilDataSet7TableAdapters.armTableAdapter();
@@ -70,21 +85,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtPatrimonioArmAtualizado = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataDeEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.armBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetGeralArm = new Registro_de_RMA.DataSetGeralArm();
-            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.windowsCeAtualizadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bootLoaderAtualizadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.softwareToradexAtualizadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.windowsCeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.softwareTrufixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.softwareToradexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDeEntradaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDesaidaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.armTableAdapter4 = new Registro_de_RMA.DataSetGeralArmTableAdapters.armTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -92,6 +92,8 @@
             this.groupBox4.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.armBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetGeralArm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet4)).BeginInit();
@@ -104,8 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.armBindingSource3)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.armBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetGeralArm)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,12 +124,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(342, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 24);
+            this.label4.Size = new System.Drawing.Size(143, 24);
             this.label4.TabIndex = 35;
-            this.label4.Text = "Registro ARM";
+            this.label4.Text = "TRUFIX(ARM)";
             // 
             // pictureBox3
             // 
@@ -270,6 +270,22 @@
             this.dataGridView3.Size = new System.Drawing.Size(731, 155);
             this.dataGridView3.TabIndex = 34;
             // 
+            // dataDeEntradaDataGridViewTextBoxColumn1
+            // 
+            this.dataDeEntradaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataDeEntradaDataGridViewTextBoxColumn1.DataPropertyName = "patrimonio";
+            this.dataDeEntradaDataGridViewTextBoxColumn1.HeaderText = "Patrimônio";
+            this.dataDeEntradaDataGridViewTextBoxColumn1.Name = "dataDeEntradaDataGridViewTextBoxColumn1";
+            this.dataDeEntradaDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataDesaidaDataGridViewTextBoxColumn1
+            // 
+            this.dataDesaidaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataDesaidaDataGridViewTextBoxColumn1.DataPropertyName = "versaoDeHardwarePc";
+            this.dataDesaidaDataGridViewTextBoxColumn1.HeaderText = "Versão de Hardware PCI";
+            this.dataDesaidaDataGridViewTextBoxColumn1.Name = "dataDesaidaDataGridViewTextBoxColumn1";
+            this.dataDesaidaDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // versaoDeSoftwarePc
             // 
             this.versaoDeSoftwarePc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -302,6 +318,16 @@
             this.SerialColibri.Name = "SerialColibri";
             this.SerialColibri.ReadOnly = true;
             // 
+            // armBindingSource4
+            // 
+            this.armBindingSource4.DataMember = "arm";
+            this.armBindingSource4.DataSource = this.dataSetGeralArm;
+            // 
+            // dataSetGeralArm
+            // 
+            this.dataSetGeralArm.DataSetName = "DataSetGeralArm";
+            this.dataSetGeralArm.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -331,6 +357,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(935, 159);
             this.dataGridView1.TabIndex = 35;
             // 
+            // windowsCeDataGridViewTextBoxColumn
+            // 
+            this.windowsCeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.windowsCeDataGridViewTextBoxColumn.DataPropertyName = "windowsCe";
+            this.windowsCeDataGridViewTextBoxColumn.HeaderText = "Windows Ce";
+            this.windowsCeDataGridViewTextBoxColumn.Name = "windowsCeDataGridViewTextBoxColumn";
+            this.windowsCeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // bootloader
             // 
             this.bootloader.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -338,6 +372,22 @@
             this.bootloader.HeaderText = "Bootloader";
             this.bootloader.Name = "bootloader";
             this.bootloader.ReadOnly = true;
+            // 
+            // softwareTrufixDataGridViewTextBoxColumn
+            // 
+            this.softwareTrufixDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.softwareTrufixDataGridViewTextBoxColumn.DataPropertyName = "softwareTrufix";
+            this.softwareTrufixDataGridViewTextBoxColumn.HeaderText = "Software Trufix";
+            this.softwareTrufixDataGridViewTextBoxColumn.Name = "softwareTrufixDataGridViewTextBoxColumn";
+            this.softwareTrufixDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // softwareToradexDataGridViewTextBoxColumn
+            // 
+            this.softwareToradexDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.softwareToradexDataGridViewTextBoxColumn.DataPropertyName = "softwareToradex";
+            this.softwareToradexDataGridViewTextBoxColumn.HeaderText = "Software Toradex";
+            this.softwareToradexDataGridViewTextBoxColumn.Name = "softwareToradexDataGridViewTextBoxColumn";
+            this.softwareToradexDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dataGridView2
             // 
@@ -361,6 +411,62 @@
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(935, 124);
             this.dataGridView2.TabIndex = 36;
+            // 
+            // patrimonioPcAtualizadoDataGridViewTextBoxColumn
+            // 
+            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn.DataPropertyName = "patrimonioPcAtualizado";
+            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn.HeaderText = "Patrimônio";
+            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn.Name = "patrimonioPcAtualizadoDataGridViewTextBoxColumn";
+            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn
+            // 
+            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn.DataPropertyName = "versaoDeHardwareAtualizadoPc";
+            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn.HeaderText = "Versão de hardware da PCI";
+            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn.Name = "versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn";
+            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn
+            // 
+            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn.DataPropertyName = "versaoDeSoftwareAtualizadoPc";
+            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn.HeaderText = "Versão de software da PCI";
+            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn.Name = "versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn";
+            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // windowsCeAtualizadoDataGridViewTextBoxColumn
+            // 
+            this.windowsCeAtualizadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.windowsCeAtualizadoDataGridViewTextBoxColumn.DataPropertyName = "windowsCeAtualizado";
+            this.windowsCeAtualizadoDataGridViewTextBoxColumn.HeaderText = "Windows CE";
+            this.windowsCeAtualizadoDataGridViewTextBoxColumn.Name = "windowsCeAtualizadoDataGridViewTextBoxColumn";
+            this.windowsCeAtualizadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bootLoaderAtualizadoDataGridViewTextBoxColumn
+            // 
+            this.bootLoaderAtualizadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.bootLoaderAtualizadoDataGridViewTextBoxColumn.DataPropertyName = "bootLoaderAtualizado";
+            this.bootLoaderAtualizadoDataGridViewTextBoxColumn.HeaderText = "Bootloader";
+            this.bootLoaderAtualizadoDataGridViewTextBoxColumn.Name = "bootLoaderAtualizadoDataGridViewTextBoxColumn";
+            this.bootLoaderAtualizadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // softwareTrufixAtualizadoDataGridViewTextBoxColumn
+            // 
+            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn.DataPropertyName = "softwareTrufixAtualizado";
+            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn.HeaderText = "Software Trufix";
+            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn.Name = "softwareTrufixAtualizadoDataGridViewTextBoxColumn";
+            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // softwareToradexAtualizadoDataGridViewTextBoxColumn
+            // 
+            this.softwareToradexAtualizadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.softwareToradexAtualizadoDataGridViewTextBoxColumn.DataPropertyName = "softwareToradexAtualizado";
+            this.softwareToradexAtualizadoDataGridViewTextBoxColumn.HeaderText = "Software Toradex";
+            this.softwareToradexAtualizadoDataGridViewTextBoxColumn.Name = "softwareToradexAtualizadoDataGridViewTextBoxColumn";
+            this.softwareToradexAtualizadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lasertechbrasilDataSet4
             // 
@@ -422,6 +528,14 @@
             this.dataGridView4.Size = new System.Drawing.Size(183, 155);
             this.dataGridView4.TabIndex = 37;
             // 
+            // dataDeEntradaDataGridViewTextBoxColumn
+            // 
+            this.dataDeEntradaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataDeEntradaDataGridViewTextBoxColumn.DataPropertyName = "dataDeEntrada";
+            this.dataDeEntradaDataGridViewTextBoxColumn.HeaderText = "Data de entrada";
+            this.dataDeEntradaDataGridViewTextBoxColumn.Name = "dataDeEntradaDataGridViewTextBoxColumn";
+            this.dataDeEntradaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // lasertechbrasilDataSet7
             // 
             this.lasertechbrasilDataSet7.DataSetName = "lasertechbrasilDataSet7";
@@ -475,120 +589,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataDeEntradaDataGridViewTextBoxColumn
-            // 
-            this.dataDeEntradaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataDeEntradaDataGridViewTextBoxColumn.DataPropertyName = "dataDeEntrada";
-            this.dataDeEntradaDataGridViewTextBoxColumn.HeaderText = "Data de entrada";
-            this.dataDeEntradaDataGridViewTextBoxColumn.Name = "dataDeEntradaDataGridViewTextBoxColumn";
-            this.dataDeEntradaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // armBindingSource4
-            // 
-            this.armBindingSource4.DataMember = "arm";
-            this.armBindingSource4.DataSource = this.dataSetGeralArm;
-            // 
-            // dataSetGeralArm
-            // 
-            this.dataSetGeralArm.DataSetName = "DataSetGeralArm";
-            this.dataSetGeralArm.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patrimonioPcAtualizadoDataGridViewTextBoxColumn
-            // 
-            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn.DataPropertyName = "patrimonioPcAtualizado";
-            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn.HeaderText = "Patrimônio";
-            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn.Name = "patrimonioPcAtualizadoDataGridViewTextBoxColumn";
-            this.patrimonioPcAtualizadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn
-            // 
-            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn.DataPropertyName = "versaoDeHardwareAtualizadoPc";
-            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn.HeaderText = "Versão de hardware da PCI";
-            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn.Name = "versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn";
-            this.versaoDeHardwareAtualizadoPcDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn
-            // 
-            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn.DataPropertyName = "versaoDeSoftwareAtualizadoPc";
-            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn.HeaderText = "Versão de software da PCI";
-            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn.Name = "versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn";
-            this.versaoDeSoftwareAtualizadoPcDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // windowsCeAtualizadoDataGridViewTextBoxColumn
-            // 
-            this.windowsCeAtualizadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.windowsCeAtualizadoDataGridViewTextBoxColumn.DataPropertyName = "windowsCeAtualizado";
-            this.windowsCeAtualizadoDataGridViewTextBoxColumn.HeaderText = "Windows CE";
-            this.windowsCeAtualizadoDataGridViewTextBoxColumn.Name = "windowsCeAtualizadoDataGridViewTextBoxColumn";
-            this.windowsCeAtualizadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bootLoaderAtualizadoDataGridViewTextBoxColumn
-            // 
-            this.bootLoaderAtualizadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.bootLoaderAtualizadoDataGridViewTextBoxColumn.DataPropertyName = "bootLoaderAtualizado";
-            this.bootLoaderAtualizadoDataGridViewTextBoxColumn.HeaderText = "Bootloader";
-            this.bootLoaderAtualizadoDataGridViewTextBoxColumn.Name = "bootLoaderAtualizadoDataGridViewTextBoxColumn";
-            this.bootLoaderAtualizadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // softwareTrufixAtualizadoDataGridViewTextBoxColumn
-            // 
-            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn.DataPropertyName = "softwareTrufixAtualizado";
-            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn.HeaderText = "Software Trufix";
-            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn.Name = "softwareTrufixAtualizadoDataGridViewTextBoxColumn";
-            this.softwareTrufixAtualizadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // softwareToradexAtualizadoDataGridViewTextBoxColumn
-            // 
-            this.softwareToradexAtualizadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.softwareToradexAtualizadoDataGridViewTextBoxColumn.DataPropertyName = "softwareToradexAtualizado";
-            this.softwareToradexAtualizadoDataGridViewTextBoxColumn.HeaderText = "Software Toradex";
-            this.softwareToradexAtualizadoDataGridViewTextBoxColumn.Name = "softwareToradexAtualizadoDataGridViewTextBoxColumn";
-            this.softwareToradexAtualizadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // windowsCeDataGridViewTextBoxColumn
-            // 
-            this.windowsCeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.windowsCeDataGridViewTextBoxColumn.DataPropertyName = "windowsCe";
-            this.windowsCeDataGridViewTextBoxColumn.HeaderText = "Windows Ce";
-            this.windowsCeDataGridViewTextBoxColumn.Name = "windowsCeDataGridViewTextBoxColumn";
-            this.windowsCeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // softwareTrufixDataGridViewTextBoxColumn
-            // 
-            this.softwareTrufixDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.softwareTrufixDataGridViewTextBoxColumn.DataPropertyName = "softwareTrufix";
-            this.softwareTrufixDataGridViewTextBoxColumn.HeaderText = "Software Trufix";
-            this.softwareTrufixDataGridViewTextBoxColumn.Name = "softwareTrufixDataGridViewTextBoxColumn";
-            this.softwareTrufixDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // softwareToradexDataGridViewTextBoxColumn
-            // 
-            this.softwareToradexDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.softwareToradexDataGridViewTextBoxColumn.DataPropertyName = "softwareToradex";
-            this.softwareToradexDataGridViewTextBoxColumn.HeaderText = "Software Toradex";
-            this.softwareToradexDataGridViewTextBoxColumn.Name = "softwareToradexDataGridViewTextBoxColumn";
-            this.softwareToradexDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataDeEntradaDataGridViewTextBoxColumn1
-            // 
-            this.dataDeEntradaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataDeEntradaDataGridViewTextBoxColumn1.DataPropertyName = "patrimonio";
-            this.dataDeEntradaDataGridViewTextBoxColumn1.HeaderText = "Patrimônio";
-            this.dataDeEntradaDataGridViewTextBoxColumn1.Name = "dataDeEntradaDataGridViewTextBoxColumn1";
-            this.dataDeEntradaDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataDesaidaDataGridViewTextBoxColumn1
-            // 
-            this.dataDesaidaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataDesaidaDataGridViewTextBoxColumn1.DataPropertyName = "versaoDeHardwarePc";
-            this.dataDesaidaDataGridViewTextBoxColumn1.HeaderText = "Versão de Hardware PCI";
-            this.dataDesaidaDataGridViewTextBoxColumn1.Name = "dataDesaidaDataGridViewTextBoxColumn1";
-            this.dataDesaidaDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // armTableAdapter4
             // 
             this.armTableAdapter4.ClearBeforeFill = true;
@@ -623,6 +623,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.armBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetGeralArm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lasertechbrasilDataSet4)).EndInit();
@@ -636,8 +638,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.armBindingSource3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.armBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetGeralArm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -12,11 +12,20 @@ namespace Registro_de_RMA.Apresentacao
 
         private void Registro_Load(object sender, EventArgs e)
         {
+            try
+            {
             this.sensorTableAdapter1.Fill(this.lasertechbrasilDataSet21.Sensor);
             this.sensorTableAdapter.Fill(this.lasertechbrasilDataSet.Sensor);
             Sensor sensor = new Sensor();
             Controle controle = new Controle();
             cbStatus.DataSource = Enum.GetValues(typeof(Entities.Enum.OrderStatus));
+
+            }
+            catch (Exception erroDeComunicacao)
+            {
+
+                MessageBox.Show(erroDeComunicacao.ToString(), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

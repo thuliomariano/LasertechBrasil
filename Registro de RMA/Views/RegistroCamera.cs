@@ -20,11 +20,18 @@ namespace Registro_de_RMA.Apresentacao
 
         private void RegistroCamera_Load(object sender, EventArgs e)
         {
+            try
+            {
             // TODO: esta linha de código carrega dados na tabela 'lasertechbrasilDataSet3.camera'. Você pode movê-la ou removê-la conforme necessário.
             this.cameraTableAdapter1.Fill(this.lasertechbrasilDataSet3.camera);
             // TODO: esta linha de código carrega dados na tabela 'lasertechbrasilDataSet1.camera'. Você pode movê-la ou removê-la conforme necessário.
             this.cameraTableAdapter.Fill(this.lasertechbrasilDataSet1.camera);
+            }
+            catch (Exception mensagemErrorBd)
+            {
 
+                MessageBox.Show(mensagemErrorBd.ToString(), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             cbStatus.DataSource = Enum.GetValues(typeof( Entities.Enum.OrderStatus));
 
         }

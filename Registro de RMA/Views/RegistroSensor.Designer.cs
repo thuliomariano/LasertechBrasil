@@ -48,6 +48,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.sensorTableAdapter = new Registro_de_RMA.lasertechbrasilDataSetTableAdapters.SensorTableAdapter();
             this.lasertechbrasilDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sensorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -70,7 +71,6 @@
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -102,12 +102,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(308, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 24);
+            this.label4.Size = new System.Drawing.Size(76, 24);
             this.label4.TabIndex = 30;
-            this.label4.Text = "Registros de sensores";
+            this.label4.Text = "Sensor";
             // 
             // pictureBox3
             // 
@@ -256,6 +256,13 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Image = global::Registro_de_RMA.Properties.Resources.exit_97636_960_7201;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(60, 25);
+            this.toolStripLabel2.Text = "Sair";
             // 
             // sensorTableAdapter
             // 
@@ -417,13 +424,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(945, 377);
             this.dataGridView1.TabIndex = 32;
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Image = global::Registro_de_RMA.Properties.Resources.exit_97636_960_7201;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(60, 25);
-            this.toolStripLabel2.Text = "Sair";
             // 
             // RegistroSensor
             // 
