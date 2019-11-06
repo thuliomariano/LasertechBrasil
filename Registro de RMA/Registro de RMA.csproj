@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Controller\ValidaArm.cs" />
     <Compile Include="Controller\ValidaCamera.cs" />
+    <Compile Include="Controller\ValidaCameraAtualizar.cs" />
     <Compile Include="DAL\ArmDao.cs" />
     <Compile Include="DAL\CameraDao.cs" />
     <Compile Include="DataSetGeralArm.Designer.cs">

@@ -71,15 +71,15 @@ namespace Registro_de_RMA.Modelo
         public String AtualizarCamera(Camera camera)
         {
 
-            ValidaCamera validaCamera = new ValidaCamera(camera);
-            if (validaCamera.Mensagem.Equals(""))
+            ValidaCameraAtualizar validaCameraAtualizar = new ValidaCameraAtualizar(camera);
+            if (validaCameraAtualizar.Mensagem.Equals(""))
             {
                 CameraDao cameraDao = new CameraDao();
                 return Mensagem = cameraDao.AtualizarCamera(camera);
             }
             else
             {
-                Mensagem = validaCamera.Mensagem;
+                Mensagem = validaCameraAtualizar.Mensagem;
             }
 
             return Mensagem;

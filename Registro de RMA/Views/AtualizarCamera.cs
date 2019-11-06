@@ -48,7 +48,7 @@ namespace Registro_de_RMA.Views
                 {
                     camera.Observacao = txtObservacaoCamera.Text.ToUpper();
                 }
-                
+
             }
             catch (Exception errorCamera)
             {

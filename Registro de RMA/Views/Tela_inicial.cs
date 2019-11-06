@@ -55,7 +55,7 @@ namespace Registro_de_RMA
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-
+            Close();
         }
     }
 }
