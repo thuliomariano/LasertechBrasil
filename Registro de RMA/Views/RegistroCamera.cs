@@ -98,5 +98,10 @@ namespace Registro_de_RMA.Apresentacao
         {
 
         }
+
+        private void toolStripTextBox1_ButtonClick(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

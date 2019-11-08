@@ -354,6 +354,7 @@
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(76, 29);
             this.toolStripTextBox1.Text = "Sair";
+            this.toolStripTextBox1.ButtonClick += new System.EventHandler(this.toolStripTextBox1_ButtonClick);
             // 
             // btnConsultarSerie
             // 

@@ -86,6 +86,7 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripSplitButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -138,7 +139,7 @@
             this.groupBox4.Controls.Add(this.btnConsultarSerie);
             this.groupBox4.Location = new System.Drawing.Point(12, 115);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(406, 69);
+            this.groupBox4.Size = new System.Drawing.Size(411, 69);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Consulta por patrimônio";
@@ -164,9 +165,9 @@
             // 
             this.btnConsultarSerie.BackgroundImage = global::Registro_de_RMA.Properties.Resources._24b34c036ba57900bb23711e12818c84;
             this.btnConsultarSerie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConsultarSerie.Location = new System.Drawing.Point(334, 17);
+            this.btnConsultarSerie.Location = new System.Drawing.Point(334, 19);
             this.btnConsultarSerie.Name = "btnConsultarSerie";
-            this.btnConsultarSerie.Size = new System.Drawing.Size(57, 39);
+            this.btnConsultarSerie.Size = new System.Drawing.Size(55, 39);
             this.btnConsultarSerie.TabIndex = 1;
             this.btnConsultarSerie.UseVisualStyleBackColor = true;
             this.btnConsultarSerie.Click += new System.EventHandler(this.btnConsultarSerie_Click);
@@ -199,7 +200,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 364);
+            this.label1.Location = new System.Drawing.Point(12, 376);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 30;
@@ -208,7 +209,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 555);
+            this.label2.Location = new System.Drawing.Point(15, 567);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 31;
@@ -298,11 +299,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 178);
+            this.label3.Location = new System.Drawing.Point(12, 190);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 33;
-            this.label3.Text = "Versões anterior";
+            this.label3.Text = "Equipamento";
             // 
             // dataGridView1
             // 
@@ -595,12 +596,22 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(761, 190);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Data";
+            // 
             // RegistroArm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(967, 727);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.dataGridView2);
@@ -703,5 +714,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPatrimonioArmAtualizado;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
     }
 }

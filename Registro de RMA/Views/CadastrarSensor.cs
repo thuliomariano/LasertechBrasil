@@ -1,7 +1,7 @@
 ﻿using Registro_de_RMA.Modelo;
 using System;
 using System.Windows.Forms;
-
+using Registro_de_RMA.Entities.Exceptions;
 namespace Registro_de_RMA.Apresentacao
 {
     public partial class CadastrarSensor : Form
@@ -14,21 +14,17 @@ namespace Registro_de_RMA.Apresentacao
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
 
-
-            DateTime date1 = DateTime.Now;
-            DateTime date2 = DateTime.Parse("2019-08-12 18:00:15");
-
-            String d1 = date1.ToString("yyyy-dd-MM HH:mm:ss");
-            String d2 = date2.ToString("yyyy-dd-MM HH:mm:ss");
-
-
-            Sensor sensor = new Sensor();
-            Controle controle = new Controle();
-
-
-
             try
             {
+                DateTime date1 = DateTime.Now;
+                DateTime date2 = DateTime.Parse("2019-08-12 18:00:15");
+
+                String d1 = date1.ToString("yyyy-dd-MM HH:mm:ss");
+                String d2 = date2.ToString("yyyy-dd-MM HH:mm:ss");
+
+                Sensor sensor = new Sensor();
+                Controle controle = new Controle();
+
                 if (txtSerie.Text == "" && txtCliente.Text == "" && txtRma.Text == "" && txtObservacao.Text == "" && txtOrdemDeServico.Text == "" && txtApontamento.Text == "" && txtRecebimento.Text == "" && txtPatrimonio.Text == "")
                 {
                     MessageBox.Show("Favor preencher pelo menos o número de série", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -93,6 +89,7 @@ namespace Registro_de_RMA.Apresentacao
                     }
                     if (txtPatrimonio.Text == "")
                     {
+                        sensor.Patrimonio = 0;
                     }
                     else
                     {
@@ -106,10 +103,19 @@ namespace Registro_de_RMA.Apresentacao
                     MessageBox.Show(controle.Mensagem, "Anteção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (Exception erroDeRecebimento)
+            catch (FormatException erroFormatException)
             {
-                MessageBox.Show(erroDeRecebimento.ToString(), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Erro de formatação: " + erroFormatException.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (DomainException erroDomainException)
+            {
+               
+            }
+            catch (Exception erroException)
+            {
+                MessageBox.Show("Erro inesperado: " + erroException.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
