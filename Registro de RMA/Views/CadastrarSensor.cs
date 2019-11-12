@@ -107,14 +107,16 @@ namespace Registro_de_RMA.Apresentacao
             {
                 MessageBox.Show("Erro de formatação: " + erroFormatException.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (DomainException erroDomainException)
+            catch (DomainException e)
             {
-               
+                throw new DomainException("Erro de " + e.Message);
             }
             catch (Exception erroException)
-            {
+            {                
                 MessageBox.Show("Erro inesperado: " + erroException.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }        
+           
+          
 
         }
 

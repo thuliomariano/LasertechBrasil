@@ -63,7 +63,6 @@
   <ItemGroup>
     <Compile Include="Controller\ValidaArm.cs" />
     <Compile Include="Controller\ValidaCamera.cs" />
-    <Compile Include="Controller\ValidaCameraAtualizar.cs" />
     <Compile Include="DAL\ArmDao.cs" />
     <Compile Include="DAL\CameraDao.cs" />
     <Compile Include="DataSetGeralArm.Designer.cs">
@@ -76,6 +75,7 @@
     <Compile Include="Entities\Enum\Fornecedor.cs" />
     <Compile Include="Entities\Enum\ModeloCamera.cs" />
     <Compile Include="Entities\Enum\OrderStatus.cs" />
+    <Compile Include="Entities\Exceptions\DomainException.cs" />
     <Compile Include="lasertechbrasilDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -416,5 +416,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

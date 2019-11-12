@@ -30,10 +30,10 @@ namespace Registro_de_RMA.DAL
                 cmd.ExecuteNonQuery();
                 Mensagem = "Cadastrado o item com sucesso!";
             }
-            catch (SqlException erro)
+            catch (SqlException erroSqlException)
             {
 
-                Mensagem = erro.ToString();
+                Mensagem = "Erro de comunicação com o BD: " + erroSqlException.Message;
             }
             finally
             {
