@@ -1,6 +1,4 @@
-﻿using Registro_de_RMA.DAL;
-using Registro_de_RMA.Controller;
-using Registro_de_RMA.Entities;
+﻿using Registro_de_RMA.Entities;
 using System.Data.SqlClient;
 
 namespace Registro_de_RMA.DAL
@@ -11,13 +9,15 @@ namespace Registro_de_RMA.DAL
         public string Mensagem { get; set; }
         public string cadastrarArm(Arm arm)
         {
+         
             Conexao con = new Conexao();
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = @"insert into arm(patrimonio, versaoDeHardwarePc, versaoDeSoftwarePc, mac, serialIris, SerialColibri, windowsCe, bootloader, softwareTrufix, softwareToradex, patrimonioPcAtualizado, versaoDeHardwareAtualizadoPc, versaoDeSoftwareAtualizadoPc, windowsCeAtualizado, bootLoaderAtualizado, softwareTrufixAtualizado, softwareToradexAtualizado, dataDeEntrada, dataDesaida) 
+            try
+            {
+                cmd.CommandText = @"insert into arm(patrimonio, versaoDeHardwarePc, versaoDeSoftwarePc, mac, serialIris, SerialColibri, windowsCe, bootloader, softwareTrufix, softwareToradex, patrimonioPcAtualizado, versaoDeHardwareAtualizadoPc, versaoDeSoftwareAtualizadoPc, windowsCeAtualizado, bootLoaderAtualizado, softwareTrufixAtualizado, softwareToradexAtualizado, dataDeEntrada, dataDesaida) 
                                 values(@Patrimonio, @VersaoDeHardwarePC,@VersaoDeSoftwarerPC, @Mac, @SerialIris, @SerialColibri, @WindowsCe, @BootLoader, @SoftwareTrufix, @SoftwareToradex, @PatrimonioPcAtualizado, @VersaoDeHardwareAtualizadoPc, @VersaoDeSoftwareAtualizadoPC, @WindowsCeAtualizado, @BootLoaderAtualizado, @SoftwareTrufixAtualizado, @SoftwareToradexAtualizado, @DataDeEntrada, @DataDeSaida)";
 
-            
             cmd.Parameters.AddWithValue("@Patrimonio", arm.Patrimonio);
             cmd.Parameters.AddWithValue("@VersaoDeHardwarePC", arm.VersaoDeHardwarePC);
             cmd.Parameters.AddWithValue("@VersaoDeSoftwarerPC", arm.VersaoDeSoftwarerPC);
@@ -38,6 +38,16 @@ namespace Registro_de_RMA.DAL
             cmd.Parameters.AddWithValue("@DataDeEntrada", arm.DataDeEntrada);
             cmd.Parameters.AddWithValue("@DataDeSaida", arm.DataDeSaida);
 
+            }
+            catch (SqlException erro)
+            {
+                Mensagem = "Erro de comunicação: " + erro.Message;
+
+            }
+            catch(System.Exception erro)
+            {
+                Mensagem = "Erro inesperado: " + erro.Message;
+            }
             try
             {
                 cmd.Connection = con.Conectar();
@@ -47,7 +57,11 @@ namespace Registro_de_RMA.DAL
             catch (SqlException erro)
             {
 
-                Mensagem = erro.ToString();
+                Mensagem = "Erro de comunicação: " + erro.Message;
+            }
+            catch (System.Exception erro)
+            {
+                Mensagem = "Erro inesperado: " + erro.Message;
             }
             finally
             {

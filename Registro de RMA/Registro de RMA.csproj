@@ -61,6 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ControleCamera.cs" />
+    <Compile Include="Controller\ControleSensor.cs" />
     <Compile Include="Controller\ValidaArm.cs" />
     <Compile Include="Controller\ValidaCamera.cs" />
     <Compile Include="DAL\ArmDao.cs" />
@@ -172,7 +174,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lasertechbrasilDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Controller\Controle.cs" />
+    <Compile Include="Controller\ControleArm.cs" />
     <Compile Include="Entities\Sensor.cs" />
     <Compile Include="Controller\ValidaSensor.cs" />
     <Compile Include="Program.cs" />

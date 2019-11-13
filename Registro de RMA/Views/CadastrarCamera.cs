@@ -1,7 +1,8 @@
-﻿using Registro_de_RMA.Entities;
-using Registro_de_RMA.Modelo;
+﻿using Registro_de_RMA.Controller;
+using Registro_de_RMA.Entities;
 using System;
 using System.Windows.Forms;
+using Registro_de_RMA.Entities.Exceptions;
 
 namespace Registro_de_RMA.Views
 {
@@ -14,9 +15,12 @@ namespace Registro_de_RMA.Views
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Camera camera = new Camera();
+
+
+
             try
             {
+                Camera camera = new Camera();
                 if (txtFornecedor.Text == "")
                 {
                     camera.Fornecedor = "";
@@ -60,36 +64,40 @@ namespace Registro_de_RMA.Views
                 camera.CameraDataDeEntrada = DateTime.Now.ToString("yyyy-dd-MM HH:mm:ss");
                 camera.CameraDataDeSaida = DateTime.Now.ToString("yyyy-dd-MM HH:mm:ss");
                 camera.CameraStatus = "ABERTO";
+                ControleCamera controleCamera = new ControleCamera();
+                controleCamera.CadastrarCamera(camera);
+                MessageBox.Show(controleCamera.Mensagem, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception erroDeDados)
+            catch (FormatException error)
             {
+                MessageBox.Show("Erro de formatação: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (OverflowException error)
+            {
+                MessageBox.Show("Erro nos valores numericos: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (DomainException error)
+            {
+                MessageBox.Show("Erro de dominio: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro inesperado: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-                MessageBox.Show(erroDeDados.ToString());
-            }
-
-            try
-            {
-                Controle controle = new Controle();
-                controle.CadastrarCamera(camera);
-                MessageBox.Show(controle.Mensagem, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception PassagemDeDados)
-            {
-                MessageBox.Show(PassagemDeDados.ToString());
-            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             try
             {
-            txtAcessório.Text = "";
-            txtApontamento.Text = "";
-            txtFornecedor.Text = "";
-            txtMac.Text = "";
-            txtObservacaoCamera.Text = "";
-            txtPatrimonioCamera.Text = "";
-            txtProduto.Text = "";
+                txtAcessório.Text = "";
+                txtApontamento.Text = "";
+                txtFornecedor.Text = "";
+                txtMac.Text = "";
+                txtObservacaoCamera.Text = "";
+                txtPatrimonioCamera.Text = "";
+                txtProduto.Text = "";
 
             }
             catch (Exception capturarDadosCamera)

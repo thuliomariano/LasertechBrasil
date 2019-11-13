@@ -1,7 +1,9 @@
-﻿using Registro_de_RMA.Modelo;
+﻿using Registro_de_RMA.Controller;
+using Registro_de_RMA.Modelo;
 using System;
-using System.Windows.Forms;
 using System.Globalization;
+using System.Windows.Forms;
+using Registro_de_RMA.Entities.Exceptions;
 
 
 namespace Registro_de_RMA.Apresentacao
@@ -23,11 +25,11 @@ namespace Registro_de_RMA.Apresentacao
             {
                 try
                 {
-                Sensor sensor = new Sensor();
-                Controle controle = new Controle();
+                    Sensor sensor = new Sensor();
+                    ControleSensor controleSensor = new ControleSensor();
 
-                DateTime d1 = DateTime.Now;
-                String date = d1.ToString("yyyy-dd-MM HH:mm:ss");
+                    DateTime d1 = DateTime.Now;
+                    String date = d1.ToString("yyyy-dd-MM HH:mm:ss");
                     if (txtId.Text == "")
                     {
                         MessageBox.Show("Campo Id não pode ser vazio, por favor insira um id valido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -69,13 +71,25 @@ namespace Registro_de_RMA.Apresentacao
                         }
                         sensor.IdSensor = Convert.ToInt32(txtId.Text.ToUpper());
                         sensor.DataDeSaida = date;
-                        controle.AtualizarStatus(sensor);
-                    }              
-                MessageBox.Show(controle.Mensagem, "Anteção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        controleSensor.AtualizarStatus(sensor);
+                    }
+                    MessageBox.Show(controleSensor.Mensagem, "Anteção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception errorSensor)
+                catch (FormatException error)
                 {
-                    MessageBox.Show(errorSensor.ToString(), "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Erro de formatação: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (OverflowException error)
+                {
+                    MessageBox.Show("Erro nos valores numericos: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (DomainException error)
+                {
+                    MessageBox.Show("Erro de dominio: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Erro inesperado: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

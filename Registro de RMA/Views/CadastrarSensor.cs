@@ -2,6 +2,8 @@
 using System;
 using System.Windows.Forms;
 using Registro_de_RMA.Entities.Exceptions;
+using Registro_de_RMA.Controller;
+
 namespace Registro_de_RMA.Apresentacao
 {
     public partial class CadastrarSensor : Form
@@ -23,7 +25,7 @@ namespace Registro_de_RMA.Apresentacao
                 String d2 = date2.ToString("yyyy-dd-MM HH:mm:ss");
 
                 Sensor sensor = new Sensor();
-                Controle controle = new Controle();
+                ControleSensor controleSensor = new ControleSensor();
 
                 if (txtSerie.Text == "" && txtCliente.Text == "" && txtRma.Text == "" && txtObservacao.Text == "" && txtOrdemDeServico.Text == "" && txtApontamento.Text == "" && txtRecebimento.Text == "" && txtPatrimonio.Text == "")
                 {
@@ -99,17 +101,21 @@ namespace Registro_de_RMA.Apresentacao
                     sensor.DataDeEntrada = d1;
                     sensor.DataDeSaida = "";
                     sensor.Status = "ABERTO";
-                    controle.CadastrarSensor(sensor);
-                    MessageBox.Show(controle.Mensagem, "Anteção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    controleSensor.CadastrarSensor(sensor);
+                    MessageBox.Show(controleSensor.Mensagem, "Anteção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+            catch (OverflowException erro)
+            {
+                MessageBox.Show("Erro de formatação: " + erroFormatException.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (FormatException erroFormatException)
             {
                 MessageBox.Show("Erro de formatação: " + erroFormatException.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (DomainException e)
+            catch (DomainException error)
             {
-                throw new DomainException("Erro de " + e.Message);
+                throw new DomainException("Erro de " + error.Message);
             }
             catch (Exception erroException)
             {                

@@ -1,8 +1,8 @@
-﻿using Registro_de_RMA.Entities;
+﻿using Registro_de_RMA.Controller;
+using Registro_de_RMA.Entities;
 using System;
 using System.Windows.Forms;
-using Registro_de_RMA.Controller;
-using Registro_de_RMA.Modelo;
+using Registro_de_RMA.Entities.Exceptions;
 
 namespace Registro_de_RMA.Views
 {
@@ -48,16 +48,25 @@ namespace Registro_de_RMA.Views
                 {
                     camera.Observacao = txtObservacaoCamera.Text.ToUpper();
                 }
-
+                ControleCamera controleCamera = new ControleCamera();
+                MessageBox.Show(controleCamera.AtualizarCamera(camera), "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception errorCamera)
+            catch (FormatException error)
             {
-
-                MessageBox.Show(errorCamera.ToString(), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Erro de formatação: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            Controle controle = new Controle();
-            MessageBox.Show(controle.AtualizarCamera(camera), "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            catch (OverflowException error)
+            {
+                MessageBox.Show("Erro nos valores numericos: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (DomainException error)
+            {
+                MessageBox.Show("Erro de dominio: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro inesperado: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -79,10 +88,13 @@ namespace Registro_de_RMA.Views
                 cbStatusCamera.Text = "";
                 txtIdCamera.Text = "";
             }
-            catch (Exception errorEntradaDadosCamera)
+            catch (FormatException errorEntradaDadosCamera)
             {
-                MessageBox.Show(errorEntradaDadosCamera.ToString(), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show("Erro no formato de entrada: " + errorEntradaDadosCamera.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro inesperado: " + error.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
